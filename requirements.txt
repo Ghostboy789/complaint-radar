@@ -1,0 +1,12 @@
+pyarrow
+duckdb
+pandas
+numpy
+scipy
+scikit-learn
+statsmodels
+sentence-transformers
+pytest
+ruff
+dbt-core>=1.11,<1.13
+dbt-duckdb

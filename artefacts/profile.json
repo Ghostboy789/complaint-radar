@@ -1,0 +1,2642 @@
+{
+ "totals": [
+  {
+   "complaints": 17533918,
+   "distinct_ids": 17533918,
+   "first_date": "2011-12-01",
+   "last_date": "2026-08-31",
+   "with_text": 3851415,
+   "first_text_date": "2015-03-19",
+   "unparsed_dates": 0
+  }
+ ],
+ "by_source_file": [
+  {
+   "source_file": "CCDB_Export_1_December_2011_through_April_2018.zip",
+   "complaints": 1031863,
+   "first_date": "2011-12-01",
+   "last_date": "2018-04-30",
+   "with_text": 291574
+  },
+  {
+   "source_file": "CCDB_Export_2_May_2018_through_April_2021.zip",
+   "complaints": 1041632,
+   "first_date": "2018-05-01",
+   "last_date": "2021-04-30",
+   "with_text": 439860
+  },
+  {
+   "source_file": "CCDB_Export_3_May_2021_through_October_2022.zip",
+   "complaints": 977426,
+   "first_date": "2021-05-01",
+   "last_date": "2022-10-31",
+   "with_text": 408046
+  },
+  {
+   "source_file": "CCDB_Export_4_November_2022_through_August_2023.zip",
+   "complaints": 987495,
+   "first_date": "2022-11-01",
+   "last_date": "2023-08-31",
+   "with_text": 388495
+  },
+  {
+   "source_file": "CCDB_Export_5_September_2023_through_March_2024.zip",
+   "complaints": 945532,
+   "first_date": "2023-09-01",
+   "last_date": "2024-03-31",
+   "with_text": 318804
+  },
+  {
+   "source_file": "CCDB_Export_6_April_2024_through_July_2024.zip",
+   "complaints": 839903,
+   "first_date": "2024-04-01",
+   "last_date": "2024-07-31",
+   "with_text": 276332
+  },
+  {
+   "source_file": "CCDB_Export_7_August_2024_through_October_2024.zip",
+   "complaints": 824514,
+   "first_date": "2024-08-01",
+   "last_date": "2024-10-31",
+   "with_text": 229944
+  },
+  {
+   "source_file": "CCDB_Export_8_November_2024_through_December_2024.zip",
+   "complaints": 591058,
+   "first_date": "2024-11-01",
+   "last_date": "2024-12-31",
+   "with_text": 154916
+  },
+  {
+   "source_file": "CCDB_Export_9_January_2025_through_February_2025.zip",
+   "complaints": 811019,
+   "first_date": "2025-01-01",
+   "last_date": "2025-02-28",
+   "with_text": 265405
+  },
+  {
+   "source_file": "CCDB_Export_10_March_2025_through_April_2025.zip",
+   "complaints": 803073,
+   "first_date": "2025-03-01",
+   "last_date": "2025-04-30",
+   "with_text": 210147
+  },
+  {
+   "source_file": "CCDB_Export_11_May_2025_through_June_2025.zip",
+   "complaints": 827343,
+   "first_date": "2025-05-01",
+   "last_date": "2025-06-30",
+   "with_text": 219632
+  },
+  {
+   "source_file": "CCDB_Export_12_July_2025_through_August_2025.zip",
+   "complaints": 968761,
+   "first_date": "2025-07-01",
+   "last_date": "2025-08-31",
+   "with_text": 234404
+  },
+  {
+   "source_file": "CCDB_Export_13_September_2025_through_October_2025.zip",
+   "complaints": 1023636,
+   "first_date": "2025-09-01",
+   "last_date": "2025-10-31",
+   "with_text": 157821
+  },
+  {
+   "source_file": "CCDB_Export_14_November_2025_through_December_2025.zip",
+   "complaints": 1009132,
+   "first_date": "2025-11-01",
+   "last_date": "2025-12-31",
+   "with_text": 134641
+  },
+  {
+   "source_file": "CCDB_Export_15_January_2026_through_February_2026.zip",
+   "complaints": 1038383,
+   "first_date": "2026-01-01",
+   "last_date": "2026-02-28",
+   "with_text": 34351
+  },
+  {
+   "source_file": "CCDB_Export_16_March_2026.zip",
+   "complaints": 614945,
+   "first_date": "2026-03-01",
+   "last_date": "2026-03-31",
+   "with_text": 21640
+  },
+  {
+   "source_file": "CCDB_Export_17_April_2026.zip",
+   "complaints": 618293,
+   "first_date": "2026-04-01",
+   "last_date": "2026-04-30",
+   "with_text": 21052
+  },
+  {
+   "source_file": "CCDB_Export_18_May_2026.zip",
+   "complaints": 619940,
+   "first_date": "2026-05-01",
+   "last_date": "2026-05-31",
+   "with_text": 17528
+  },
+  {
+   "source_file": "CCDB_Export_19_June_2026.zip",
+   "complaints": 620794,
+   "first_date": "2026-06-01",
+   "last_date": "2026-06-30",
+   "with_text": 16820
+  },
+  {
+   "source_file": "CCDB_Export_20_July_2026.zip",
+   "complaints": 672036,
+   "first_date": "2026-07-01",
+   "last_date": "2026-07-31",
+   "with_text": 10002
+  },
+  {
+   "source_file": "CCDB_Export_21_August_2026.zip",
+   "complaints": 667140,
+   "first_date": "2026-08-01",
+   "last_date": "2026-08-31",
+   "with_text": 1
+  }
+ ],
+ "by_year": [
+  {
+   "year": 2011,
+   "complaints": 2536,
+   "with_text": 0,
+   "text_share": 0.0
+  },
+  {
+   "year": 2012,
+   "complaints": 72368,
+   "with_text": 0,
+   "text_share": 0.0
+  },
+  {
+   "year": 2013,
+   "complaints": 108214,
+   "with_text": 0,
+   "text_share": 0.0
+  },
+  {
+   "year": 2014,
+   "complaints": 152909,
+   "with_text": 0,
+   "text_share": 0.0
+  },
+  {
+   "year": 2015,
+   "complaints": 168273,
+   "with_text": 54723,
+   "text_share": 0.3252
+  },
+  {
+   "year": 2016,
+   "complaints": 191292,
+   "with_text": 77766,
+   "text_share": 0.4065
+  },
+  {
+   "year": 2017,
+   "complaints": 242745,
+   "with_text": 115311,
+   "text_share": 0.475
+  },
+  {
+   "year": 2018,
+   "complaints": 257131,
+   "with_text": 118393,
+   "text_share": 0.4604
+  },
+  {
+   "year": 2019,
+   "complaints": 277240,
+   "with_text": 124843,
+   "text_share": 0.4503
+  },
+  {
+   "year": 2020,
+   "complaints": 444213,
+   "with_text": 174297,
+   "text_share": 0.3924
+  },
+  {
+   "year": 2021,
+   "complaints": 495939,
+   "with_text": 203570,
+   "text_share": 0.4105
+  },
+  {
+   "year": 2022,
+   "complaints": 800245,
+   "with_text": 337273,
+   "text_share": 0.4215
+  },
+  {
+   "year": 2023,
+   "complaints": 1292049,
+   "with_text": 487410,
+   "text_share": 0.3772
+  },
+  {
+   "year": 2024,
+   "complaints": 2734269,
+   "with_text": 814385,
+   "text_share": 0.2978
+  },
+  {
+   "year": 2025,
+   "complaints": 5442964,
+   "with_text": 1222050,
+   "text_share": 0.2245
+  },
+  {
+   "year": 2026,
+   "complaints": 4851531,
+   "with_text": 121394,
+   "text_share": 0.025
+  }
+ ],
+ "products": [
+  {
+   "product": "Credit reporting or other personal consumer reports",
+   "first_date": "2023-08-24",
+   "last_date": "2026-08-31",
+   "complaints": 11983547,
+   "with_text": 1672429,
+   "issues": 18,
+   "sub_products": 2
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-25",
+   "complaints": 2163770,
+   "with_text": 807499,
+   "issues": 32,
+   "sub_products": 4
+  },
+  {
+   "product": "Debt collection",
+   "first_date": "2013-07-10",
+   "last_date": "2026-08-31",
+   "complaints": 1186841,
+   "with_text": 445246,
+   "issues": 11,
+   "sub_products": 19
+  },
+  {
+   "product": "Mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2026-08-31",
+   "complaints": 459836,
+   "with_text": 147249,
+   "issues": 18,
+   "sub_products": 13
+  },
+  {
+   "product": "Checking or savings account",
+   "first_date": "2017-04-21",
+   "last_date": "2026-08-31",
+   "complaints": 394323,
+   "with_text": 189350,
+   "issues": 14,
+   "sub_products": 5
+  },
+  {
+   "product": "Credit card",
+   "first_date": "2011-12-01",
+   "last_date": "2026-08-31",
+   "complaints": 341890,
+   "with_text": 129144,
+   "issues": 48,
+   "sub_products": 2
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-25",
+   "complaints": 206356,
+   "with_text": 108683,
+   "issues": 24,
+   "sub_products": 7
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 190548,
+   "with_text": 122005,
+   "issues": 17,
+   "sub_products": 11
+  },
+  {
+   "product": "Credit reporting",
+   "first_date": "2012-10-22",
+   "last_date": "2017-04-22",
+   "complaints": 140426,
+   "with_text": 31587,
+   "issues": 5,
+   "sub_products": 0
+  },
+  {
+   "product": "Student loan",
+   "first_date": "2012-03-01",
+   "last_date": "2026-08-31",
+   "complaints": 133125,
+   "with_text": 63196,
+   "issues": 17,
+   "sub_products": 3
+  },
+  {
+   "product": "Vehicle loan or lease",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 102439,
+   "with_text": 53663,
+   "issues": 13,
+   "sub_products": 3
+  },
+  {
+   "product": "Bank account or service",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-22",
+   "complaints": 86198,
+   "with_text": 14883,
+   "issues": 5,
+   "sub_products": 5
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 37329,
+   "with_text": 18864,
+   "issues": 33,
+   "sub_products": 8
+  },
+  {
+   "product": "Consumer Loan",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-21",
+   "complaints": 31559,
+   "with_text": 9458,
+   "issues": 18,
+   "sub_products": 6
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 30614,
+   "with_text": 17219,
+   "issues": 27,
+   "sub_products": 5
+  },
+  {
+   "product": "Prepaid card",
+   "first_date": "2014-07-20",
+   "last_date": "2026-08-31",
+   "complaints": 23008,
+   "with_text": 11784,
+   "issues": 14,
+   "sub_products": 13
+  },
+  {
+   "product": "Debt or credit management",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 10153,
+   "with_text": 5606,
+   "issues": 6,
+   "sub_products": 4
+  },
+  {
+   "product": "Payday loan",
+   "first_date": "2013-11-06",
+   "last_date": "2017-04-21",
+   "complaints": 5528,
+   "with_text": 1745,
+   "issues": 7,
+   "sub_products": 0
+  },
+  {
+   "product": "Money transfers",
+   "first_date": "2013-04-04",
+   "last_date": "2017-04-21",
+   "complaints": 5354,
+   "with_text": 1497,
+   "issues": 6,
+   "sub_products": 2
+  },
+  {
+   "product": "Other financial service",
+   "first_date": "2014-07-19",
+   "last_date": "2017-04-21",
+   "complaints": 1056,
+   "with_text": 292,
+   "issues": 9,
+   "sub_products": 7
+  },
+  {
+   "product": "Virtual currency",
+   "first_date": "2014-08-15",
+   "last_date": "2017-04-03",
+   "complaints": 18,
+   "with_text": 16,
+   "issues": 4,
+   "sub_products": 2
+  }
+ ],
+ "product_by_year_text": [
+  {
+   "product": "Bank account or service",
+   "2015": 4559,
+   "2016": 7755,
+   "2017": 2569,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 0,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  },
+  {
+   "product": "Checking or savings account",
+   "2015": 0,
+   "2016": 0,
+   "2017": 4752,
+   "2018": 6999,
+   "2019": 7351,
+   "2020": 9530,
+   "2021": 12401,
+   "2022": 18032,
+   "2023": 28017,
+   "2024": 29485,
+   "2025": 51448,
+   "2026": 21335
+  },
+  {
+   "product": "Consumer Loan",
+   "2015": 2969,
+   "2016": 4666,
+   "2017": 1823,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 0,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  },
+  {
+   "product": "Credit card",
+   "2015": 6243,
+   "2016": 9433,
+   "2017": 3161,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 12905,
+   "2024": 35451,
+   "2025": 41516,
+   "2026": 20435
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "2015": 0,
+   "2016": 0,
+   "2017": 7799,
+   "2018": 11854,
+   "2019": 12526,
+   "2020": 17102,
+   "2021": 16607,
+   "2022": 21512,
+   "2023": 21283,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  },
+  {
+   "product": "Credit reporting",
+   "2015": 10258,
+   "2016": 15081,
+   "2017": 6248,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 0,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  },
+  {
+   "product": "Credit reporting or other personal consumer reports",
+   "2015": 0,
+   "2016": 0,
+   "2017": 0,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 124058,
+   "2024": 630670,
+   "2025": 912756,
+   "2026": 4945
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "2015": 0,
+   "2016": 0,
+   "2017": 36301,
+   "2018": 48975,
+   "2019": 58515,
+   "2020": 95924,
+   "2021": 109197,
+   "2022": 233888,
+   "2023": 224699,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  },
+  {
+   "product": "Debt collection",
+   "2015": 14546,
+   "2016": 18676,
+   "2017": 23571,
+   "2018": 26107,
+   "2019": 23945,
+   "2020": 25831,
+   "2021": 34478,
+   "2022": 31380,
+   "2023": 35607,
+   "2024": 70291,
+   "2025": 100609,
+   "2026": 40205
+  },
+  {
+   "product": "Debt or credit management",
+   "2015": 0,
+   "2016": 0,
+   "2017": 0,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 307,
+   "2024": 1553,
+   "2025": 2645,
+   "2026": 1101
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "2015": 0,
+   "2016": 0,
+   "2017": 1870,
+   "2018": 3241,
+   "2019": 2835,
+   "2020": 4827,
+   "2021": 7966,
+   "2022": 7898,
+   "2023": 8459,
+   "2024": 10239,
+   "2025": 64863,
+   "2026": 9807
+  },
+  {
+   "product": "Money transfers",
+   "2015": 562,
+   "2016": 711,
+   "2017": 224,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 0,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  },
+  {
+   "product": "Mortgage",
+   "2015": 12301,
+   "2016": 15764,
+   "2017": 13152,
+   "2018": 10269,
+   "2019": 10035,
+   "2020": 12467,
+   "2021": 14077,
+   "2022": 12289,
+   "2023": 12883,
+   "2024": 12209,
+   "2025": 14031,
+   "2026": 7772
+  },
+  {
+   "product": "Other financial service",
+   "2015": 87,
+   "2016": 139,
+   "2017": 66,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 0,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  },
+  {
+   "product": "Payday loan",
+   "2015": 614,
+   "2016": 865,
+   "2017": 266,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 0,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "2015": 0,
+   "2016": 0,
+   "2017": 1633,
+   "2018": 2396,
+   "2019": 2425,
+   "2020": 2349,
+   "2021": 2388,
+   "2022": 3202,
+   "2023": 2826,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "2015": 0,
+   "2016": 0,
+   "2017": 0,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 1492,
+   "2024": 5211,
+   "2025": 7805,
+   "2026": 4356
+  },
+  {
+   "product": "Prepaid card",
+   "2015": 772,
+   "2016": 492,
+   "2017": 186,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 1351,
+   "2024": 3699,
+   "2025": 3822,
+   "2026": 1462
+  },
+  {
+   "product": "Student loan",
+   "2015": 1805,
+   "2016": 4178,
+   "2017": 9640,
+   "2018": 5288,
+   "2019": 4281,
+   "2020": 2465,
+   "2021": 2171,
+   "2022": 4256,
+   "2023": 6163,
+   "2024": 8025,
+   "2025": 10869,
+   "2026": 4055
+  },
+  {
+   "product": "Vehicle loan or lease",
+   "2015": 0,
+   "2016": 0,
+   "2017": 2047,
+   "2018": 3264,
+   "2019": 2930,
+   "2020": 3802,
+   "2021": 4285,
+   "2022": 4816,
+   "2023": 7360,
+   "2024": 7552,
+   "2025": 11686,
+   "2026": 5921
+  },
+  {
+   "product": "Virtual currency",
+   "2015": 7,
+   "2016": 6,
+   "2017": 3,
+   "2018": 0,
+   "2019": 0,
+   "2020": 0,
+   "2021": 0,
+   "2022": 0,
+   "2023": 0,
+   "2024": 0,
+   "2025": 0,
+   "2026": 0
+  }
+ ],
+ "sub_products": [
+  {
+   "product": "Bank account or service",
+   "sub_product": "Checking account",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-22",
+   "complaints": 59041,
+   "with_text": 10112
+  },
+  {
+   "product": "Bank account or service",
+   "sub_product": "Other bank product/service",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-21",
+   "complaints": 17822,
+   "with_text": 3476
+  },
+  {
+   "product": "Bank account or service",
+   "sub_product": "Savings account",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-21",
+   "complaints": 5294,
+   "with_text": 887
+  },
+  {
+   "product": "Bank account or service",
+   "sub_product": "(CD) Certificate of deposit",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-22",
+   "complaints": 3416,
+   "with_text": 274
+  },
+  {
+   "product": "Bank account or service",
+   "sub_product": "Cashing a check without an account",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-18",
+   "complaints": 625,
+   "with_text": 134
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "Checking account",
+   "first_date": "2017-04-21",
+   "last_date": "2026-08-31",
+   "complaints": 319830,
+   "with_text": 156091
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "Other banking product or service",
+   "first_date": "2017-04-21",
+   "last_date": "2026-08-31",
+   "complaints": 36909,
+   "with_text": 15645
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "Savings account",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 29582,
+   "with_text": 14678
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "CD (Certificate of Deposit)",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 7902,
+   "with_text": 2901
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": null,
+   "first_date": "2017-05-21",
+   "last_date": "2024-05-11",
+   "complaints": 99,
+   "with_text": 35
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "Credit reporting",
+   "first_date": "2024-07-17",
+   "last_date": "2024-07-17",
+   "complaints": 1,
+   "with_text": 0
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Vehicle loan",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-21",
+   "complaints": 17769,
+   "with_text": 5138
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Installment loan",
+   "first_date": "2012-03-05",
+   "last_date": "2017-04-21",
+   "complaints": 8671,
+   "with_text": 3083
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Vehicle lease",
+   "first_date": "2012-03-02",
+   "last_date": "2017-04-21",
+   "complaints": 2654,
+   "with_text": 960
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Personal line of credit",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-19",
+   "complaints": 1824,
+   "with_text": 44
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Title loan",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-20",
+   "complaints": 547,
+   "with_text": 199
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Pawn loan",
+   "first_date": "2014-07-26",
+   "last_date": "2017-04-21",
+   "complaints": 94,
+   "with_text": 34
+  },
+  {
+   "product": "Credit card",
+   "sub_product": "General-purpose credit card or charge card",
+   "first_date": "2023-08-17",
+   "last_date": "2026-08-31",
+   "complaints": 224808,
+   "with_text": 95839
+  },
+  {
+   "product": "Credit card",
+   "sub_product": null,
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-22",
+   "complaints": 89185,
+   "with_text": 18837
+  },
+  {
+   "product": "Credit card",
+   "sub_product": "Store credit card",
+   "first_date": "2023-08-24",
+   "last_date": "2026-08-31",
+   "complaints": 27897,
+   "with_text": 14468
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "General-purpose credit card or charge card",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-25",
+   "complaints": 158877,
+   "with_text": 83540
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Store credit card",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 27909,
+   "with_text": 15504
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Government benefit card",
+   "first_date": "2017-04-25",
+   "last_date": "2023-08-24",
+   "complaints": 9067,
+   "with_text": 3661
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "General-purpose prepaid card",
+   "first_date": "2017-04-25",
+   "last_date": "2023-08-24",
+   "complaints": 8530,
+   "with_text": 4857
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Gift card",
+   "first_date": "2017-04-25",
+   "last_date": "2023-08-24",
+   "complaints": 1021,
+   "with_text": 618
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Payroll card",
+   "first_date": "2017-04-26",
+   "last_date": "2023-08-23",
+   "complaints": 917,
+   "with_text": 483
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Student prepaid card",
+   "first_date": "2018-06-25",
+   "last_date": "2023-08-19",
+   "complaints": 32,
+   "with_text": 20
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": null,
+   "first_date": "2021-03-24",
+   "last_date": "2021-04-01",
+   "complaints": 3,
+   "with_text": 0
+  },
+  {
+   "product": "Credit reporting",
+   "sub_product": null,
+   "first_date": "2012-10-22",
+   "last_date": "2017-04-22",
+   "complaints": 140426,
+   "with_text": 31587
+  },
+  {
+   "product": "Credit reporting or other personal consumer reports",
+   "sub_product": "Credit reporting",
+   "first_date": "2023-08-24",
+   "last_date": "2026-08-31",
+   "complaints": 11937857,
+   "with_text": 1661266
+  },
+  {
+   "product": "Credit reporting or other personal consumer reports",
+   "sub_product": "Other personal consumer report",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 45690,
+   "with_text": 11163
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "sub_product": "Credit reporting",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-25",
+   "complaints": 2142647,
+   "with_text": 796515
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "sub_product": "Other personal consumer report",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 16058,
+   "with_text": 8169
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "sub_product": "Credit repair services",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 5064,
+   "with_text": 2814
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "sub_product": "Conventional home mortgage",
+   "first_date": "2018-05-22",
+   "last_date": "2018-05-22",
+   "complaints": 1,
+   "with_text": 1
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "I do not know",
+   "first_date": "2013-07-10",
+   "last_date": "2026-08-31",
+   "complaints": 485940,
+   "with_text": 141324
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Other debt",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 198043,
+   "with_text": 84053
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Credit card debt",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 179642,
+   "with_text": 83285
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Medical debt",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 77481,
+   "with_text": 39023
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Other (i.e. phone, health club, etc.)",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 44436,
+   "with_text": 12376
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Auto debt",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 32475,
+   "with_text": 17424
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Telecommunications debt",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 30943,
+   "with_text": 13980
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Rental debt",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 29497,
+   "with_text": 13973
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Credit card",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 28626,
+   "with_text": 7509
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Medical",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 21143,
+   "with_text": 6976
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Payday loan debt",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 16533,
+   "with_text": 9236
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Mortgage debt",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-29",
+   "complaints": 8544,
+   "with_text": 4609
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Payday loan",
+   "first_date": "2013-10-30",
+   "last_date": "2017-04-21",
+   "complaints": 7493,
+   "with_text": 2053
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Private student loan debt",
+   "first_date": "2017-04-25",
+   "last_date": "2026-08-31",
+   "complaints": 6113,
+   "with_text": 3148
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Federal student loan debt",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 6026,
+   "with_text": 3073
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Mortgage",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 4807,
+   "with_text": 907
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Auto",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 3748,
+   "with_text": 1064
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Non-federal student loan",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 2878,
+   "with_text": 684
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Federal student loan",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 2473,
+   "with_text": 549
+  },
+  {
+   "product": "Debt or credit management",
+   "sub_product": "Debt settlement",
+   "first_date": "2023-08-27",
+   "last_date": "2026-08-31",
+   "complaints": 5398,
+   "with_text": 3023
+  },
+  {
+   "product": "Debt or credit management",
+   "sub_product": "Credit repair services",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 4222,
+   "with_text": 2273
+  },
+  {
+   "product": "Debt or credit management",
+   "sub_product": "Mortgage modification or foreclosure avoidance",
+   "first_date": "2023-08-26",
+   "last_date": "2026-08-25",
+   "complaints": 385,
+   "with_text": 230
+  },
+  {
+   "product": "Debt or credit management",
+   "sub_product": "Student loan debt relief",
+   "first_date": "2023-08-31",
+   "last_date": "2026-08-12",
+   "complaints": 148,
+   "with_text": 80
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Domestic (US) money transfer",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 85139,
+   "with_text": 63026
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Mobile or digital wallet",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 59703,
+   "with_text": 33002
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Virtual currency",
+   "first_date": "2017-04-26",
+   "last_date": "2026-08-31",
+   "complaints": 21686,
+   "with_text": 13204
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "International money transfer",
+   "first_date": "2017-04-25",
+   "last_date": "2026-08-31",
+   "complaints": 14516,
+   "with_text": 7432
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Money order, traveler's check or cashier's check",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 2537,
+   "with_text": 1316
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Check cashing service",
+   "first_date": "2017-04-25",
+   "last_date": "2026-08-31",
+   "complaints": 2255,
+   "with_text": 1418
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Foreign currency exchange",
+   "first_date": "2017-04-26",
+   "last_date": "2026-08-29",
+   "complaints": 1380,
+   "with_text": 859
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Traveler's check or cashier's check",
+   "first_date": "2017-04-27",
+   "last_date": "2023-08-23",
+   "complaints": 983,
+   "with_text": 545
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Debt settlement",
+   "first_date": "2017-04-26",
+   "last_date": "2023-08-24",
+   "complaints": 946,
+   "with_text": 426
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Money order",
+   "first_date": "2017-05-02",
+   "last_date": "2023-08-16",
+   "complaints": 776,
+   "with_text": 377
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Refund anticipation check",
+   "first_date": "2017-05-04",
+   "last_date": "2023-08-24",
+   "complaints": 627,
+   "with_text": 400
+  },
+  {
+   "product": "Money transfers",
+   "sub_product": "International money transfer",
+   "first_date": "2013-04-04",
+   "last_date": "2017-04-20",
+   "complaints": 2770,
+   "with_text": 636
+  },
+  {
+   "product": "Money transfers",
+   "sub_product": "Domestic (US) money transfer",
+   "first_date": "2013-04-04",
+   "last_date": "2017-04-21",
+   "complaints": 2584,
+   "with_text": 861
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Conventional home mortgage",
+   "first_date": "2017-04-21",
+   "last_date": "2026-08-31",
+   "complaints": 138356,
+   "with_text": 67542
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Other mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-21",
+   "complaints": 86612,
+   "with_text": 3236
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Conventional fixed mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-22",
+   "complaints": 70593,
+   "with_text": 14557
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "FHA mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2026-08-31",
+   "complaints": 63752,
+   "with_text": 27870
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Conventional adjustable mortgage (ARM)",
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-21",
+   "complaints": 25380,
+   "with_text": 4975
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "VA mortgage",
+   "first_date": "2011-12-05",
+   "last_date": "2026-08-31",
+   "complaints": 23483,
+   "with_text": 12286
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Other type of mortgage",
+   "first_date": "2017-04-21",
+   "last_date": "2026-08-31",
+   "complaints": 17880,
+   "with_text": 5830
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Home equity loan or line of credit (HELOC)",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 14514,
+   "with_text": 6457
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Home equity loan or line of credit",
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-21",
+   "complaints": 11622,
+   "with_text": 2102
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Reverse mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2026-08-30",
+   "complaints": 5391,
+   "with_text": 1545
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Manufactured home loan",
+   "first_date": "2023-08-29",
+   "last_date": "2026-08-31",
+   "complaints": 826,
+   "with_text": 442
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "USDA mortgage",
+   "first_date": "2023-08-29",
+   "last_date": "2026-08-27",
+   "complaints": 765,
+   "with_text": 407
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Second mortgage",
+   "first_date": "2011-12-16",
+   "last_date": "2016-03-10",
+   "complaints": 662,
+   "with_text": 0
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Debt settlement",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-21",
+   "complaints": 331,
+   "with_text": 109
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Check cashing",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-21",
+   "complaints": 266,
+   "with_text": 54
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Money order",
+   "first_date": "2014-07-24",
+   "last_date": "2017-04-17",
+   "complaints": 143,
+   "with_text": 35
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Credit repair",
+   "first_date": "2014-08-04",
+   "last_date": "2017-04-21",
+   "complaints": 102,
+   "with_text": 39
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Traveler\u2019s/Cashier\u2019s checks",
+   "first_date": "2014-07-23",
+   "last_date": "2017-04-12",
+   "complaints": 88,
+   "with_text": 22
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Refund anticipation check",
+   "first_date": "2014-07-19",
+   "last_date": "2017-03-28",
+   "complaints": 68,
+   "with_text": 17
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Foreign currency exchange",
+   "first_date": "2014-08-01",
+   "last_date": "2017-04-04",
+   "complaints": 58,
+   "with_text": 16
+  },
+  {
+   "product": "Payday loan",
+   "sub_product": null,
+   "first_date": "2013-11-06",
+   "last_date": "2017-04-21",
+   "complaints": 5528,
+   "with_text": 1745
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Installment loan",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 13416,
+   "with_text": 7674
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Personal line of credit",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 7367,
+   "with_text": 3604
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Payday loan",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 6963,
+   "with_text": 4200
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Title loan",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 2758,
+   "with_text": 1695
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Pawn loan",
+   "first_date": "2017-05-22",
+   "last_date": "2023-08-19",
+   "complaints": 76,
+   "with_text": 45
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": null,
+   "first_date": "2017-08-14",
+   "last_date": "2022-07-15",
+   "complaints": 34,
+   "with_text": 1
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Installment loan",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 21138,
+   "with_text": 10127
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Personal line of credit",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 6600,
+   "with_text": 3349
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Payday loan",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 5865,
+   "with_text": 3273
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Title loan",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 2446,
+   "with_text": 1432
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Other advances of future income",
+   "first_date": "2023-08-30",
+   "last_date": "2026-08-31",
+   "complaints": 712,
+   "with_text": 351
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Earned wage access",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 386,
+   "with_text": 224
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Pawn loan",
+   "first_date": "2023-08-29",
+   "last_date": "2026-08-24",
+   "complaints": 122,
+   "with_text": 74
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Tax refund anticipation loan or check",
+   "first_date": "2023-09-15",
+   "last_date": "2026-07-29",
+   "complaints": 60,
+   "with_text": 34
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "General-purpose prepaid card",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 10557,
+   "with_text": 5970
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Government benefit card",
+   "first_date": "2023-08-18",
+   "last_date": "2026-08-29",
+   "complaints": 5136,
+   "with_text": 2420
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Gift card",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 2478,
+   "with_text": 1400
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "General purpose card",
+   "first_date": "2014-07-20",
+   "last_date": "2017-04-21",
+   "complaints": 1752,
+   "with_text": 730
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Payroll card",
+   "first_date": "2014-07-25",
+   "last_date": "2026-08-31",
+   "complaints": 1404,
+   "with_text": 754
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Mobile wallet",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-21",
+   "complaints": 418,
+   "with_text": 85
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Gift or merchant card",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-20",
+   "complaints": 402,
+   "with_text": 154
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Government benefit payment card",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-21",
+   "complaints": 389,
+   "with_text": 80
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "ID prepaid card",
+   "first_date": "2014-08-18",
+   "last_date": "2017-04-21",
+   "complaints": 207,
+   "with_text": 101
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Other special purpose card",
+   "first_date": "2014-08-06",
+   "last_date": "2017-04-05",
+   "complaints": 191,
+   "with_text": 58
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Transit card",
+   "first_date": "2014-08-10",
+   "last_date": "2017-04-08",
+   "complaints": 37,
+   "with_text": 19
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Student prepaid card",
+   "first_date": "2023-10-12",
+   "last_date": "2026-08-26",
+   "complaints": 25,
+   "with_text": 10
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Electronic Benefit Transfer / EBT card",
+   "first_date": "2014-11-06",
+   "last_date": "2017-04-06",
+   "complaints": 12,
+   "with_text": 3
+  },
+  {
+   "product": "Student loan",
+   "sub_product": "Federal student loan servicing",
+   "first_date": "2016-02-25",
+   "last_date": "2026-08-31",
+   "complaints": 85554,
+   "with_text": 43718
+  },
+  {
+   "product": "Student loan",
+   "sub_product": "Private student loan",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 25289,
+   "with_text": 13725
+  },
+  {
+   "product": "Student loan",
+   "sub_product": "Non-federal student loan",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-21",
+   "complaints": 22282,
+   "with_text": 5753
+  },
+  {
+   "product": "Vehicle loan or lease",
+   "sub_product": "Loan",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 87850,
+   "with_text": 45414
+  },
+  {
+   "product": "Vehicle loan or lease",
+   "sub_product": "Lease",
+   "first_date": "2017-04-25",
+   "last_date": "2026-08-31",
+   "complaints": 14543,
+   "with_text": 8220
+  },
+  {
+   "product": "Vehicle loan or lease",
+   "sub_product": "Title loan",
+   "first_date": "2017-07-25",
+   "last_date": "2022-09-19",
+   "complaints": 46,
+   "with_text": 29
+  },
+  {
+   "product": "Virtual currency",
+   "sub_product": "Domestic (US) money transfer",
+   "first_date": "2014-08-15",
+   "last_date": "2017-04-03",
+   "complaints": 17,
+   "with_text": 15
+  },
+  {
+   "product": "Virtual currency",
+   "sub_product": "International money transfer",
+   "first_date": "2016-03-28",
+   "last_date": "2016-03-28",
+   "complaints": 1,
+   "with_text": 1
+  }
+ ],
+ "monthly_since_2023": [
+  {
+   "month": "2023-01",
+   "complaints": 93933,
+   "with_text": 39586,
+   "with_text_credit_reporting": 26259,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-02",
+   "complaints": 86539,
+   "with_text": 35023,
+   "with_text_credit_reporting": 24650,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-03",
+   "complaints": 110635,
+   "with_text": 41060,
+   "with_text_credit_reporting": 29814,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-04",
+   "complaints": 97084,
+   "with_text": 36594,
+   "with_text_credit_reporting": 26922,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-05",
+   "complaints": 106211,
+   "with_text": 41134,
+   "with_text_credit_reporting": 30318,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-06",
+   "complaints": 104425,
+   "with_text": 41320,
+   "with_text_credit_reporting": 30513,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-07",
+   "complaints": 106773,
+   "with_text": 40771,
+   "with_text_credit_reporting": 29458,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-08",
+   "complaints": 119711,
+   "with_text": 46311,
+   "with_text_credit_reporting": 33890,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-09",
+   "complaints": 112887,
+   "with_text": 42517,
+   "with_text_credit_reporting": 30785,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-10",
+   "complaints": 117420,
+   "with_text": 43349,
+   "with_text_credit_reporting": 30555,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-11",
+   "complaints": 113365,
+   "with_text": 38894,
+   "with_text_credit_reporting": 26889,
+   "in_progress": 0
+  },
+  {
+   "month": "2023-12",
+   "complaints": 123066,
+   "with_text": 40851,
+   "with_text_credit_reporting": 28704,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-01",
+   "complaints": 143365,
+   "with_text": 43920,
+   "with_text_credit_reporting": 30671,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-02",
+   "complaints": 157614,
+   "with_text": 48111,
+   "with_text_credit_reporting": 34847,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-03",
+   "complaints": 177815,
+   "with_text": 61162,
+   "with_text_credit_reporting": 44113,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-04",
+   "complaints": 191120,
+   "with_text": 63970,
+   "with_text_credit_reporting": 46450,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-05",
+   "complaints": 211961,
+   "with_text": 71313,
+   "with_text_credit_reporting": 54602,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-06",
+   "complaints": 204168,
+   "with_text": 68200,
+   "with_text_credit_reporting": 54310,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-07",
+   "complaints": 232654,
+   "with_text": 72849,
+   "with_text_credit_reporting": 58657,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-08",
+   "complaints": 263816,
+   "with_text": 75894,
+   "with_text_credit_reporting": 60516,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-09",
+   "complaints": 264821,
+   "with_text": 74366,
+   "with_text_credit_reporting": 59717,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-10",
+   "complaints": 295877,
+   "with_text": 79684,
+   "with_text_credit_reporting": 63431,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-11",
+   "complaints": 287077,
+   "with_text": 73591,
+   "with_text_credit_reporting": 58748,
+   "in_progress": 0
+  },
+  {
+   "month": "2024-12",
+   "complaints": 303981,
+   "with_text": 81325,
+   "with_text_credit_reporting": 64608,
+   "in_progress": 0
+  },
+  {
+   "month": "2025-01",
+   "complaints": 475783,
+   "with_text": 172937,
+   "with_text_credit_reporting": 99709,
+   "in_progress": 0
+  },
+  {
+   "month": "2025-02",
+   "complaints": 335236,
+   "with_text": 92468,
+   "with_text_credit_reporting": 71154,
+   "in_progress": 0
+  },
+  {
+   "month": "2025-03",
+   "complaints": 396973,
+   "with_text": 105164,
+   "with_text_credit_reporting": 84844,
+   "in_progress": 0
+  },
+  {
+   "month": "2025-04",
+   "complaints": 406100,
+   "with_text": 104983,
+   "with_text_credit_reporting": 84375,
+   "in_progress": 0
+  },
+  {
+   "month": "2025-05",
+   "complaints": 415182,
+   "with_text": 106947,
+   "with_text_credit_reporting": 84945,
+   "in_progress": 0
+  },
+  {
+   "month": "2025-06",
+   "complaints": 412161,
+   "with_text": 112685,
+   "with_text_credit_reporting": 91358,
+   "in_progress": 0
+  },
+  {
+   "month": "2025-07",
+   "complaints": 473191,
+   "with_text": 125539,
+   "with_text_credit_reporting": 101415,
+   "in_progress": 0
+  },
+  {
+   "month": "2025-08",
+   "complaints": 495570,
+   "with_text": 108865,
+   "with_text_credit_reporting": 84380,
+   "in_progress": 0
+  },
+  {
+   "month": "2025-09",
+   "complaints": 503850,
+   "with_text": 81660,
+   "with_text_credit_reporting": 58449,
+   "in_progress": 65
+  },
+  {
+   "month": "2025-10",
+   "complaints": 519786,
+   "with_text": 76161,
+   "with_text_credit_reporting": 55819,
+   "in_progress": 219
+  },
+  {
+   "month": "2025-11",
+   "complaints": 496658,
+   "with_text": 78131,
+   "with_text_credit_reporting": 57432,
+   "in_progress": 1
+  },
+  {
+   "month": "2025-12",
+   "complaints": 512474,
+   "with_text": 56510,
+   "with_text_credit_reporting": 38876,
+   "in_progress": 0
+  },
+  {
+   "month": "2026-01",
+   "complaints": 541263,
+   "with_text": 22227,
+   "with_text_credit_reporting": 862,
+   "in_progress": 1
+  },
+  {
+   "month": "2026-02",
+   "complaints": 497120,
+   "with_text": 12124,
+   "with_text_credit_reporting": 513,
+   "in_progress": 8
+  },
+  {
+   "month": "2026-03",
+   "complaints": 614945,
+   "with_text": 21640,
+   "with_text_credit_reporting": 816,
+   "in_progress": 22
+  },
+  {
+   "month": "2026-04",
+   "complaints": 618293,
+   "with_text": 21052,
+   "with_text_credit_reporting": 793,
+   "in_progress": 34
+  },
+  {
+   "month": "2026-05",
+   "complaints": 619940,
+   "with_text": 17528,
+   "with_text_credit_reporting": 746,
+   "in_progress": 90
+  },
+  {
+   "month": "2026-06",
+   "complaints": 620794,
+   "with_text": 16820,
+   "with_text_credit_reporting": 751,
+   "in_progress": 448
+  },
+  {
+   "month": "2026-07",
+   "complaints": 672036,
+   "with_text": 10002,
+   "with_text_credit_reporting": 463,
+   "in_progress": 105327
+  },
+  {
+   "month": "2026-08",
+   "complaints": 667140,
+   "with_text": 1,
+   "with_text_credit_reporting": 1,
+   "in_progress": 370160
+  }
+ ],
+ "blank_share": [
+  {
+   "col": "date_received",
+   "blank_share": 0.0
+  },
+  {
+   "col": "product",
+   "blank_share": 0.0
+  },
+  {
+   "col": "sub_product",
+   "blank_share": 0.0134
+  },
+  {
+   "col": "issue",
+   "blank_share": 0.0
+  },
+  {
+   "col": "sub_issue",
+   "blank_share": 0.0532
+  },
+  {
+   "col": "narrative",
+   "blank_share": 0.7803
+  },
+  {
+   "col": "company_public_response",
+   "blank_share": 0.4465
+  },
+  {
+   "col": "company",
+   "blank_share": 0.0
+  },
+  {
+   "col": "state",
+   "blank_share": 0.0036
+  },
+  {
+   "col": "zip_code",
+   "blank_share": 0.0001
+  },
+  {
+   "col": "tags",
+   "blank_share": 0.9542
+  },
+  {
+   "col": "submitted_via",
+   "blank_share": 0.0
+  },
+  {
+   "col": "date_sent_to_company",
+   "blank_share": 0.0
+  },
+  {
+   "col": "company_response",
+   "blank_share": 0.0
+  },
+  {
+   "col": "timely_response",
+   "blank_share": 0.0
+  },
+  {
+   "col": "complaint_id",
+   "blank_share": 0.0
+  },
+  {
+   "col": "source_file",
+   "blank_share": 0.0
+  }
+ ],
+ "text_length": [
+  {
+   "n": 3851415,
+   "chars_p5_p25_p50_p75_p95_p99": [
+    127.0,
+    347.0,
+    670.0,
+    1222.0,
+    3007.0,
+    5874.0
+   ],
+   "max_chars": 35984,
+   "share_with_masking": 0.6764
+  }
+ ],
+ "repeats_by_year": [
+  {
+   "year": 2015,
+   "with_text": 54723,
+   "repeated_text": 1701,
+   "repeated_share": 0.0311,
+   "most_copies": 536
+  },
+  {
+   "year": 2016,
+   "with_text": 77766,
+   "repeated_text": 2326,
+   "repeated_share": 0.0299,
+   "most_copies": 103
+  },
+  {
+   "year": 2017,
+   "with_text": 115311,
+   "repeated_text": 9196,
+   "repeated_share": 0.0797,
+   "most_copies": 1035
+  },
+  {
+   "year": 2018,
+   "with_text": 118393,
+   "repeated_text": 15558,
+   "repeated_share": 0.1314,
+   "most_copies": 1035
+  },
+  {
+   "year": 2019,
+   "with_text": 124843,
+   "repeated_text": 21089,
+   "repeated_share": 0.1689,
+   "most_copies": 1035
+  },
+  {
+   "year": 2020,
+   "with_text": 174297,
+   "repeated_text": 47714,
+   "repeated_share": 0.2738,
+   "most_copies": 996
+  },
+  {
+   "year": 2021,
+   "with_text": 203570,
+   "repeated_text": 48862,
+   "repeated_share": 0.24,
+   "most_copies": 24247
+  },
+  {
+   "year": 2022,
+   "with_text": 337273,
+   "repeated_text": 103873,
+   "repeated_share": 0.308,
+   "most_copies": 24247
+  },
+  {
+   "year": 2023,
+   "with_text": 487410,
+   "repeated_text": 190431,
+   "repeated_share": 0.3907,
+   "most_copies": 30112
+  },
+  {
+   "year": 2024,
+   "with_text": 814385,
+   "repeated_text": 418002,
+   "repeated_share": 0.5133,
+   "most_copies": 30112
+  },
+  {
+   "year": 2025,
+   "with_text": 1222050,
+   "repeated_text": 716911,
+   "repeated_share": 0.5866,
+   "most_copies": 30112
+  },
+  {
+   "year": 2026,
+   "with_text": 121394,
+   "repeated_text": 14327,
+   "repeated_share": 0.118,
+   "most_copies": 30112
+  }
+ ],
+ "repeats_by_product": [
+  {
+   "product": "Credit reporting or other personal consumer reports",
+   "with_text": 1672429,
+   "repeated_share": 0.6668
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "with_text": 807499,
+   "repeated_share": 0.4186
+  },
+  {
+   "product": "Debt collection",
+   "with_text": 445246,
+   "repeated_share": 0.1848
+  },
+  {
+   "product": "Checking or savings account",
+   "with_text": 189350,
+   "repeated_share": 0.0267
+  },
+  {
+   "product": "Mortgage",
+   "with_text": 147249,
+   "repeated_share": 0.0026
+  },
+  {
+   "product": "Credit card",
+   "with_text": 129144,
+   "repeated_share": 0.087
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "with_text": 122005,
+   "repeated_share": 0.2238
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "with_text": 108683,
+   "repeated_share": 0.0514
+  },
+  {
+   "product": "Student loan",
+   "with_text": 63196,
+   "repeated_share": 0.0088
+  },
+  {
+   "product": "Vehicle loan or lease",
+   "with_text": 53663,
+   "repeated_share": 0.0154
+  },
+  {
+   "product": "Credit reporting",
+   "with_text": 31587,
+   "repeated_share": 0.0882
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "with_text": 18864,
+   "repeated_share": 0.0075
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "with_text": 17219,
+   "repeated_share": 0.0092
+  },
+  {
+   "product": "Bank account or service",
+   "with_text": 14883,
+   "repeated_share": 0.0038
+  },
+  {
+   "product": "Prepaid card",
+   "with_text": 11784,
+   "repeated_share": 0.0079
+  },
+  {
+   "product": "Consumer Loan",
+   "with_text": 9458,
+   "repeated_share": 0.008
+  },
+  {
+   "product": "Debt or credit management",
+   "with_text": 5606,
+   "repeated_share": 0.0275
+  },
+  {
+   "product": "Payday loan",
+   "with_text": 1745,
+   "repeated_share": 0.008
+  },
+  {
+   "product": "Money transfers",
+   "with_text": 1497,
+   "repeated_share": 0.0013
+  },
+  {
+   "product": "Other financial service",
+   "with_text": 292,
+   "repeated_share": 0.0068
+  },
+  {
+   "product": "Virtual currency",
+   "with_text": 16,
+   "repeated_share": 0.1875
+  }
+ ],
+ "repeat_label_agreement": [
+  {
+   "repeated_texts": 265289,
+   "complaints": 1589990,
+   "share_with_modal_product": 0.968
+  }
+ ],
+ "top_companies": [
+  {
+   "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+   "complaints": 4785659,
+   "share": 0.2729
+  },
+  {
+   "company": "EQUIFAX, INC.",
+   "complaints": 4658351,
+   "share": 0.2657
+  },
+  {
+   "company": "Experian Information Solutions Inc.",
+   "complaints": 4222327,
+   "share": 0.2408
+  },
+  {
+   "company": "BANK OF AMERICA, NATIONAL ASSOCIATION",
+   "complaints": 186233,
+   "share": 0.0106
+  },
+  {
+   "company": "JPMORGAN CHASE & CO.",
+   "complaints": 175270,
+   "share": 0.01
+  },
+  {
+   "company": "WELLS FARGO & COMPANY",
+   "complaints": 174517,
+   "share": 0.01
+  },
+  {
+   "company": "CAPITAL ONE FINANCIAL CORPORATION",
+   "complaints": 171222,
+   "share": 0.0098
+  },
+  {
+   "company": "CITIBANK, N.A.",
+   "complaints": 141213,
+   "share": 0.0081
+  },
+  {
+   "company": "SYNCHRONY FINANCIAL",
+   "complaints": 83488,
+   "share": 0.0048
+  },
+  {
+   "company": "Resurgent Capital Services L.P.",
+   "complaints": 71113,
+   "share": 0.0041
+  },
+  {
+   "company": "Block, Inc.",
+   "complaints": 70349,
+   "share": 0.004
+  },
+  {
+   "company": "ENCORE CAPITAL GROUP INC.",
+   "complaints": 66621,
+   "share": 0.0038
+  },
+  {
+   "company": "LEXISNEXIS",
+   "complaints": 65951,
+   "share": 0.0038
+  },
+  {
+   "company": "Portfolio Recovery Associates, LLC",
+   "complaints": 65254,
+   "share": 0.0037
+  },
+  {
+   "company": "AMERICAN EXPRESS COMPANY",
+   "complaints": 59715,
+   "share": 0.0034
+  }
+ ],
+ "top3_company_share_by_year": [
+  {
+   "year": 2011,
+   "top3_share": 0.4957,
+   "top3": "BANK OF AMERICA, NATIONAL ASSOCIATION | JPMORGAN CHASE & CO. | CITIBANK, N.A."
+  },
+  {
+   "year": 2012,
+   "top3_share": 0.4521,
+   "top3": "BANK OF AMERICA, NATIONAL ASSOCIATION | WELLS FARGO & COMPANY | JPMORGAN CHASE & CO."
+  },
+  {
+   "year": 2013,
+   "top3_share": 0.3286,
+   "top3": "BANK OF AMERICA, NATIONAL ASSOCIATION | WELLS FARGO & COMPANY | JPMORGAN CHASE & CO."
+  },
+  {
+   "year": 2014,
+   "top3_share": 0.1994,
+   "top3": "BANK OF AMERICA, NATIONAL ASSOCIATION | Experian Information Solutions Inc. | EQUIFAX, INC."
+  },
+  {
+   "year": 2015,
+   "top3_share": 0.1961,
+   "top3": "EQUIFAX, INC. | Experian Information Solutions Inc. | TRANSUNION INTERMEDIATE HOLDINGS, INC."
+  },
+  {
+   "year": 2016,
+   "top3_share": 0.2243,
+   "top3": "EQUIFAX, INC. | Experian Information Solutions Inc. | TRANSUNION INTERMEDIATE HOLDINGS, INC."
+  },
+  {
+   "year": 2017,
+   "top3_share": 0.3068,
+   "top3": "EQUIFAX, INC. | TRANSUNION INTERMEDIATE HOLDINGS, INC. | Experian Information Solutions Inc."
+  },
+  {
+   "year": 2018,
+   "top3_share": 0.3435,
+   "top3": "EQUIFAX, INC. | Experian Information Solutions Inc. | TRANSUNION INTERMEDIATE HOLDINGS, INC."
+  },
+  {
+   "year": 2019,
+   "top3_share": 0.4213,
+   "top3": "EQUIFAX, INC. | TRANSUNION INTERMEDIATE HOLDINGS, INC. | Experian Information Solutions Inc."
+  },
+  {
+   "year": 2020,
+   "top3_share": 0.5689,
+   "top3": "Experian Information Solutions Inc. | TRANSUNION INTERMEDIATE HOLDINGS, INC. | EQUIFAX, INC."
+  },
+  {
+   "year": 2021,
+   "top3_share": 0.5152,
+   "top3": "EQUIFAX, INC. | TRANSUNION INTERMEDIATE HOLDINGS, INC. | Experian Information Solutions Inc."
+  },
+  {
+   "year": 2022,
+   "top3_share": 0.6863,
+   "top3": "TRANSUNION INTERMEDIATE HOLDINGS, INC. | EQUIFAX, INC. | Experian Information Solutions Inc."
+  },
+  {
+   "year": 2023,
+   "top3_share": 0.7575,
+   "top3": "TRANSUNION INTERMEDIATE HOLDINGS, INC. | EQUIFAX, INC. | Experian Information Solutions Inc."
+  },
+  {
+   "year": 2024,
+   "top3_share": 0.8405,
+   "top3": "TRANSUNION INTERMEDIATE HOLDINGS, INC. | Experian Information Solutions Inc. | EQUIFAX, INC."
+  },
+  {
+   "year": 2025,
+   "top3_share": 0.8582,
+   "top3": "EQUIFAX, INC. | TRANSUNION INTERMEDIATE HOLDINGS, INC. | Experian Information Solutions Inc."
+  },
+  {
+   "year": 2026,
+   "top3_share": 0.8784,
+   "top3": "TRANSUNION INTERMEDIATE HOLDINGS, INC. | EQUIFAX, INC. | Experian Information Solutions Inc."
+  }
+ ],
+ "submitted_via": [
+  {
+   "submitted_via": "Web",
+   "complaints": 16898300
+  },
+  {
+   "submitted_via": "Referral",
+   "complaints": 278486
+  },
+  {
+   "submitted_via": "Phone",
+   "complaints": 220604
+  },
+  {
+   "submitted_via": "Postal mail",
+   "complaints": 110461
+  },
+  {
+   "submitted_via": "Fax",
+   "complaints": 25644
+  },
+  {
+   "submitted_via": "Email",
+   "complaints": 423
+  }
+ ],
+ "company_response": [
+  {
+   "company_response": "Closed with explanation",
+   "complaints": 10820382
+  },
+  {
+   "company_response": "Closed with non-monetary relief",
+   "complaints": 5944694
+  },
+  {
+   "company_response": "In progress",
+   "complaints": 476377
+  },
+  {
+   "company_response": "Closed with monetary relief",
+   "complaints": 218197
+  },
+  {
+   "company_response": "Untimely response",
+   "complaints": 33465
+  },
+  {
+   "company_response": "Closed without relief",
+   "complaints": 17867
+  },
+  {
+   "company_response": "Closed",
+   "complaints": 17611
+  },
+  {
+   "company_response": "Closed with relief",
+   "complaints": 5304
+  },
+  {
+   "company_response": null,
+   "complaints": 21
+  }
+ ],
+ "timely_response": [
+  {
+   "timely_response": "Yes",
+   "complaints": 17425219
+  },
+  {
+   "timely_response": "No",
+   "complaints": 108699
+  }
+ ],
+ "tags": [
+  {
+   "tags": null,
+   "complaints": 16731296
+  },
+  {
+   "tags": "Servicemember",
+   "complaints": 510144
+  },
+  {
+   "tags": "Older American",
+   "complaints": 233752
+  },
+  {
+   "tags": "Older American, Servicemember",
+   "complaints": 58726
+  }
+ ],
+ "cardinality": [
+  {
+   "products": 21,
+   "sub_products": 86,
+   "issues": 178,
+   "sub_issues": 272,
+   "companies": 8112,
+   "states": 63
+  }
+ ]
+}
