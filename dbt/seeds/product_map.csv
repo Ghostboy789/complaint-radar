@@ -1,0 +1,33 @@
+product,sub_product,product_group
+Bank account or service,*,bank_account
+Checking or savings account,*,bank_account
+Consumer Loan,*,personal_loan
+Consumer Loan,Vehicle loan,vehicle_loan
+Consumer Loan,Vehicle lease,vehicle_loan
+Credit card,*,credit_card
+Credit card or prepaid card,*,credit_card
+Credit card or prepaid card,Government benefit card,prepaid_card
+Credit card or prepaid card,General-purpose prepaid card,prepaid_card
+Credit card or prepaid card,Gift card,prepaid_card
+Credit card or prepaid card,Payroll card,prepaid_card
+Credit card or prepaid card,Student prepaid card,prepaid_card
+Credit reporting,*,credit_reporting
+Credit reporting or other personal consumer reports,*,credit_reporting
+"Credit reporting, credit repair services, or other personal consumer reports",*,credit_reporting
+"Credit reporting, credit repair services, or other personal consumer reports",Credit repair services,debt_management
+Debt collection,*,debt_collection
+Debt or credit management,*,debt_management
+"Money transfer, virtual currency, or money service",*,money_transfer
+"Money transfer, virtual currency, or money service",Debt settlement,debt_management
+Money transfers,*,money_transfer
+Mortgage,*,mortgage
+Other financial service,*,money_transfer
+Other financial service,Debt settlement,debt_management
+Other financial service,Credit repair,debt_management
+Payday loan,*,personal_loan
+"Payday loan, title loan, or personal loan",*,personal_loan
+"Payday loan, title loan, personal loan, or advance loan",*,personal_loan
+Prepaid card,*,prepaid_card
+Student loan,*,student_loan
+Vehicle loan or lease,*,vehicle_loan
+Virtual currency,*,money_transfer

@@ -1,0 +1,12 @@
+product_group,label,current_product,letter,in_radar
+credit_reporting,Credit reporting,Credit reporting or other personal consumer reports,A,true
+debt_collection,Debt collection,Debt collection,B,true
+mortgage,Mortgage,Mortgage,C,true
+bank_account,Bank account,Checking or savings account,D,true
+credit_card,Credit card,Credit card,E,true
+student_loan,Student loan,Student loan,F,true
+money_transfer,Money transfer,"Money transfer, virtual currency, or money service",G,true
+vehicle_loan,Vehicle loan,Vehicle loan or lease,H,true
+personal_loan,Personal loan,"Payday loan, title loan, personal loan, or advance loan",I,true
+prepaid_card,Prepaid card,Prepaid card,J,true
+debt_management,Debt management,Debt or credit management,K,false

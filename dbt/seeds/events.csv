@@ -1,0 +1,6 @@
+event_id,event_date,product_group,title
+equifax_breach,2017-09-07,credit_reporting,Equifax data breach announced
+cares_act,2020-03-27,mortgage,CARES Act mortgage forbearance signed
+ftx_bankruptcy,2022-11-11,money_transfer,FTX files for bankruptcy
+svb_failure,2023-03-10,bank_account,Silicon Valley Bank fails
+student_loan_restart,2023-10-01,student_loan,Federal student-loan payments restart
