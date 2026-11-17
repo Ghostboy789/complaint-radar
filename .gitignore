@@ -9,6 +9,8 @@ __pycache__/
 .ruff_cache/
 dbt/target/
 dbt/logs/
+logs/
+data/tmp/
 dbt/dbt_packages/
 dbt/.user.yml
 *.duckdb

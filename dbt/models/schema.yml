@@ -1,0 +1,555 @@
+version: 2
+
+models:
+  - name: ensure_marts_dir
+    description: "Build helper that creates the Parquet output folder before the marts write to it."
+
+  - name: stg_complaints
+    description: "One row per raw complaint, typed and without the narrative text."
+    columns:
+      - name: complaint_id
+        description: "Complaint identifier, cast to BIGINT."
+        data_tests:
+          - unique
+          - not_null
+      - name: date_received
+        description: "Date the complaint was received."
+        data_tests:
+          - not_null
+      - name: product
+        description: "Product label as published by the source."
+        data_tests:
+          - not_null
+      - name: sub_product
+        description: "Sub-product label as published by the source; nullable."
+      - name: issue
+        description: "Issue label as published by the source; null on a few referral rows."
+      - name: company
+        description: "Company the complaint was sent to."
+        data_tests:
+          - not_null
+      - name: state
+        description: "Two-letter state code; nullable."
+      - name: submitted_via
+        description: "Channel the complaint came through."
+        data_tests:
+          - not_null
+      - name: company_response
+        description: "Company response category; null on a few records."
+      - name: timely_response
+        description: "Whether the company answered on time ('Yes' or 'No')."
+        data_tests:
+          - not_null
+      - name: has_narrative
+        description: "True when a non-blank narrative is present."
+        data_tests:
+          - not_null
+      - name: text_hash
+        description: "MD5 of the normalised narrative when present; nullable."
+
+  - name: stg_narratives
+    description: "Narrative text for complaints that have one, read straight from the raw files."
+    columns:
+      - name: complaint_id
+        description: "Complaint identifier."
+        data_tests:
+          - not_null
+      - name: narrative
+        description: "Published complaint narrative."
+        data_tests:
+          - not_null
+
+  - name: int_complaints
+    description: "Staged complaints enriched with product group, calendar fields and response flags."
+    columns:
+      - name: complaint_id
+        description: "Complaint identifier."
+        data_tests:
+          - unique
+          - not_null
+      - name: date_received
+        description: "Date the complaint was received."
+        data_tests:
+          - not_null
+      - name: week_start
+        description: "Monday of the week the complaint was received."
+      - name: month_start
+        description: "First day of the month the complaint was received."
+      - name: year
+        description: "Calendar year the complaint was received."
+      - name: product
+        description: "Product label as published by the source."
+      - name: sub_product
+        description: "Sub-product label as published by the source; nullable."
+      - name: product_group
+        description: "One of the eleven product groups mapped from product and sub-product."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: &product_groups
+                  - credit_reporting
+                  - debt_collection
+                  - mortgage
+                  - bank_account
+                  - credit_card
+                  - student_loan
+                  - money_transfer
+                  - vehicle_loan
+                  - personal_loan
+                  - prepaid_card
+                  - debt_management
+      - name: is_responded
+        description: "True when the company response is not 'In progress'."
+      - name: is_timely
+        description: "True when the company answered on time."
+      - name: is_monetary_relief
+        description: "True when the response was 'Closed with monetary relief'."
+      - name: is_any_relief
+        description: "True when the response was any kind of relief."
+      - name: has_narrative
+        description: "True when a non-blank narrative is present."
+      - name: text_hash
+        description: "MD5 of the normalised narrative when present; nullable."
+
+  - name: fct_complaints
+    description: "Fact table with one row per complaint and no narrative text."
+    columns:
+      - name: complaint_id
+        description: "Complaint identifier, unique across the whole data."
+        data_tests:
+          - unique
+          - not_null
+      - name: date_received
+        description: "Date the complaint was received."
+        data_tests:
+          - not_null
+      - name: week_start
+        description: "Monday of the complaint week."
+        data_tests:
+          - not_null
+      - name: month_start
+        description: "First day of the complaint month."
+        data_tests:
+          - not_null
+      - name: year
+        description: "Calendar year of the complaint."
+        data_tests:
+          - not_null
+      - name: product
+        description: "Product label as published by the source."
+        data_tests:
+          - not_null
+      - name: product_group
+        description: "One of the eleven product groups."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: *product_groups
+      - name: issue
+        description: "Issue label as published by the source."
+      - name: company
+        description: "Company the complaint was sent to."
+        data_tests:
+          - not_null
+      - name: state
+        description: "Two-letter state code; nullable."
+      - name: submitted_via
+        description: "Channel the complaint came through."
+      - name: company_response
+        description: "Company response category."
+        data_tests:
+          - not_null
+      - name: is_responded
+        description: "True when the company response is not 'In progress'."
+        data_tests:
+          - not_null
+      - name: is_timely
+        description: "True when the company answered on time."
+        data_tests:
+          - not_null
+      - name: is_monetary_relief
+        description: "True when the response was 'Closed with monetary relief'."
+        data_tests:
+          - not_null
+      - name: is_any_relief
+        description: "True when the response was any kind of relief."
+        data_tests:
+          - not_null
+      - name: has_narrative
+        description: "True when a non-blank narrative is present."
+        data_tests:
+          - not_null
+      - name: text_hash
+        description: "MD5 of the normalised narrative when present; nullable."
+
+  - name: dim_product_map
+    description: "Observed product and sub-product pairs with dates, counts and their product group."
+    columns:
+      - name: product
+        description: "Product label as published by the source."
+        data_tests:
+          - not_null
+      - name: sub_product
+        description: "Sub-product label as published by the source; nullable."
+      - name: product_group
+        description: "Product group this pair maps to."
+        data_tests:
+          - not_null
+      - name: first_date
+        description: "First date the pair was received."
+        data_tests:
+          - not_null
+      - name: last_date
+        description: "Last date the pair was received."
+        data_tests:
+          - not_null
+      - name: complaints
+        description: "Complaints carrying this pair."
+        data_tests:
+          - not_null
+      - name: with_narrative
+        description: "Complaints carrying this pair that have a narrative."
+        data_tests:
+          - not_null
+
+  - name: dim_events
+    description: "The five public events with the Monday of their event week."
+    columns:
+      - name: event_id
+        description: "Short event identifier."
+        data_tests:
+          - unique
+          - not_null
+      - name: event_date
+        description: "Date of the event."
+        data_tests:
+          - not_null
+      - name: week_start
+        description: "Monday of the event week."
+        data_tests:
+          - not_null
+      - name: product_group
+        description: "Product group whose series is scored against the event."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: *product_groups
+      - name: title
+        description: "Human-readable event title."
+        data_tests:
+          - not_null
+
+  - name: mart_volume_monthly
+    description: "Monthly complaint volume and response counts by product group."
+    columns:
+      - name: month_start
+        description: "First day of the month."
+        data_tests:
+          - not_null
+      - name: product_group
+        description: "One of the eleven product groups."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: *product_groups
+      - name: complaints
+        description: "Complaints received in the month."
+        data_tests:
+          - not_null
+      - name: with_narrative
+        description: "Complaints with a narrative."
+        data_tests:
+          - not_null
+      - name: responded
+        description: "Complaints whose company response is not 'In progress'."
+        data_tests:
+          - not_null
+      - name: timely
+        description: "Timely responses among responded complaints."
+        data_tests:
+          - not_null
+      - name: monetary_relief
+        description: "Responses closed with monetary relief."
+        data_tests:
+          - not_null
+      - name: any_relief
+        description: "Responses closed with any kind of relief."
+        data_tests:
+          - not_null
+
+  - name: mart_volume_cube
+    description: "Yearly complaint and response counts by product group and company bucket."
+    columns:
+      - name: year
+        description: "Calendar year."
+        data_tests:
+          - not_null
+      - name: product_group
+        description: "One of the eleven product groups."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: *product_groups
+      - name: company_bucket
+        description: "One of the 20 largest companies, else 'All other companies'."
+        data_tests:
+          - not_null
+      - name: complaints
+        description: "Complaints in the bucket."
+        data_tests:
+          - not_null
+      - name: with_narrative
+        description: "Complaints with a narrative."
+        data_tests:
+          - not_null
+      - name: responded
+        description: "Complaints whose company response is not 'In progress'."
+        data_tests:
+          - not_null
+      - name: timely
+        description: "Timely responses among responded complaints."
+        data_tests:
+          - not_null
+      - name: monetary_relief
+        description: "Responses closed with monetary relief."
+        data_tests:
+          - not_null
+      - name: any_relief
+        description: "Responses closed with any kind of relief."
+        data_tests:
+          - not_null
+
+  - name: mart_state_year
+    description: "Complaint counts by state and year, with missing states labelled Unknown."
+    columns:
+      - name: state
+        description: "Two-letter state code or 'Unknown'."
+        data_tests:
+          - not_null
+      - name: year
+        description: "Calendar year."
+        data_tests:
+          - not_null
+      - name: complaints
+        description: "Complaints in the state and year."
+        data_tests:
+          - not_null
+
+  - name: mart_response_mix
+    description: "Company response category counts by year and product group."
+    columns:
+      - name: year
+        description: "Calendar year."
+        data_tests:
+          - not_null
+      - name: product_group
+        description: "One of the eleven product groups."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: *product_groups
+      - name: company_response
+        description: "Company response category."
+        data_tests:
+          - not_null
+      - name: complaints
+        description: "Complaints with this response."
+        data_tests:
+          - not_null
+
+  - name: mart_weekly_product
+    description: "Full weekly grid for all eleven product groups, zeros included."
+    columns:
+      - name: week_start
+        description: "Monday of the week."
+        data_tests:
+          - not_null
+      - name: product_group
+        description: "One of the eleven product groups."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: *product_groups
+      - name: complaints
+        description: "Complaints received in the week."
+        data_tests:
+          - not_null
+      - name: with_narrative
+        description: "Complaints with a narrative."
+        data_tests:
+          - not_null
+
+  - name: mart_weekly_issue
+    description: "Weekly complaint counts by product group and issue, full weeks with complaints only."
+    columns:
+      - name: week_start
+        description: "Monday of the week."
+        data_tests:
+          - not_null
+      - name: product_group
+        description: "One of the eleven product groups."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: *product_groups
+      - name: issue
+        description: "Issue label as published by the source."
+        data_tests:
+          - not_null
+      - name: complaints
+        description: "Complaints with this issue in the week."
+        data_tests:
+          - not_null
+
+  - name: mart_text_repeats
+    description: "Narrative counts and repeated-text counts by year and product group."
+    columns:
+      - name: year
+        description: "Calendar year."
+        data_tests:
+          - not_null
+      - name: product_group
+        description: "One of the eleven product groups."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: *product_groups
+      - name: with_narrative
+        description: "Complaints with a narrative."
+        data_tests:
+          - not_null
+      - name: repeated_text
+        description: "Narratives whose text hash occurs more than once in the whole data."
+        data_tests:
+          - not_null
+
+  - name: mart_label_noise
+    description: "One-row summary of repeated texts in the 2026 test period."
+    columns:
+      - name: complaints
+        description: "Test-period complaints whose text hash is shared by at least two test complaints."
+        data_tests:
+          - not_null
+      - name: distinct_texts
+        description: "Number of shared text hashes."
+        data_tests:
+          - not_null
+      - name: in_modal_product
+        description: "Complaints carrying the most common product of their text."
+        data_tests:
+          - not_null
+
+  - name: mart_router_samples
+    description: "Router train, validation and test rows with narrative text."
+    columns:
+      - name: complaint_id
+        description: "Complaint identifier, unique across the three splits."
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_complaints')
+                field: complaint_id
+      - name: split
+        description: "One of 'train', 'validation' or 'test'."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - train
+                  - validation
+                  - test
+      - name: date_received
+        description: "Date the complaint was received."
+        data_tests:
+          - not_null
+      - name: product
+        description: "One of the eleven current product labels."
+        data_tests:
+          - not_null
+      - name: issue
+        description: "Issue label as published by the source."
+        data_tests:
+          - not_null
+      - name: text_hash
+        description: "MD5 of the normalised narrative."
+        data_tests:
+          - not_null
+      - name: is_new_text
+        description: "Test rows only: true when the text hash was not seen before 2026."
+        data_tests:
+          - not_null
+      - name: narrative
+        description: "Published complaint narrative."
+        data_tests:
+          - not_null
+
+  - name: mart_llm_samples
+    description: "Fixed language-model samples for the test, validation and few-shot roles."
+    columns:
+      - name: complaint_id
+        description: "Complaint identifier, unique across roles."
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_complaints')
+                field: complaint_id
+      - name: role
+        description: "One of 'test', 'validation' or 'fewshot'."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - test
+                  - validation
+                  - fewshot
+      - name: product
+        description: "One of the eleven current product labels."
+        data_tests:
+          - not_null
+      - name: text_hash
+        description: "MD5 of the normalised narrative, unique within role and product."
+        data_tests:
+          - not_null
+      - name: narrative
+        description: "Published complaint narrative."
+        data_tests:
+          - not_null
+
+  - name: mart_novelty_sample
+    description: "Up to 100 narratives per week and event product group from 2015-03-23."
+    columns:
+      - name: complaint_id
+        description: "Complaint identifier, unique in the sample."
+        data_tests:
+          - unique
+          - not_null
+      - name: week_start
+        description: "Monday of the week."
+        data_tests:
+          - not_null
+      - name: product_group
+        description: "Event product group."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: *product_groups
+      - name: narrative
+        description: "Published complaint narrative."
+        data_tests:
+          - not_null

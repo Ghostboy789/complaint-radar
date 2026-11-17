@@ -1,0 +1,59 @@
+name: complaint_radar
+version: "1.0.0"
+config-version: 2
+
+profile: complaint_radar
+
+model-paths:
+  - models
+seed-paths:
+  - seeds
+test-paths:
+  - tests
+analysis-paths:
+  - analyses
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+
+target-path: target
+clean-targets:
+  - target
+  - dbt_packages
+
+# DuckDB refuses to change `temp_directory` once the database has spilled, and dbt-duckdb
+# re-applies every entry in `settings` on each new cursor. Set it once here instead.
+on-run-start:
+  - "SET temp_directory = '{{ env_var('CR_TMP_DIR', '../data/tmp') }}'"
+
+models:
+  complaint_radar:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: table
+    marts:
+      +materialized: table
+      +post-hook: "{{ write_mart_parquet() }}"
+
+seeds:
+  complaint_radar:
+    product_map:
+      +column_types:
+        product: varchar
+        sub_product: varchar
+        product_group: varchar
+    product_groups:
+      +column_types:
+        product_group: varchar
+        label: varchar
+        current_product: varchar
+        letter: varchar
+        in_radar: boolean
+    events:
+      +column_types:
+        event_id: varchar
+        event_date: date
+        product_group: varchar
+        title: varchar
