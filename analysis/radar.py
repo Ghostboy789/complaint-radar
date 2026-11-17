@@ -129,8 +129,7 @@ def naive_alarm_weeks(counts) -> list[int]:
 def episode_indices(weeks, z=None, gap: int = EPISODE_GAP_WEEKS) -> list[dict]:
     """Group sorted alarm weeks into episodes.
 
-    The gap is the number of weeks with no alarm between two alarm weeks, so alarms five
-    calendar weeks apart (four empty weeks) stay in the same episode.
+    Alarm weeks no more than `gap` weeks apart belong to one episode (ANALYSIS_PLAN.md 7).
     """
     ordered = sorted(int(week) for week in weeks)
     if not ordered:
@@ -138,7 +137,7 @@ def episode_indices(weeks, z=None, gap: int = EPISODE_GAP_WEEKS) -> list[dict]:
 
     groups = [[ordered[0]]]
     for week in ordered[1:]:
-        if week - groups[-1][-1] - 1 > gap:
+        if week - groups[-1][-1] > gap:
             groups.append([week])
         else:
             groups[-1].append(week)

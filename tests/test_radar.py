@@ -66,9 +66,11 @@ def test_naive_rule_needs_two_weeks_above_the_mean():
 
 
 def test_episode_gap_groups_alarms():
-    episodes = radar.episode_indices([10, 11, 15, 20, 30])
+    # 11 -> 15 is 4 weeks apart (same episode); 15 -> 20 is 5 weeks apart (new episode)
+    episodes = radar.episode_indices([10, 11, 15, 20, 24, 30])
     assert [(episode["start"], episode["end"]) for episode in episodes] == [
-        (10, 20),
+        (10, 15),
+        (20, 24),
         (30, 30),
     ]
 
