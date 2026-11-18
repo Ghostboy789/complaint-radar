@@ -1,0 +1,2274 @@
+{
+ "totals": {
+  "complaints": 17533918,
+  "with_narrative": 3851415,
+  "first_date": "2011-12-01",
+  "last_date": "2026-08-31",
+  "companies": 8112,
+  "narrative_share": {
+   "value": 0.219655,
+   "ci_low": 0.219461,
+   "ci_high": 0.219849,
+   "n": 17533918
+  },
+  "timely_rate": {
+   "value": 0.993628,
+   "ci_low": 0.99359,
+   "ci_high": 0.993665,
+   "n": 17057541
+  },
+  "monetary_relief_rate": {
+   "value": 0.012792,
+   "ci_low": 0.012739,
+   "ci_high": 0.012845,
+   "n": 17057541
+  },
+  "any_relief_rate": {
+   "value": 0.361611,
+   "ci_low": 0.361383,
+   "ci_high": 0.361839,
+   "n": 17057541
+  }
+ },
+ "by_year": [
+  {
+   "year": 2011,
+   "complaints": 2536,
+   "with_narrative": 0,
+   "narrative_share": {
+    "value": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.001512,
+    "n": 2536
+   },
+   "timely_rate": {
+    "value": 0.901025,
+    "ci_low": 0.888789,
+    "ci_high": 0.912048,
+    "n": 2536
+   },
+   "monetary_relief_rate": {
+    "value": 0.000789,
+    "ci_low": 0.000216,
+    "ci_high": 0.002871,
+    "n": 2536
+   }
+  },
+  {
+   "year": 2012,
+   "complaints": 72368,
+   "with_narrative": 0,
+   "narrative_share": {
+    "value": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 5.3e-05,
+    "n": 72368
+   },
+   "timely_rate": {
+    "value": 0.965358,
+    "ci_low": 0.964,
+    "ci_high": 0.966665,
+    "n": 72368
+   },
+   "monetary_relief_rate": {
+    "value": 0.090869,
+    "ci_low": 0.088796,
+    "ci_high": 0.092985,
+    "n": 72368
+   }
+  },
+  {
+   "year": 2013,
+   "complaints": 108214,
+   "with_narrative": 0,
+   "narrative_share": {
+    "value": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 3.5e-05,
+    "n": 108214
+   },
+   "timely_rate": {
+    "value": 0.98831,
+    "ci_low": 0.987652,
+    "ci_high": 0.988933,
+    "n": 108214
+   },
+   "monetary_relief_rate": {
+    "value": 0.08242,
+    "ci_low": 0.080796,
+    "ci_high": 0.084073,
+    "n": 108214
+   }
+  },
+  {
+   "year": 2014,
+   "complaints": 152909,
+   "with_narrative": 0,
+   "narrative_share": {
+    "value": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 2.5e-05,
+    "n": 152909
+   },
+   "timely_rate": {
+    "value": 0.977117,
+    "ci_low": 0.976356,
+    "ci_high": 0.977855,
+    "n": 152909
+   },
+   "monetary_relief_rate": {
+    "value": 0.061115,
+    "ci_low": 0.059925,
+    "ci_high": 0.062326,
+    "n": 152909
+   }
+  },
+  {
+   "year": 2015,
+   "complaints": 168273,
+   "with_narrative": 54723,
+   "narrative_share": {
+    "value": 0.325204,
+    "ci_low": 0.322969,
+    "ci_high": 0.327446,
+    "n": 168273
+   },
+   "timely_rate": {
+    "value": 0.972533,
+    "ci_low": 0.971741,
+    "ci_high": 0.973303,
+    "n": 168273
+   },
+   "monetary_relief_rate": {
+    "value": 0.062244,
+    "ci_low": 0.0611,
+    "ci_high": 0.063408,
+    "n": 168273
+   }
+  },
+  {
+   "year": 2016,
+   "complaints": 191292,
+   "with_narrative": 77766,
+   "narrative_share": {
+    "value": 0.40653,
+    "ci_low": 0.404331,
+    "ci_high": 0.408733,
+    "n": 191292
+   },
+   "timely_rate": {
+    "value": 0.966036,
+    "ci_low": 0.965215,
+    "ci_high": 0.966839,
+    "n": 191292
+   },
+   "monetary_relief_rate": {
+    "value": 0.062585,
+    "ci_low": 0.061508,
+    "ci_high": 0.063679,
+    "n": 191292
+   }
+  },
+  {
+   "year": 2017,
+   "complaints": 242745,
+   "with_narrative": 115311,
+   "narrative_share": {
+    "value": 0.475029,
+    "ci_low": 0.473043,
+    "ci_high": 0.477016,
+    "n": 242745
+   },
+   "timely_rate": {
+    "value": 0.972004,
+    "ci_low": 0.97134,
+    "ci_high": 0.972652,
+    "n": 242745
+   },
+   "monetary_relief_rate": {
+    "value": 0.048401,
+    "ci_low": 0.047554,
+    "ci_high": 0.049261,
+    "n": 242745
+   }
+  },
+  {
+   "year": 2018,
+   "complaints": 257131,
+   "with_narrative": 118393,
+   "narrative_share": {
+    "value": 0.460438,
+    "ci_low": 0.458513,
+    "ci_high": 0.462366,
+    "n": 257131
+   },
+   "timely_rate": {
+    "value": 0.982873,
+    "ci_low": 0.982364,
+    "ci_high": 0.983367,
+    "n": 257131
+   },
+   "monetary_relief_rate": {
+    "value": 0.046334,
+    "ci_low": 0.045529,
+    "ci_high": 0.047154,
+    "n": 257131
+   }
+  },
+  {
+   "year": 2019,
+   "complaints": 277240,
+   "with_narrative": 124843,
+   "narrative_share": {
+    "value": 0.450307,
+    "ci_low": 0.448455,
+    "ci_high": 0.452159,
+    "n": 277240
+   },
+   "timely_rate": {
+    "value": 0.985031,
+    "ci_low": 0.984572,
+    "ci_high": 0.985476,
+    "n": 277239
+   },
+   "monetary_relief_rate": {
+    "value": 0.041084,
+    "ci_low": 0.040351,
+    "ci_high": 0.041829,
+    "n": 277239
+   }
+  },
+  {
+   "year": 2020,
+   "complaints": 444213,
+   "with_narrative": 174297,
+   "narrative_share": {
+    "value": 0.392373,
+    "ci_low": 0.390938,
+    "ci_high": 0.393809,
+    "n": 444213
+   },
+   "timely_rate": {
+    "value": 0.989744,
+    "ci_low": 0.989443,
+    "ci_high": 0.990036,
+    "n": 444213
+   },
+   "monetary_relief_rate": {
+    "value": 0.029105,
+    "ci_low": 0.028615,
+    "ci_high": 0.029604,
+    "n": 444213
+   }
+  },
+  {
+   "year": 2021,
+   "complaints": 495939,
+   "with_narrative": 203570,
+   "narrative_share": {
+    "value": 0.410474,
+    "ci_low": 0.409105,
+    "ci_high": 0.411844,
+    "n": 495939
+   },
+   "timely_rate": {
+    "value": 0.987577,
+    "ci_low": 0.987265,
+    "ci_high": 0.987882,
+    "n": 495938
+   },
+   "monetary_relief_rate": {
+    "value": 0.028576,
+    "ci_low": 0.028116,
+    "ci_high": 0.029044,
+    "n": 495938
+   }
+  },
+  {
+   "year": 2022,
+   "complaints": 800245,
+   "with_narrative": 337273,
+   "narrative_share": {
+    "value": 0.421462,
+    "ci_low": 0.420381,
+    "ci_high": 0.422544,
+    "n": 800245
+   },
+   "timely_rate": {
+    "value": 0.993608,
+    "ci_low": 0.993431,
+    "ci_high": 0.99378,
+    "n": 800245
+   },
+   "monetary_relief_rate": {
+    "value": 0.021059,
+    "ci_low": 0.020746,
+    "ci_high": 0.021375,
+    "n": 800245
+   }
+  },
+  {
+   "year": 2023,
+   "complaints": 1292049,
+   "with_narrative": 487410,
+   "narrative_share": {
+    "value": 0.377238,
+    "ci_low": 0.376403,
+    "ci_high": 0.378074,
+    "n": 1292049
+   },
+   "timely_rate": {
+    "value": 0.995727,
+    "ci_low": 0.995613,
+    "ci_high": 0.995838,
+    "n": 1292049
+   },
+   "monetary_relief_rate": {
+    "value": 0.015754,
+    "ci_low": 0.015541,
+    "ci_high": 0.01597,
+    "n": 1292049
+   }
+  },
+  {
+   "year": 2024,
+   "complaints": 2734269,
+   "with_narrative": 814385,
+   "narrative_share": {
+    "value": 0.297844,
+    "ci_low": 0.297302,
+    "ci_high": 0.298386,
+    "n": 2734269
+   },
+   "timely_rate": {
+    "value": 0.99717,
+    "ci_low": 0.997107,
+    "ci_high": 0.997233,
+    "n": 2734269
+   },
+   "monetary_relief_rate": {
+    "value": 0.008684,
+    "ci_low": 0.008575,
+    "ci_high": 0.008795,
+    "n": 2734269
+   }
+  },
+  {
+   "year": 2025,
+   "complaints": 5442964,
+   "with_narrative": 1222050,
+   "narrative_share": {
+    "value": 0.224519,
+    "ci_low": 0.224169,
+    "ci_high": 0.22487,
+    "n": 5442964
+   },
+   "timely_rate": {
+    "value": 0.99549,
+    "ci_low": 0.995433,
+    "ci_high": 0.995545,
+    "n": 5442679
+   },
+   "monetary_relief_rate": {
+    "value": 0.0048,
+    "ci_low": 0.004742,
+    "ci_high": 0.004858,
+    "n": 5442679
+   }
+  },
+  {
+   "year": 2026,
+   "complaints": 4851531,
+   "with_narrative": 121394,
+   "narrative_share": {
+    "value": 0.025022,
+    "ci_low": 0.024883,
+    "ci_high": 0.025161,
+    "n": 4851531
+   },
+   "timely_rate": {
+    "value": 0.995185,
+    "ci_low": 0.99512,
+    "ci_high": 0.995249,
+    "n": 4375441
+   },
+   "monetary_relief_rate": {
+    "value": 0.004954,
+    "ci_low": 0.004889,
+    "ci_high": 0.005021,
+    "n": 4375441
+   }
+  }
+ ],
+ "by_product_group": [
+  {
+   "product_group": "credit_reporting",
+   "label": "Credit reporting",
+   "complaints": 14282679,
+   "with_narrative": 2508701,
+   "narrative_share": {
+    "value": 0.175646,
+    "ci_low": 0.175449,
+    "ci_high": 0.175844,
+    "n": 14282679
+   },
+   "timely_rate": {
+    "value": 0.998488,
+    "ci_low": 0.998467,
+    "ci_high": 0.998508,
+    "n": 13824090
+   },
+   "monetary_relief_rate": {
+    "value": 0.000456,
+    "ci_low": 0.000445,
+    "ci_high": 0.000468,
+    "n": 13824090
+   },
+   "any_relief_rate": {
+    "value": 0.401986,
+    "ci_low": 0.401728,
+    "ci_high": 0.402244,
+    "n": 13824090
+   }
+  },
+  {
+   "product_group": "debt_collection",
+   "label": "Debt collection",
+   "complaints": 1186841,
+   "with_narrative": 445246,
+   "narrative_share": {
+    "value": 0.375152,
+    "ci_low": 0.374282,
+    "ci_high": 0.376024,
+    "n": 1186841
+   },
+   "timely_rate": {
+    "value": 0.964308,
+    "ci_low": 0.963971,
+    "ci_high": 0.964641,
+    "n": 1181341
+   },
+   "monetary_relief_rate": {
+    "value": 0.004674,
+    "ci_low": 0.004552,
+    "ci_high": 0.004798,
+    "n": 1181341
+   },
+   "any_relief_rate": {
+    "value": 0.201957,
+    "ci_low": 0.201234,
+    "ci_high": 0.202682,
+    "n": 1181341
+   }
+  },
+  {
+   "product_group": "mortgage",
+   "label": "Mortgage",
+   "complaints": 459836,
+   "with_narrative": 147249,
+   "narrative_share": {
+    "value": 0.320221,
+    "ci_low": 0.318874,
+    "ci_high": 0.321571,
+    "n": 459836
+   },
+   "timely_rate": {
+    "value": 0.981337,
+    "ci_low": 0.980941,
+    "ci_high": 0.981724,
+    "n": 458383
+   },
+   "monetary_relief_rate": {
+    "value": 0.028459,
+    "ci_low": 0.027981,
+    "ci_high": 0.028944,
+    "n": 458383
+   },
+   "any_relief_rate": {
+    "value": 0.077221,
+    "ci_low": 0.076452,
+    "ci_high": 0.077998,
+    "n": 458383
+   }
+  },
+  {
+   "product_group": "bank_account",
+   "label": "Bank account",
+   "complaints": 480521,
+   "with_narrative": 204233,
+   "narrative_share": {
+    "value": 0.425024,
+    "ci_low": 0.423627,
+    "ci_high": 0.426422,
+    "n": 480521
+   },
+   "timely_rate": {
+    "value": 0.987469,
+    "ci_low": 0.987149,
+    "ci_high": 0.987781,
+    "n": 476734
+   },
+   "monetary_relief_rate": {
+    "value": 0.160383,
+    "ci_low": 0.159344,
+    "ci_high": 0.161427,
+    "n": 476734
+   },
+   "any_relief_rate": {
+    "value": 0.217048,
+    "ci_low": 0.21588,
+    "ci_high": 0.21822,
+    "n": 476734
+   }
+  },
+  {
+   "product_group": "credit_card",
+   "label": "Credit card",
+   "complaints": 528679,
+   "with_narrative": 228188,
+   "narrative_share": {
+    "value": 0.431619,
+    "ci_low": 0.430285,
+    "ci_high": 0.432955,
+    "n": 528679
+   },
+   "timely_rate": {
+    "value": 0.992703,
+    "ci_low": 0.99247,
+    "ci_high": 0.99293,
+    "n": 525036
+   },
+   "monetary_relief_rate": {
+    "value": 0.161989,
+    "ci_low": 0.160995,
+    "ci_high": 0.162988,
+    "n": 525036
+   },
+   "any_relief_rate": {
+    "value": 0.323644,
+    "ci_low": 0.32238,
+    "ci_high": 0.324911,
+    "n": 525036
+   }
+  },
+  {
+   "product_group": "student_loan",
+   "label": "Student loan",
+   "complaints": 133125,
+   "with_narrative": 63196,
+   "narrative_share": {
+    "value": 0.474712,
+    "ci_low": 0.47203,
+    "ci_high": 0.477395,
+    "n": 133125
+   },
+   "timely_rate": {
+    "value": 0.895593,
+    "ci_low": 0.893933,
+    "ci_high": 0.897231,
+    "n": 132032
+   },
+   "monetary_relief_rate": {
+    "value": 0.018511,
+    "ci_low": 0.017798,
+    "ci_high": 0.019252,
+    "n": 132032
+   },
+   "any_relief_rate": {
+    "value": 0.070157,
+    "ci_low": 0.068792,
+    "ci_high": 0.071547,
+    "n": 132032
+   }
+  },
+  {
+   "product_group": "money_transfer",
+   "label": "Money transfer",
+   "complaints": 195597,
+   "with_narrative": 123236,
+   "narrative_share": {
+    "value": 0.630051,
+    "ci_low": 0.627908,
+    "ci_high": 0.632188,
+    "n": 195597
+   },
+   "timely_rate": {
+    "value": 0.983571,
+    "ci_low": 0.982997,
+    "ci_high": 0.984127,
+    "n": 194661
+   },
+   "monetary_relief_rate": {
+    "value": 0.061507,
+    "ci_low": 0.060448,
+    "ci_high": 0.062583,
+    "n": 194661
+   },
+   "any_relief_rate": {
+    "value": 0.09928,
+    "ci_low": 0.09796,
+    "ci_high": 0.100617,
+    "n": 194661
+   }
+  },
+  {
+   "product_group": "vehicle_loan",
+   "label": "Vehicle loan",
+   "complaints": 122862,
+   "with_narrative": 59761,
+   "narrative_share": {
+    "value": 0.486408,
+    "ci_low": 0.483613,
+    "ci_high": 0.489203,
+    "n": 122862
+   },
+   "timely_rate": {
+    "value": 0.978968,
+    "ci_low": 0.978149,
+    "ci_high": 0.979758,
+    "n": 122197
+   },
+   "monetary_relief_rate": {
+    "value": 0.033814,
+    "ci_low": 0.032815,
+    "ci_high": 0.034842,
+    "n": 122197
+   },
+   "any_relief_rate": {
+    "value": 0.102613,
+    "ci_low": 0.100924,
+    "ci_high": 0.104327,
+    "n": 122197
+   }
+  },
+  {
+   "product_group": "personal_loan",
+   "label": "Personal loan",
+   "complaints": 84607,
+   "with_narrative": 41188,
+   "narrative_share": {
+    "value": 0.486816,
+    "ci_low": 0.483448,
+    "ci_high": 0.490184,
+    "n": 84607
+   },
+   "timely_rate": {
+    "value": 0.948196,
+    "ci_low": 0.946677,
+    "ci_high": 0.949673,
+    "n": 84105
+   },
+   "monetary_relief_rate": {
+    "value": 0.047453,
+    "ci_low": 0.046036,
+    "ci_high": 0.04891,
+    "n": 84105
+   },
+   "any_relief_rate": {
+    "value": 0.096546,
+    "ci_low": 0.094568,
+    "ci_high": 0.09856,
+    "n": 84105
+   }
+  },
+  {
+   "product_group": "prepaid_card",
+   "label": "Prepaid card",
+   "complaints": 42575,
+   "with_narrative": 21423,
+   "narrative_share": {
+    "value": 0.503183,
+    "ci_low": 0.498433,
+    "ci_high": 0.507931,
+    "n": 42575
+   },
+   "timely_rate": {
+    "value": 0.951884,
+    "ci_low": 0.949808,
+    "ci_high": 0.953877,
+    "n": 42522
+   },
+   "monetary_relief_rate": {
+    "value": 0.198156,
+    "ci_low": 0.194395,
+    "ci_high": 0.201972,
+    "n": 42522
+   },
+   "any_relief_rate": {
+    "value": 0.274587,
+    "ci_low": 0.270366,
+    "ci_high": 0.27885,
+    "n": 42522
+   }
+  },
+  {
+   "product_group": "debt_management",
+   "label": "Debt management",
+   "complaints": 16596,
+   "with_narrative": 8994,
+   "narrative_share": {
+    "value": 0.541938,
+    "ci_low": 0.534349,
+    "ci_high": 0.549507,
+    "n": 16596
+   },
+   "timely_rate": {
+    "value": 0.920134,
+    "ci_low": 0.915891,
+    "ci_high": 0.92418,
+    "n": 16440
+   },
+   "monetary_relief_rate": {
+    "value": 0.05146,
+    "ci_low": 0.048186,
+    "ci_high": 0.054943,
+    "n": 16440
+   },
+   "any_relief_rate": {
+    "value": 0.17062,
+    "ci_low": 0.164947,
+    "ci_high": 0.176448,
+    "n": 16440
+   }
+  }
+ ],
+ "top_companies": [
+  {
+   "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+   "complaints": 4785659,
+   "share": 0.272937,
+   "timely_rate": {
+    "value": 0.99993,
+    "ci_low": 0.999922,
+    "ci_high": 0.999938,
+    "n": 4654603
+   },
+   "monetary_relief_rate": {
+    "value": 0.00013,
+    "ci_low": 0.00012,
+    "ci_high": 0.000141,
+    "n": 4654603
+   }
+  },
+  {
+   "company": "EQUIFAX, INC.",
+   "complaints": 4658351,
+   "share": 0.265677,
+   "timely_rate": {
+    "value": 0.999616,
+    "ci_low": 0.999597,
+    "ci_high": 0.999633,
+    "n": 4614401
+   },
+   "monetary_relief_rate": {
+    "value": 1.2e-05,
+    "ci_low": 9e-06,
+    "ci_high": 1.5e-05,
+    "n": 4614401
+   }
+  },
+  {
+   "company": "Experian Information Solutions Inc.",
+   "complaints": 4222327,
+   "share": 0.240809,
+   "timely_rate": {
+    "value": 0.999976,
+    "ci_low": 0.999971,
+    "ci_high": 0.999981,
+    "n": 3940149
+   },
+   "monetary_relief_rate": {
+    "value": 0.00029,
+    "ci_low": 0.000273,
+    "ci_high": 0.000307,
+    "n": 3940149
+   }
+  },
+  {
+   "company": "BANK OF AMERICA, NATIONAL ASSOCIATION",
+   "complaints": 186233,
+   "share": 0.010621,
+   "timely_rate": {
+    "value": 0.975966,
+    "ci_low": 0.975257,
+    "ci_high": 0.976656,
+    "n": 184197
+   },
+   "monetary_relief_rate": {
+    "value": 0.190372,
+    "ci_low": 0.188586,
+    "ci_high": 0.192172,
+    "n": 184197
+   }
+  },
+  {
+   "company": "JPMORGAN CHASE & CO.",
+   "complaints": 175270,
+   "share": 0.009996,
+   "timely_rate": {
+    "value": 0.999451,
+    "ci_low": 0.99933,
+    "ci_high": 0.999551,
+    "n": 174928
+   },
+   "monetary_relief_rate": {
+    "value": 0.101299,
+    "ci_low": 0.099894,
+    "ci_high": 0.102722,
+    "n": 174928
+   }
+  },
+  {
+   "company": "WELLS FARGO & COMPANY",
+   "complaints": 174517,
+   "share": 0.009953,
+   "timely_rate": {
+    "value": 0.978074,
+    "ci_low": 0.977375,
+    "ci_high": 0.978752,
+    "n": 173856
+   },
+   "monetary_relief_rate": {
+    "value": 0.08323,
+    "ci_low": 0.081941,
+    "ci_high": 0.084537,
+    "n": 173856
+   }
+  },
+  {
+   "company": "CAPITAL ONE FINANCIAL CORPORATION",
+   "complaints": 171222,
+   "share": 0.009765,
+   "timely_rate": {
+    "value": 0.999484,
+    "ci_low": 0.999364,
+    "ci_high": 0.999581,
+    "n": 170530
+   },
+   "monetary_relief_rate": {
+    "value": 0.070017,
+    "ci_low": 0.068816,
+    "ci_high": 0.071238,
+    "n": 170530
+   }
+  },
+  {
+   "company": "CITIBANK, N.A.",
+   "complaints": 141213,
+   "share": 0.008054,
+   "timely_rate": {
+    "value": 0.997373,
+    "ci_low": 0.997092,
+    "ci_high": 0.997627,
+    "n": 140846
+   },
+   "monetary_relief_rate": {
+    "value": 0.176405,
+    "ci_low": 0.174424,
+    "ci_high": 0.178405,
+    "n": 140846
+   }
+  },
+  {
+   "company": "SYNCHRONY FINANCIAL",
+   "complaints": 83488,
+   "share": 0.004762,
+   "timely_rate": {
+    "value": 0.992423,
+    "ci_low": 0.991805,
+    "ci_high": 0.992994,
+    "n": 81955
+   },
+   "monetary_relief_rate": {
+    "value": 0.141553,
+    "ci_low": 0.139184,
+    "ci_high": 0.143957,
+    "n": 81955
+   }
+  },
+  {
+   "company": "Resurgent Capital Services L.P.",
+   "complaints": 71113,
+   "share": 0.004056,
+   "timely_rate": {
+    "value": 0.999803,
+    "ci_low": 0.999669,
+    "ci_high": 0.999883,
+    "n": 71063
+   },
+   "monetary_relief_rate": {
+    "value": 0.001646,
+    "ci_low": 0.001374,
+    "ci_high": 0.001973,
+    "n": 71063
+   }
+  },
+  {
+   "company": "Block, Inc.",
+   "complaints": 70349,
+   "share": 0.004012,
+   "timely_rate": {
+    "value": 0.986037,
+    "ci_low": 0.985141,
+    "ci_high": 0.986879,
+    "n": 70113
+   },
+   "monetary_relief_rate": {
+    "value": 0.001797,
+    "ci_low": 0.00151,
+    "ci_high": 0.002139,
+    "n": 70113
+   }
+  },
+  {
+   "company": "ENCORE CAPITAL GROUP INC.",
+   "complaints": 66621,
+   "share": 0.0038,
+   "timely_rate": {
+    "value": 0.999533,
+    "ci_low": 0.999338,
+    "ci_high": 0.999671,
+    "n": 66435
+   },
+   "monetary_relief_rate": {
+    "value": 0.001475,
+    "ci_low": 0.001211,
+    "ci_high": 0.001797,
+    "n": 66435
+   }
+  },
+  {
+   "company": "LEXISNEXIS",
+   "complaints": 65951,
+   "share": 0.003761,
+   "timely_rate": {
+    "value": 0.989857,
+    "ci_low": 0.989063,
+    "ci_high": 0.990594,
+    "n": 65858
+   },
+   "monetary_relief_rate": {
+    "value": 4.6e-05,
+    "ci_low": 1.5e-05,
+    "ci_high": 0.000134,
+    "n": 65858
+   }
+  },
+  {
+   "company": "Portfolio Recovery Associates, LLC",
+   "complaints": 65254,
+   "share": 0.003722,
+   "timely_rate": {
+    "value": 0.988795,
+    "ci_low": 0.987953,
+    "ci_high": 0.989579,
+    "n": 64437
+   },
+   "monetary_relief_rate": {
+    "value": 7.8e-05,
+    "ci_low": 3.3e-05,
+    "ci_high": 0.000182,
+    "n": 64437
+   }
+  },
+  {
+   "company": "AMERICAN EXPRESS COMPANY",
+   "complaints": 59715,
+   "share": 0.003406,
+   "timely_rate": {
+    "value": 0.997553,
+    "ci_low": 0.997123,
+    "ci_high": 0.997919,
+    "n": 59668
+   },
+   "monetary_relief_rate": {
+    "value": 0.151924,
+    "ci_low": 0.149066,
+    "ci_high": 0.154826,
+    "n": 59668
+   }
+  },
+  {
+   "company": "CBC Companies, Inc.",
+   "complaints": 58086,
+   "share": 0.003313,
+   "timely_rate": {
+    "value": 0.999793,
+    "ci_low": 0.999639,
+    "ci_high": 0.999882,
+    "n": 58081
+   },
+   "monetary_relief_rate": {
+    "value": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 6.6e-05,
+    "n": 58081
+   }
+  },
+  {
+   "company": "CL Holdings LLC",
+   "complaints": 52416,
+   "share": 0.002989,
+   "timely_rate": {
+    "value": 0.999828,
+    "ci_low": 0.999673,
+    "ci_high": 0.99991,
+    "n": 52378
+   },
+   "monetary_relief_rate": {
+    "value": 0.002138,
+    "ci_low": 0.001778,
+    "ci_high": 0.002572,
+    "n": 52378
+   }
+  },
+  {
+   "company": "U.S. BANCORP",
+   "complaints": 49661,
+   "share": 0.002832,
+   "timely_rate": {
+    "value": 0.998167,
+    "ci_low": 0.99775,
+    "ci_high": 0.998507,
+    "n": 49641
+   },
+   "monetary_relief_rate": {
+    "value": 0.107995,
+    "ci_low": 0.105295,
+    "ci_high": 0.110756,
+    "n": 49641
+   }
+  },
+  {
+   "company": "NAVY FEDERAL CREDIT UNION",
+   "complaints": 48954,
+   "share": 0.002792,
+   "timely_rate": {
+    "value": 0.999792,
+    "ci_low": 0.999617,
+    "ci_high": 0.999887,
+    "n": 48001
+   },
+   "monetary_relief_rate": {
+    "value": 0.065165,
+    "ci_low": 0.062992,
+    "ci_high": 0.067408,
+    "n": 48001
+   }
+  },
+  {
+   "company": "Bread Financial Holdings, Inc.",
+   "complaints": 48867,
+   "share": 0.002787,
+   "timely_rate": {
+    "value": 0.999918,
+    "ci_low": 0.999789,
+    "ci_high": 0.999968,
+    "n": 48814
+   },
+   "monetary_relief_rate": {
+    "value": 0.169275,
+    "ci_low": 0.165975,
+    "ci_high": 0.172628,
+    "n": 48814
+   }
+  }
+ ],
+ "response_mix": [
+  {
+   "company_response": "Closed with explanation",
+   "complaints": 10820382,
+   "share": 0.617111
+  },
+  {
+   "company_response": "Closed with non-monetary relief",
+   "complaints": 5944694,
+   "share": 0.33904
+  },
+  {
+   "company_response": "In progress",
+   "complaints": 476377,
+   "share": 0.027169
+  },
+  {
+   "company_response": "Closed with monetary relief",
+   "complaints": 218197,
+   "share": 0.012444
+  },
+  {
+   "company_response": "Untimely response",
+   "complaints": 33465,
+   "share": 0.001909
+  },
+  {
+   "company_response": "Closed without relief",
+   "complaints": 17867,
+   "share": 0.001019
+  },
+  {
+   "company_response": "Closed",
+   "complaints": 17611,
+   "share": 0.001004
+  },
+  {
+   "company_response": "Closed with relief",
+   "complaints": 5304,
+   "share": 0.000302
+  },
+  {
+   "company_response": "Unknown",
+   "complaints": 21,
+   "share": 1e-06
+  }
+ ],
+ "repeats": [
+  {
+   "year": 2015,
+   "with_narrative": 54723,
+   "repeated_share": {
+    "value": 0.031084,
+    "ci_low": 0.029662,
+    "ci_high": 0.032571,
+    "n": 54723
+   }
+  },
+  {
+   "year": 2016,
+   "with_narrative": 77766,
+   "repeated_share": {
+    "value": 0.02991,
+    "ci_low": 0.028736,
+    "ci_high": 0.031131,
+    "n": 77766
+   }
+  },
+  {
+   "year": 2017,
+   "with_narrative": 115311,
+   "repeated_share": {
+    "value": 0.07975,
+    "ci_low": 0.0782,
+    "ci_high": 0.081327,
+    "n": 115311
+   }
+  },
+  {
+   "year": 2018,
+   "with_narrative": 118393,
+   "repeated_share": {
+    "value": 0.13141,
+    "ci_low": 0.129497,
+    "ci_high": 0.133346,
+    "n": 118393
+   }
+  },
+  {
+   "year": 2019,
+   "with_narrative": 124843,
+   "repeated_share": {
+    "value": 0.168924,
+    "ci_low": 0.166856,
+    "ci_high": 0.171013,
+    "n": 124843
+   }
+  },
+  {
+   "year": 2020,
+   "with_narrative": 174297,
+   "repeated_share": {
+    "value": 0.273751,
+    "ci_low": 0.271663,
+    "ci_high": 0.275849,
+    "n": 174297
+   }
+  },
+  {
+   "year": 2021,
+   "with_narrative": 203570,
+   "repeated_share": {
+    "value": 0.240026,
+    "ci_low": 0.238175,
+    "ci_high": 0.241886,
+    "n": 203570
+   }
+  },
+  {
+   "year": 2022,
+   "with_narrative": 337273,
+   "repeated_share": {
+    "value": 0.307979,
+    "ci_low": 0.306423,
+    "ci_high": 0.309539,
+    "n": 337273
+   }
+  },
+  {
+   "year": 2023,
+   "with_narrative": 487410,
+   "repeated_share": {
+    "value": 0.3907,
+    "ci_low": 0.389331,
+    "ci_high": 0.39207,
+    "n": 487410
+   }
+  },
+  {
+   "year": 2024,
+   "with_narrative": 814385,
+   "repeated_share": {
+    "value": 0.513273,
+    "ci_low": 0.512188,
+    "ci_high": 0.514359,
+    "n": 814385
+   }
+  },
+  {
+   "year": 2025,
+   "with_narrative": 1222050,
+   "repeated_share": {
+    "value": 0.586646,
+    "ci_low": 0.585773,
+    "ci_high": 0.587519,
+    "n": 1222050
+   }
+  },
+  {
+   "year": 2026,
+   "with_narrative": 121394,
+   "repeated_share": {
+    "value": 0.118021,
+    "ci_low": 0.116218,
+    "ci_high": 0.119848,
+    "n": 121394
+   }
+  }
+ ],
+ "label_noise": {
+  "complaints": 13109,
+  "distinct_texts": 1900,
+  "modal_share": {
+   "value": 0.99466,
+   "ci_low": 0.993259,
+   "ci_high": 0.995771,
+   "n": 13109
+  }
+ },
+ "taxonomy": [
+  {
+   "product": "Bank account or service",
+   "sub_product": "Checking account",
+   "product_group": "bank_account",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-22",
+   "complaints": 59041
+  },
+  {
+   "product": "Bank account or service",
+   "sub_product": "Other bank product/service",
+   "product_group": "bank_account",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-21",
+   "complaints": 17822
+  },
+  {
+   "product": "Bank account or service",
+   "sub_product": "Savings account",
+   "product_group": "bank_account",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-21",
+   "complaints": 5294
+  },
+  {
+   "product": "Bank account or service",
+   "sub_product": "(CD) Certificate of deposit",
+   "product_group": "bank_account",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-22",
+   "complaints": 3416
+  },
+  {
+   "product": "Bank account or service",
+   "sub_product": "Cashing a check without an account",
+   "product_group": "bank_account",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-18",
+   "complaints": 625
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "Checking account",
+   "product_group": "bank_account",
+   "first_date": "2017-04-21",
+   "last_date": "2026-08-31",
+   "complaints": 319830
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "Other banking product or service",
+   "product_group": "bank_account",
+   "first_date": "2017-04-21",
+   "last_date": "2026-08-31",
+   "complaints": 36909
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "Savings account",
+   "product_group": "bank_account",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 29582
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "CD (Certificate of Deposit)",
+   "product_group": "bank_account",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 7902
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": null,
+   "product_group": "bank_account",
+   "first_date": "2017-05-21",
+   "last_date": "2024-05-11",
+   "complaints": 99
+  },
+  {
+   "product": "Checking or savings account",
+   "sub_product": "Credit reporting",
+   "product_group": "bank_account",
+   "first_date": "2024-07-17",
+   "last_date": "2024-07-17",
+   "complaints": 1
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Vehicle loan",
+   "product_group": "vehicle_loan",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-21",
+   "complaints": 17769
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Installment loan",
+   "product_group": "personal_loan",
+   "first_date": "2012-03-05",
+   "last_date": "2017-04-21",
+   "complaints": 8671
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Vehicle lease",
+   "product_group": "vehicle_loan",
+   "first_date": "2012-03-02",
+   "last_date": "2017-04-21",
+   "complaints": 2654
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Personal line of credit",
+   "product_group": "personal_loan",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-19",
+   "complaints": 1824
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Title loan",
+   "product_group": "personal_loan",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-20",
+   "complaints": 547
+  },
+  {
+   "product": "Consumer Loan",
+   "sub_product": "Pawn loan",
+   "product_group": "personal_loan",
+   "first_date": "2014-07-26",
+   "last_date": "2017-04-21",
+   "complaints": 94
+  },
+  {
+   "product": "Credit card",
+   "sub_product": "General-purpose credit card or charge card",
+   "product_group": "credit_card",
+   "first_date": "2023-08-17",
+   "last_date": "2026-08-31",
+   "complaints": 224808
+  },
+  {
+   "product": "Credit card",
+   "sub_product": null,
+   "product_group": "credit_card",
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-22",
+   "complaints": 89185
+  },
+  {
+   "product": "Credit card",
+   "sub_product": "Store credit card",
+   "product_group": "credit_card",
+   "first_date": "2023-08-24",
+   "last_date": "2026-08-31",
+   "complaints": 27897
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "General-purpose credit card or charge card",
+   "product_group": "credit_card",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-25",
+   "complaints": 158877
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Store credit card",
+   "product_group": "credit_card",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 27909
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Government benefit card",
+   "product_group": "prepaid_card",
+   "first_date": "2017-04-25",
+   "last_date": "2023-08-24",
+   "complaints": 9067
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "General-purpose prepaid card",
+   "product_group": "prepaid_card",
+   "first_date": "2017-04-25",
+   "last_date": "2023-08-24",
+   "complaints": 8530
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Gift card",
+   "product_group": "prepaid_card",
+   "first_date": "2017-04-25",
+   "last_date": "2023-08-24",
+   "complaints": 1021
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Payroll card",
+   "product_group": "prepaid_card",
+   "first_date": "2017-04-26",
+   "last_date": "2023-08-23",
+   "complaints": 917
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": "Student prepaid card",
+   "product_group": "prepaid_card",
+   "first_date": "2018-06-25",
+   "last_date": "2023-08-19",
+   "complaints": 32
+  },
+  {
+   "product": "Credit card or prepaid card",
+   "sub_product": null,
+   "product_group": "credit_card",
+   "first_date": "2021-03-24",
+   "last_date": "2021-04-01",
+   "complaints": 3
+  },
+  {
+   "product": "Credit reporting",
+   "sub_product": null,
+   "product_group": "credit_reporting",
+   "first_date": "2012-10-22",
+   "last_date": "2017-04-22",
+   "complaints": 140426
+  },
+  {
+   "product": "Credit reporting or other personal consumer reports",
+   "sub_product": "Credit reporting",
+   "product_group": "credit_reporting",
+   "first_date": "2023-08-24",
+   "last_date": "2026-08-31",
+   "complaints": 11937857
+  },
+  {
+   "product": "Credit reporting or other personal consumer reports",
+   "sub_product": "Other personal consumer report",
+   "product_group": "credit_reporting",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 45690
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "sub_product": "Credit reporting",
+   "product_group": "credit_reporting",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-25",
+   "complaints": 2142647
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "sub_product": "Other personal consumer report",
+   "product_group": "credit_reporting",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 16058
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "sub_product": "Credit repair services",
+   "product_group": "debt_management",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 5064
+  },
+  {
+   "product": "Credit reporting, credit repair services, or other personal consumer reports",
+   "sub_product": "Conventional home mortgage",
+   "product_group": "credit_reporting",
+   "first_date": "2018-05-22",
+   "last_date": "2018-05-22",
+   "complaints": 1
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "I do not know",
+   "product_group": "debt_collection",
+   "first_date": "2013-07-10",
+   "last_date": "2026-08-31",
+   "complaints": 485940
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Other debt",
+   "product_group": "debt_collection",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 198043
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Credit card debt",
+   "product_group": "debt_collection",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 179642
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Medical debt",
+   "product_group": "debt_collection",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 77481
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Other (i.e. phone, health club, etc.)",
+   "product_group": "debt_collection",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 44436
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Auto debt",
+   "product_group": "debt_collection",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 32475
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Telecommunications debt",
+   "product_group": "debt_collection",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 30943
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Rental debt",
+   "product_group": "debt_collection",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 29497
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Credit card",
+   "product_group": "debt_collection",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 28626
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Medical",
+   "product_group": "debt_collection",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 21143
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Payday loan debt",
+   "product_group": "debt_collection",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 16533
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Mortgage debt",
+   "product_group": "debt_collection",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-29",
+   "complaints": 8544
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Payday loan",
+   "product_group": "debt_collection",
+   "first_date": "2013-10-30",
+   "last_date": "2017-04-21",
+   "complaints": 7493
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Private student loan debt",
+   "product_group": "debt_collection",
+   "first_date": "2017-04-25",
+   "last_date": "2026-08-31",
+   "complaints": 6113
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Federal student loan debt",
+   "product_group": "debt_collection",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 6026
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Mortgage",
+   "product_group": "debt_collection",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 4807
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Auto",
+   "product_group": "debt_collection",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 3748
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Non-federal student loan",
+   "product_group": "debt_collection",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 2878
+  },
+  {
+   "product": "Debt collection",
+   "sub_product": "Federal student loan",
+   "product_group": "debt_collection",
+   "first_date": "2013-07-10",
+   "last_date": "2017-04-21",
+   "complaints": 2473
+  },
+  {
+   "product": "Debt or credit management",
+   "sub_product": "Debt settlement",
+   "product_group": "debt_management",
+   "first_date": "2023-08-27",
+   "last_date": "2026-08-31",
+   "complaints": 5398
+  },
+  {
+   "product": "Debt or credit management",
+   "sub_product": "Credit repair services",
+   "product_group": "debt_management",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 4222
+  },
+  {
+   "product": "Debt or credit management",
+   "sub_product": "Mortgage modification or foreclosure avoidance",
+   "product_group": "debt_management",
+   "first_date": "2023-08-26",
+   "last_date": "2026-08-25",
+   "complaints": 385
+  },
+  {
+   "product": "Debt or credit management",
+   "sub_product": "Student loan debt relief",
+   "product_group": "debt_management",
+   "first_date": "2023-08-31",
+   "last_date": "2026-08-12",
+   "complaints": 148
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Domestic (US) money transfer",
+   "product_group": "money_transfer",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 85139
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Mobile or digital wallet",
+   "product_group": "money_transfer",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 59703
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Virtual currency",
+   "product_group": "money_transfer",
+   "first_date": "2017-04-26",
+   "last_date": "2026-08-31",
+   "complaints": 21686
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "International money transfer",
+   "product_group": "money_transfer",
+   "first_date": "2017-04-25",
+   "last_date": "2026-08-31",
+   "complaints": 14516
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Money order, traveler's check or cashier's check",
+   "product_group": "money_transfer",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 2537
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Check cashing service",
+   "product_group": "money_transfer",
+   "first_date": "2017-04-25",
+   "last_date": "2026-08-31",
+   "complaints": 2255
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Foreign currency exchange",
+   "product_group": "money_transfer",
+   "first_date": "2017-04-26",
+   "last_date": "2026-08-29",
+   "complaints": 1380
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Traveler's check or cashier's check",
+   "product_group": "money_transfer",
+   "first_date": "2017-04-27",
+   "last_date": "2023-08-23",
+   "complaints": 983
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Debt settlement",
+   "product_group": "debt_management",
+   "first_date": "2017-04-26",
+   "last_date": "2023-08-24",
+   "complaints": 946
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Money order",
+   "product_group": "money_transfer",
+   "first_date": "2017-05-02",
+   "last_date": "2023-08-16",
+   "complaints": 776
+  },
+  {
+   "product": "Money transfer, virtual currency, or money service",
+   "sub_product": "Refund anticipation check",
+   "product_group": "money_transfer",
+   "first_date": "2017-05-04",
+   "last_date": "2023-08-24",
+   "complaints": 627
+  },
+  {
+   "product": "Money transfers",
+   "sub_product": "International money transfer",
+   "product_group": "money_transfer",
+   "first_date": "2013-04-04",
+   "last_date": "2017-04-20",
+   "complaints": 2770
+  },
+  {
+   "product": "Money transfers",
+   "sub_product": "Domestic (US) money transfer",
+   "product_group": "money_transfer",
+   "first_date": "2013-04-04",
+   "last_date": "2017-04-21",
+   "complaints": 2584
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Conventional home mortgage",
+   "product_group": "mortgage",
+   "first_date": "2017-04-21",
+   "last_date": "2026-08-31",
+   "complaints": 138356
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Other mortgage",
+   "product_group": "mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-21",
+   "complaints": 86612
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Conventional fixed mortgage",
+   "product_group": "mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-22",
+   "complaints": 70593
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "FHA mortgage",
+   "product_group": "mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2026-08-31",
+   "complaints": 63752
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Conventional adjustable mortgage (ARM)",
+   "product_group": "mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-21",
+   "complaints": 25380
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "VA mortgage",
+   "product_group": "mortgage",
+   "first_date": "2011-12-05",
+   "last_date": "2026-08-31",
+   "complaints": 23483
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Other type of mortgage",
+   "product_group": "mortgage",
+   "first_date": "2017-04-21",
+   "last_date": "2026-08-31",
+   "complaints": 17880
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Home equity loan or line of credit (HELOC)",
+   "product_group": "mortgage",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 14514
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Home equity loan or line of credit",
+   "product_group": "mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2017-04-21",
+   "complaints": 11622
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Reverse mortgage",
+   "product_group": "mortgage",
+   "first_date": "2011-12-01",
+   "last_date": "2026-08-30",
+   "complaints": 5391
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Manufactured home loan",
+   "product_group": "mortgage",
+   "first_date": "2023-08-29",
+   "last_date": "2026-08-31",
+   "complaints": 826
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "USDA mortgage",
+   "product_group": "mortgage",
+   "first_date": "2023-08-29",
+   "last_date": "2026-08-27",
+   "complaints": 765
+  },
+  {
+   "product": "Mortgage",
+   "sub_product": "Second mortgage",
+   "product_group": "mortgage",
+   "first_date": "2011-12-16",
+   "last_date": "2016-03-10",
+   "complaints": 662
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Debt settlement",
+   "product_group": "debt_management",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-21",
+   "complaints": 331
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Check cashing",
+   "product_group": "money_transfer",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-21",
+   "complaints": 266
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Money order",
+   "product_group": "money_transfer",
+   "first_date": "2014-07-24",
+   "last_date": "2017-04-17",
+   "complaints": 143
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Credit repair",
+   "product_group": "debt_management",
+   "first_date": "2014-08-04",
+   "last_date": "2017-04-21",
+   "complaints": 102
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Traveler\u2019s/Cashier\u2019s checks",
+   "product_group": "money_transfer",
+   "first_date": "2014-07-23",
+   "last_date": "2017-04-12",
+   "complaints": 88
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Refund anticipation check",
+   "product_group": "money_transfer",
+   "first_date": "2014-07-19",
+   "last_date": "2017-03-28",
+   "complaints": 68
+  },
+  {
+   "product": "Other financial service",
+   "sub_product": "Foreign currency exchange",
+   "product_group": "money_transfer",
+   "first_date": "2014-08-01",
+   "last_date": "2017-04-04",
+   "complaints": 58
+  },
+  {
+   "product": "Payday loan",
+   "sub_product": null,
+   "product_group": "personal_loan",
+   "first_date": "2013-11-06",
+   "last_date": "2017-04-21",
+   "complaints": 5528
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Installment loan",
+   "product_group": "personal_loan",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 13416
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Personal line of credit",
+   "product_group": "personal_loan",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 7367
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Payday loan",
+   "product_group": "personal_loan",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 6963
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Title loan",
+   "product_group": "personal_loan",
+   "first_date": "2017-04-24",
+   "last_date": "2023-08-24",
+   "complaints": 2758
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": "Pawn loan",
+   "product_group": "personal_loan",
+   "first_date": "2017-05-22",
+   "last_date": "2023-08-19",
+   "complaints": 76
+  },
+  {
+   "product": "Payday loan, title loan, or personal loan",
+   "sub_product": null,
+   "product_group": "personal_loan",
+   "first_date": "2017-08-14",
+   "last_date": "2022-07-15",
+   "complaints": 34
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Installment loan",
+   "product_group": "personal_loan",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 21138
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Personal line of credit",
+   "product_group": "personal_loan",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 6600
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Payday loan",
+   "product_group": "personal_loan",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 5865
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Title loan",
+   "product_group": "personal_loan",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 2446
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Other advances of future income",
+   "product_group": "personal_loan",
+   "first_date": "2023-08-30",
+   "last_date": "2026-08-31",
+   "complaints": 712
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Earned wage access",
+   "product_group": "personal_loan",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 386
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Pawn loan",
+   "product_group": "personal_loan",
+   "first_date": "2023-08-29",
+   "last_date": "2026-08-24",
+   "complaints": 122
+  },
+  {
+   "product": "Payday loan, title loan, personal loan, or advance loan",
+   "sub_product": "Tax refund anticipation loan or check",
+   "product_group": "personal_loan",
+   "first_date": "2023-09-15",
+   "last_date": "2026-07-29",
+   "complaints": 60
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "General-purpose prepaid card",
+   "product_group": "prepaid_card",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 10557
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Government benefit card",
+   "product_group": "prepaid_card",
+   "first_date": "2023-08-18",
+   "last_date": "2026-08-29",
+   "complaints": 5136
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Gift card",
+   "product_group": "prepaid_card",
+   "first_date": "2023-08-25",
+   "last_date": "2026-08-31",
+   "complaints": 2478
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "General purpose card",
+   "product_group": "prepaid_card",
+   "first_date": "2014-07-20",
+   "last_date": "2017-04-21",
+   "complaints": 1752
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Payroll card",
+   "product_group": "prepaid_card",
+   "first_date": "2014-07-25",
+   "last_date": "2026-08-31",
+   "complaints": 1404
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Mobile wallet",
+   "product_group": "prepaid_card",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-21",
+   "complaints": 418
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Gift or merchant card",
+   "product_group": "prepaid_card",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-20",
+   "complaints": 402
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Government benefit payment card",
+   "product_group": "prepaid_card",
+   "first_date": "2014-07-21",
+   "last_date": "2017-04-21",
+   "complaints": 389
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "ID prepaid card",
+   "product_group": "prepaid_card",
+   "first_date": "2014-08-18",
+   "last_date": "2017-04-21",
+   "complaints": 207
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Other special purpose card",
+   "product_group": "prepaid_card",
+   "first_date": "2014-08-06",
+   "last_date": "2017-04-05",
+   "complaints": 191
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Transit card",
+   "product_group": "prepaid_card",
+   "first_date": "2014-08-10",
+   "last_date": "2017-04-08",
+   "complaints": 37
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Student prepaid card",
+   "product_group": "prepaid_card",
+   "first_date": "2023-10-12",
+   "last_date": "2026-08-26",
+   "complaints": 25
+  },
+  {
+   "product": "Prepaid card",
+   "sub_product": "Electronic Benefit Transfer / EBT card",
+   "product_group": "prepaid_card",
+   "first_date": "2014-11-06",
+   "last_date": "2017-04-06",
+   "complaints": 12
+  },
+  {
+   "product": "Student loan",
+   "sub_product": "Federal student loan servicing",
+   "product_group": "student_loan",
+   "first_date": "2016-02-25",
+   "last_date": "2026-08-31",
+   "complaints": 85554
+  },
+  {
+   "product": "Student loan",
+   "sub_product": "Private student loan",
+   "product_group": "student_loan",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 25289
+  },
+  {
+   "product": "Student loan",
+   "sub_product": "Non-federal student loan",
+   "product_group": "student_loan",
+   "first_date": "2012-03-01",
+   "last_date": "2017-04-21",
+   "complaints": 22282
+  },
+  {
+   "product": "Vehicle loan or lease",
+   "sub_product": "Loan",
+   "product_group": "vehicle_loan",
+   "first_date": "2017-04-24",
+   "last_date": "2026-08-31",
+   "complaints": 87850
+  },
+  {
+   "product": "Vehicle loan or lease",
+   "sub_product": "Lease",
+   "product_group": "vehicle_loan",
+   "first_date": "2017-04-25",
+   "last_date": "2026-08-31",
+   "complaints": 14543
+  },
+  {
+   "product": "Vehicle loan or lease",
+   "sub_product": "Title loan",
+   "product_group": "vehicle_loan",
+   "first_date": "2017-07-25",
+   "last_date": "2022-09-19",
+   "complaints": 46
+  },
+  {
+   "product": "Virtual currency",
+   "sub_product": "Domestic (US) money transfer",
+   "product_group": "money_transfer",
+   "first_date": "2014-08-15",
+   "last_date": "2017-04-03",
+   "complaints": 17
+  },
+  {
+   "product": "Virtual currency",
+   "sub_product": "International money transfer",
+   "product_group": "money_transfer",
+   "first_date": "2016-03-28",
+   "last_date": "2016-03-28",
+   "complaints": 1
+  }
+ ]
+}

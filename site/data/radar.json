@@ -1,0 +1,725 @@
+{
+ "rule": {
+  "level_weeks": 26,
+  "scale_weeks": 52,
+  "limit": 3.0,
+  "consecutive": 2,
+  "monitor_from_week": 131,
+  "episode_gap_weeks": 4,
+  "event_window_weeks": 8,
+  "naive_ratio": 1.5
+ },
+ "weeks": {
+  "first": "2011-12-05",
+  "last": "2026-08-24",
+  "n": 769
+ },
+ "series": [
+  {
+   "product_group": "credit_reporting",
+   "monitored_from": "2015-04-20",
+   "series_years": 11.4038,
+   "episodes": [
+    {
+     "start": "2020-04-27",
+     "end": "2020-05-18",
+     "alarm_weeks": 2,
+     "peak_z": 3.9839,
+     "event_id": null
+    }
+   ],
+   "naive_episodes": [
+    {
+     "start": "2017-05-01",
+     "end": "2017-05-22",
+     "alarm_weeks": 4,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2017-06-26",
+     "end": "2017-09-25",
+     "alarm_weeks": 12,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2020-04-20",
+     "end": "2020-06-08",
+     "alarm_weeks": 8,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2020-07-13",
+     "end": "2020-07-20",
+     "alarm_weeks": 2,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2020-12-07",
+     "end": "2020-12-14",
+     "alarm_weeks": 2,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2022-02-21",
+     "end": "2022-02-21",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2022-04-11",
+     "end": "2022-05-02",
+     "alarm_weeks": 4,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2023-03-20",
+     "end": "2023-03-20",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2024-02-26",
+     "end": "2024-03-18",
+     "alarm_weeks": 4,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2024-04-22",
+     "end": "2024-12-09",
+     "alarm_weeks": 26,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2025-01-13",
+     "end": "2025-02-03",
+     "alarm_weeks": 4,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2025-03-10",
+     "end": "2025-03-10",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    }
+   ]
+  },
+  {
+   "product_group": "debt_collection",
+   "monitored_from": "2016-01-04",
+   "series_years": 10.6923,
+   "episodes": [
+    {
+     "start": "2016-08-29",
+     "end": "2016-08-29",
+     "alarm_weeks": 1,
+     "peak_z": 4.0578,
+     "event_id": null
+    },
+    {
+     "start": "2023-12-18",
+     "end": "2023-12-18",
+     "alarm_weeks": 1,
+     "peak_z": 7.1441,
+     "event_id": null
+    },
+    {
+     "start": "2024-02-12",
+     "end": "2024-04-22",
+     "alarm_weeks": 11,
+     "peak_z": 7.8087,
+     "event_id": null
+    }
+   ],
+   "naive_episodes": [
+    {
+     "start": "2024-02-19",
+     "end": "2024-06-03",
+     "alarm_weeks": 16,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2024-08-19",
+     "end": "2024-10-14",
+     "alarm_weeks": 9,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2025-01-13",
+     "end": "2025-02-03",
+     "alarm_weeks": 4,
+     "peak_z": null,
+     "event_id": null
+    }
+   ]
+  },
+  {
+   "product_group": "mortgage",
+   "monitored_from": "2014-06-02",
+   "series_years": 12.2885,
+   "episodes": [
+    {
+     "start": "2023-01-23",
+     "end": "2023-02-06",
+     "alarm_weeks": 3,
+     "peak_z": 4.1728,
+     "event_id": null
+    }
+   ],
+   "naive_episodes": [
+    {
+     "start": "2023-01-23",
+     "end": "2023-01-23",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2026-01-12",
+     "end": "2026-01-12",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    }
+   ]
+  },
+  {
+   "product_group": "bank_account",
+   "monitored_from": "2014-08-25",
+   "series_years": 12.0577,
+   "episodes": [
+    {
+     "start": "2023-01-23",
+     "end": "2023-01-23",
+     "alarm_weeks": 1,
+     "peak_z": 3.536,
+     "event_id": null
+    },
+    {
+     "start": "2025-01-20",
+     "end": "2025-02-03",
+     "alarm_weeks": 3,
+     "peak_z": 14.119,
+     "event_id": null
+    }
+   ],
+   "naive_episodes": [
+    {
+     "start": "2016-09-19",
+     "end": "2016-09-26",
+     "alarm_weeks": 2,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2023-01-23",
+     "end": "2023-01-30",
+     "alarm_weeks": 2,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2025-01-20",
+     "end": "2025-01-27",
+     "alarm_weeks": 2,
+     "peak_z": null,
+     "event_id": null
+    }
+   ]
+  },
+  {
+   "product_group": "credit_card",
+   "monitored_from": "2014-06-02",
+   "series_years": 12.2885,
+   "episodes": [],
+   "naive_episodes": []
+  },
+  {
+   "product_group": "student_loan",
+   "monitored_from": "2014-08-25",
+   "series_years": 12.0577,
+   "episodes": [
+    {
+     "start": "2016-04-04",
+     "end": "2016-04-11",
+     "alarm_weeks": 2,
+     "peak_z": 5.0369,
+     "event_id": null
+    },
+    {
+     "start": "2017-01-23",
+     "end": "2017-01-23",
+     "alarm_weeks": 1,
+     "peak_z": 4.7849,
+     "event_id": null
+    },
+    {
+     "start": "2023-09-25",
+     "end": "2023-11-06",
+     "alarm_weeks": 7,
+     "peak_z": 4.0124,
+     "event_id": "student_loan_restart"
+    }
+   ],
+   "naive_episodes": [
+    {
+     "start": "2016-03-07",
+     "end": "2016-05-23",
+     "alarm_weeks": 12,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2016-08-01",
+     "end": "2016-08-08",
+     "alarm_weeks": 2,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2016-09-26",
+     "end": "2016-09-26",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2017-01-23",
+     "end": "2017-02-13",
+     "alarm_weeks": 4,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2022-01-17",
+     "end": "2022-03-14",
+     "alarm_weeks": 7,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2022-08-29",
+     "end": "2022-10-24",
+     "alarm_weeks": 9,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2023-09-04",
+     "end": "2024-01-29",
+     "alarm_weeks": 15,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2025-01-13",
+     "end": "2025-02-10",
+     "alarm_weeks": 3,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2025-03-17",
+     "end": "2025-03-17",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    }
+   ]
+  },
+  {
+   "product_group": "money_transfer",
+   "monitored_from": "2015-09-28",
+   "series_years": 10.9615,
+   "episodes": [
+    {
+     "start": "2017-07-03",
+     "end": "2017-07-03",
+     "alarm_weeks": 1,
+     "peak_z": 3.073,
+     "event_id": null
+    },
+    {
+     "start": "2020-06-01",
+     "end": "2020-07-13",
+     "alarm_weeks": 5,
+     "peak_z": 4.3638,
+     "event_id": null
+    },
+    {
+     "start": "2025-01-20",
+     "end": "2025-02-24",
+     "alarm_weeks": 6,
+     "peak_z": 20.2855,
+     "event_id": null
+    }
+   ],
+   "naive_episodes": [
+    {
+     "start": "2017-05-01",
+     "end": "2017-09-11",
+     "alarm_weeks": 18,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2017-12-04",
+     "end": "2018-01-29",
+     "alarm_weeks": 9,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2020-04-27",
+     "end": "2020-08-03",
+     "alarm_weeks": 13,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2021-02-08",
+     "end": "2021-05-24",
+     "alarm_weeks": 16,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2025-01-20",
+     "end": "2025-02-03",
+     "alarm_weeks": 3,
+     "peak_z": null,
+     "event_id": null
+    }
+   ]
+  },
+  {
+   "product_group": "vehicle_loan",
+   "monitored_from": "2014-08-25",
+   "series_years": 12.0577,
+   "episodes": [
+    {
+     "start": "2024-12-16",
+     "end": "2024-12-16",
+     "alarm_weeks": 1,
+     "peak_z": 4.2465,
+     "event_id": null
+    },
+    {
+     "start": "2025-01-20",
+     "end": "2025-01-20",
+     "alarm_weeks": 1,
+     "peak_z": 3.8548,
+     "event_id": null
+    }
+   ],
+   "naive_episodes": [
+    {
+     "start": "2023-01-23",
+     "end": "2023-02-06",
+     "alarm_weeks": 3,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2025-01-13",
+     "end": "2025-01-27",
+     "alarm_weeks": 3,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2026-01-12",
+     "end": "2026-01-12",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    }
+   ]
+  },
+  {
+   "product_group": "personal_loan",
+   "monitored_from": "2014-08-25",
+   "series_years": 12.0577,
+   "episodes": [
+    {
+     "start": "2024-03-25",
+     "end": "2024-03-25",
+     "alarm_weeks": 1,
+     "peak_z": 4.2659,
+     "event_id": null
+    }
+   ],
+   "naive_episodes": [
+    {
+     "start": "2014-08-25",
+     "end": "2014-09-29",
+     "alarm_weeks": 6,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2024-03-25",
+     "end": "2024-03-25",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    }
+   ]
+  },
+  {
+   "product_group": "prepaid_card",
+   "monitored_from": "2017-01-09",
+   "series_years": 9.6731,
+   "episodes": [
+    {
+     "start": "2018-10-22",
+     "end": "2018-10-22",
+     "alarm_weeks": 1,
+     "peak_z": 3.7996,
+     "event_id": null
+    },
+    {
+     "start": "2020-04-20",
+     "end": "2020-04-20",
+     "alarm_weeks": 1,
+     "peak_z": 4.4557,
+     "event_id": null
+    },
+    {
+     "start": "2024-12-23",
+     "end": "2024-12-23",
+     "alarm_weeks": 1,
+     "peak_z": 3.7841,
+     "event_id": null
+    }
+   ],
+   "naive_episodes": [
+    {
+     "start": "2018-10-22",
+     "end": "2018-10-22",
+     "alarm_weeks": 1,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2020-04-06",
+     "end": "2020-08-10",
+     "alarm_weeks": 17,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2020-09-21",
+     "end": "2020-10-26",
+     "alarm_weeks": 4,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2023-09-18",
+     "end": "2023-10-16",
+     "alarm_weeks": 2,
+     "peak_z": null,
+     "event_id": null
+    },
+    {
+     "start": "2023-12-18",
+     "end": "2024-01-08",
+     "alarm_weeks": 4,
+     "peak_z": null,
+     "event_id": null
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "event_id": "equifax_breach",
+   "title": "Equifax data breach announced",
+   "event_date": "2017-09-07",
+   "week_start": "2017-09-04",
+   "product_group": "credit_reporting",
+   "detected": false,
+   "already_open": false,
+   "delay_weeks": null,
+   "naive_detected": false,
+   "naive_delay_weeks": null,
+   "lead_weeks_vs_naive": null
+  },
+  {
+   "event_id": "cares_act",
+   "title": "CARES Act mortgage forbearance signed",
+   "event_date": "2020-03-27",
+   "week_start": "2020-03-23",
+   "product_group": "mortgage",
+   "detected": false,
+   "already_open": false,
+   "delay_weeks": null,
+   "naive_detected": false,
+   "naive_delay_weeks": null,
+   "lead_weeks_vs_naive": null
+  },
+  {
+   "event_id": "ftx_bankruptcy",
+   "title": "FTX files for bankruptcy",
+   "event_date": "2022-11-11",
+   "week_start": "2022-11-07",
+   "product_group": "money_transfer",
+   "detected": false,
+   "already_open": false,
+   "delay_weeks": null,
+   "naive_detected": false,
+   "naive_delay_weeks": null,
+   "lead_weeks_vs_naive": null
+  },
+  {
+   "event_id": "svb_failure",
+   "title": "Silicon Valley Bank fails",
+   "event_date": "2023-03-10",
+   "week_start": "2023-03-06",
+   "product_group": "bank_account",
+   "detected": false,
+   "already_open": false,
+   "delay_weeks": null,
+   "naive_detected": false,
+   "naive_delay_weeks": null,
+   "lead_weeks_vs_naive": null
+  },
+  {
+   "event_id": "student_loan_restart",
+   "title": "Federal student-loan payments restart",
+   "event_date": "2023-10-01",
+   "week_start": "2023-09-25",
+   "product_group": "student_loan",
+   "detected": true,
+   "already_open": false,
+   "delay_weeks": 0,
+   "naive_detected": false,
+   "naive_delay_weeks": null,
+   "lead_weeks_vs_naive": null
+  }
+ ],
+ "summary": {
+  "events": 5,
+  "detected": 1,
+  "detection_rate": {
+   "value": 0.2,
+   "ci_low": 0.036224,
+   "ci_high": 0.624465,
+   "n": 5
+  },
+  "unexplained_episodes": 18,
+  "series_years": 115.5385,
+  "unexplained_per_series_year": {
+   "value": 0.155792,
+   "ci_low": 0.092332,
+   "ci_high": 0.246219,
+   "n": 18
+  },
+  "naive_detected": 0,
+  "naive_unexplained_episodes": 44,
+  "naive_unexplained_per_series_year": {
+   "value": 0.380825,
+   "ci_low": 0.276708,
+   "ci_high": 0.51124,
+   "n": 44
+  }
+ },
+ "h3": {
+  "pass": false
+ },
+ "novelty": {
+  "series": [
+   {
+    "product_group": "credit_reporting",
+    "monitored_from": "2017-10-23",
+    "series_years": 8.8077,
+    "episodes": []
+   },
+   {
+    "product_group": "mortgage",
+    "monitored_from": "2017-10-23",
+    "series_years": 8.8077,
+    "episodes": []
+   },
+   {
+    "product_group": "bank_account",
+    "monitored_from": "2017-10-30",
+    "series_years": 8.7885,
+    "episodes": []
+   },
+   {
+    "product_group": "student_loan",
+    "monitored_from": "2017-12-04",
+    "series_years": 8.6538,
+    "episodes": [
+     {
+      "start": "2024-10-07",
+      "end": "2024-10-07",
+      "alarm_weeks": 1,
+      "peak_z": 3.4319,
+      "event_id": null
+     }
+    ]
+   },
+   {
+    "product_group": "money_transfer",
+    "monitored_from": "2019-12-02",
+    "series_years": 6.6731,
+    "episodes": []
+   }
+  ],
+  "events": [
+   {
+    "event_id": "equifax_breach",
+    "detected": false,
+    "already_open": false,
+    "delay_weeks": null
+   },
+   {
+    "event_id": "cares_act",
+    "detected": false,
+    "already_open": false,
+    "delay_weeks": null
+   },
+   {
+    "event_id": "ftx_bankruptcy",
+    "detected": false,
+    "already_open": false,
+    "delay_weeks": null
+   },
+   {
+    "event_id": "svb_failure",
+    "detected": false,
+    "already_open": false,
+    "delay_weeks": null
+   },
+   {
+    "event_id": "student_loan_restart",
+    "detected": false,
+    "already_open": false,
+    "delay_weeks": null
+   }
+  ],
+  "unexplained_episodes": 1,
+  "unexplained_per_series_year": {
+   "value": 0.023963,
+   "ci_low": 0.000607,
+   "ci_high": 0.133514,
+   "n": 1
+  }
+ }
+}

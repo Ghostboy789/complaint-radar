@@ -1,0 +1,817 @@
+{
+ "model": "llama3.1:8b",
+ "sample": {
+  "test": 3300,
+  "validation": 1650,
+  "per_product": [
+   {
+    "product": "Credit reporting or other personal consumer reports",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Debt collection",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Mortgage",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Checking or savings account",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Credit card",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Student loan",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Money transfer, virtual currency, or money service",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Vehicle loan or lease",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Payday loan, title loan, personal loan, or advance loan",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Prepaid card",
+    "test": 300,
+    "validation": 150
+   },
+   {
+    "product": "Debt or credit management",
+    "test": 300,
+    "validation": 150
+   }
+  ]
+ },
+ "variants": {
+  "zero_shot": {
+   "validation_macro_f1": 0.595306,
+   "test": {
+    "macro_f1": {
+     "value": 0.600549,
+     "ci_low": 0.585492,
+     "ci_high": 0.616615,
+     "n": 3300
+    },
+    "accuracy": {
+     "value": 0.614242,
+     "ci_low": 0.599394,
+     "ci_high": 0.629705,
+     "n": 3300
+    },
+    "ece": 0.218504,
+    "per_product": [
+     {
+      "product": "Credit reporting or other personal consumer reports",
+      "precision": 0.552521,
+      "recall": 0.876667,
+      "f1": 0.677835,
+      "n": 300
+     },
+     {
+      "product": "Debt collection",
+      "precision": 0.770833,
+      "recall": 0.493333,
+      "f1": 0.601626,
+      "n": 300
+     },
+     {
+      "product": "Mortgage",
+      "precision": 0.924171,
+      "recall": 0.65,
+      "f1": 0.763209,
+      "n": 300
+     },
+     {
+      "product": "Checking or savings account",
+      "precision": 0.678571,
+      "recall": 0.443333,
+      "f1": 0.53629,
+      "n": 300
+     },
+     {
+      "product": "Credit card",
+      "precision": 0.552163,
+      "recall": 0.723333,
+      "f1": 0.626263,
+      "n": 300
+     },
+     {
+      "product": "Student loan",
+      "precision": 0.938849,
+      "recall": 0.87,
+      "f1": 0.903114,
+      "n": 300
+     },
+     {
+      "product": "Money transfer, virtual currency, or money service",
+      "precision": 0.694656,
+      "recall": 0.606667,
+      "f1": 0.647687,
+      "n": 300
+     },
+     {
+      "product": "Vehicle loan or lease",
+      "precision": 0.652055,
+      "recall": 0.793333,
+      "f1": 0.715789,
+      "n": 300
+     },
+     {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "precision": 0.40198,
+      "recall": 0.676667,
+      "f1": 0.504348,
+      "n": 300
+     },
+     {
+      "product": "Prepaid card",
+      "precision": 0.409794,
+      "recall": 0.53,
+      "f1": 0.462209,
+      "n": 300
+     },
+     {
+      "product": "Debt or credit management",
+      "precision": 0.823529,
+      "recall": 0.093333,
+      "f1": 0.167665,
+      "n": 300
+     }
+    ],
+    "reliability": [
+     {
+      "bin_low": 0.1,
+      "bin_high": 0.2,
+      "n": 10,
+      "mean_confidence": 0.174226,
+      "accuracy": 0.1
+     },
+     {
+      "bin_low": 0.2,
+      "bin_high": 0.3,
+      "n": 42,
+      "mean_confidence": 0.255512,
+      "accuracy": 0.119048
+     },
+     {
+      "bin_low": 0.3,
+      "bin_high": 0.4,
+      "n": 123,
+      "mean_confidence": 0.357671,
+      "accuracy": 0.317073
+     },
+     {
+      "bin_low": 0.4,
+      "bin_high": 0.5,
+      "n": 173,
+      "mean_confidence": 0.453157,
+      "accuracy": 0.306358
+     },
+     {
+      "bin_low": 0.5,
+      "bin_high": 0.6,
+      "n": 241,
+      "mean_confidence": 0.551189,
+      "accuracy": 0.356846
+     },
+     {
+      "bin_low": 0.6,
+      "bin_high": 0.7,
+      "n": 242,
+      "mean_confidence": 0.652347,
+      "accuracy": 0.330579
+     },
+     {
+      "bin_low": 0.7,
+      "bin_high": 0.8,
+      "n": 246,
+      "mean_confidence": 0.751151,
+      "accuracy": 0.455285
+     },
+     {
+      "bin_low": 0.8,
+      "bin_high": 0.9,
+      "n": 370,
+      "mean_confidence": 0.854982,
+      "accuracy": 0.467568
+     },
+     {
+      "bin_low": 0.9,
+      "bin_high": 1.0,
+      "n": 1853,
+      "mean_confidence": 0.98293,
+      "accuracy": 0.797625
+     }
+    ],
+    "confusion": [
+     [
+      263,
+      10,
+      0,
+      2,
+      8,
+      4,
+      0,
+      2,
+      10,
+      0,
+      1
+     ],
+     [
+      61,
+      148,
+      0,
+      2,
+      12,
+      5,
+      1,
+      15,
+      45,
+      6,
+      5
+     ],
+     [
+      1,
+      1,
+      195,
+      3,
+      3,
+      2,
+      0,
+      74,
+      19,
+      2,
+      0
+     ],
+     [
+      12,
+      0,
+      3,
+      133,
+      50,
+      1,
+      25,
+      2,
+      16,
+      58,
+      0
+     ],
+     [
+      19,
+      3,
+      1,
+      5,
+      217,
+      0,
+      3,
+      2,
+      18,
+      32,
+      0
+     ],
+     [
+      9,
+      0,
+      3,
+      0,
+      3,
+      261,
+      0,
+      5,
+      19,
+      0,
+      0
+     ],
+     [
+      2,
+      0,
+      1,
+      23,
+      14,
+      0,
+      182,
+      1,
+      13,
+      64,
+      0
+     ],
+     [
+      14,
+      0,
+      0,
+      0,
+      7,
+      0,
+      0,
+      238,
+      39,
+      2,
+      0
+     ],
+     [
+      15,
+      3,
+      0,
+      3,
+      9,
+      2,
+      4,
+      17,
+      203,
+      44,
+      0
+     ],
+     [
+      5,
+      0,
+      1,
+      22,
+      48,
+      0,
+      47,
+      1,
+      17,
+      159,
+      0
+     ],
+     [
+      75,
+      27,
+      7,
+      3,
+      22,
+      3,
+      0,
+      8,
+      106,
+      21,
+      28
+     ]
+    ]
+   },
+   "auto_route": {
+    "threshold": 0.999923,
+    "validation_precision": 0.955556,
+    "test": {
+     "coverage": {
+      "value": 0.04697,
+      "ci_low": 0.040263,
+      "ci_high": 0.05473,
+      "n": 3300
+     },
+     "precision": {
+      "value": 0.954839,
+      "ci_low": 0.909723,
+      "ci_high": 0.977954,
+      "n": 155
+     }
+    }
+   },
+   "seconds_per_1000": 2138.580404,
+   "prompt_tokens_per_1000": 354995.151515,
+   "output_tokens_per_1000": 1000.0,
+   "mean_letter_mass": 0.994573
+  },
+  "few_shot": {
+   "validation_macro_f1": 0.632473,
+   "test": {
+    "macro_f1": {
+     "value": 0.617242,
+     "ci_low": 0.60216,
+     "ci_high": 0.632685,
+     "n": 3300
+    },
+    "accuracy": {
+     "value": 0.623939,
+     "ci_low": 0.609091,
+     "ci_high": 0.639402,
+     "n": 3300
+    },
+    "ece": 0.179328,
+    "per_product": [
+     {
+      "product": "Credit reporting or other personal consumer reports",
+      "precision": 0.618005,
+      "recall": 0.846667,
+      "f1": 0.714487,
+      "n": 300
+     },
+     {
+      "product": "Debt collection",
+      "precision": 0.635514,
+      "recall": 0.453333,
+      "f1": 0.529183,
+      "n": 300
+     },
+     {
+      "product": "Mortgage",
+      "precision": 0.957346,
+      "recall": 0.673333,
+      "f1": 0.790607,
+      "n": 300
+     },
+     {
+      "product": "Checking or savings account",
+      "precision": 0.681223,
+      "recall": 0.52,
+      "f1": 0.589792,
+      "n": 300
+     },
+     {
+      "product": "Credit card",
+      "precision": 0.700787,
+      "recall": 0.593333,
+      "f1": 0.642599,
+      "n": 300
+     },
+     {
+      "product": "Student loan",
+      "precision": 0.935593,
+      "recall": 0.92,
+      "f1": 0.927731,
+      "n": 300
+     },
+     {
+      "product": "Money transfer, virtual currency, or money service",
+      "precision": 0.570292,
+      "recall": 0.716667,
+      "f1": 0.635155,
+      "n": 300
+     },
+     {
+      "product": "Vehicle loan or lease",
+      "precision": 0.680791,
+      "recall": 0.803333,
+      "f1": 0.737003,
+      "n": 300
+     },
+     {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "precision": 0.366987,
+      "recall": 0.763333,
+      "f1": 0.495671,
+      "n": 300
+     },
+     {
+      "product": "Prepaid card",
+      "precision": 0.610526,
+      "recall": 0.386667,
+      "f1": 0.473469,
+      "n": 300
+     },
+     {
+      "product": "Debt or credit management",
+      "precision": 0.397163,
+      "recall": 0.186667,
+      "f1": 0.253968,
+      "n": 300
+     }
+    ],
+    "reliability": [
+     {
+      "bin_low": 0.2,
+      "bin_high": 0.3,
+      "n": 38,
+      "mean_confidence": 0.270083,
+      "accuracy": 0.078947
+     },
+     {
+      "bin_low": 0.3,
+      "bin_high": 0.4,
+      "n": 140,
+      "mean_confidence": 0.357886,
+      "accuracy": 0.3
+     },
+     {
+      "bin_low": 0.4,
+      "bin_high": 0.5,
+      "n": 225,
+      "mean_confidence": 0.455463,
+      "accuracy": 0.355556
+     },
+     {
+      "bin_low": 0.5,
+      "bin_high": 0.6,
+      "n": 299,
+      "mean_confidence": 0.546344,
+      "accuracy": 0.367893
+     },
+     {
+      "bin_low": 0.6,
+      "bin_high": 0.7,
+      "n": 283,
+      "mean_confidence": 0.649253,
+      "accuracy": 0.424028
+     },
+     {
+      "bin_low": 0.7,
+      "bin_high": 0.8,
+      "n": 295,
+      "mean_confidence": 0.751053,
+      "accuracy": 0.545763
+     },
+     {
+      "bin_low": 0.8,
+      "bin_high": 0.9,
+      "n": 411,
+      "mean_confidence": 0.854518,
+      "accuracy": 0.610706
+     },
+     {
+      "bin_low": 0.9,
+      "bin_high": 1.0,
+      "n": 1609,
+      "mean_confidence": 0.974564,
+      "accuracy": 0.802983
+     }
+    ],
+    "confusion": [
+     [
+      254,
+      10,
+      0,
+      0,
+      1,
+      4,
+      5,
+      3,
+      3,
+      0,
+      20
+     ],
+     [
+      45,
+      136,
+      0,
+      1,
+      7,
+      5,
+      3,
+      11,
+      78,
+      2,
+      12
+     ],
+     [
+      2,
+      2,
+      202,
+      4,
+      0,
+      2,
+      1,
+      69,
+      14,
+      0,
+      4
+     ],
+     [
+      7,
+      10,
+      0,
+      156,
+      23,
+      1,
+      44,
+      5,
+      30,
+      18,
+      6
+     ],
+     [
+      14,
+      7,
+      1,
+      7,
+      178,
+      0,
+      11,
+      4,
+      44,
+      15,
+      19
+     ],
+     [
+      1,
+      0,
+      0,
+      0,
+      1,
+      276,
+      0,
+      1,
+      17,
+      0,
+      4
+     ],
+     [
+      2,
+      7,
+      0,
+      28,
+      7,
+      0,
+      215,
+      1,
+      26,
+      13,
+      1
+     ],
+     [
+      7,
+      5,
+      0,
+      0,
+      1,
+      0,
+      0,
+      241,
+      39,
+      0,
+      7
+     ],
+     [
+      9,
+      5,
+      1,
+      1,
+      6,
+      3,
+      7,
+      11,
+      229,
+      18,
+      10
+     ],
+     [
+      4,
+      10,
+      0,
+      27,
+      18,
+      0,
+      87,
+      2,
+      34,
+      116,
+      2
+     ],
+     [
+      66,
+      22,
+      7,
+      5,
+      12,
+      4,
+      4,
+      6,
+      110,
+      8,
+      56
+     ]
+    ]
+   },
+   "auto_route": {
+    "threshold": 0.999465,
+    "validation_precision": 0.965517,
+    "test": {
+     "coverage": {
+      "value": 0.018788,
+      "ci_low": 0.014684,
+      "ci_high": 0.024011,
+      "n": 3300
+     },
+     "precision": {
+      "value": 0.903226,
+      "ci_low": 0.804512,
+      "ci_high": 0.954888,
+      "n": 62
+     }
+    }
+   },
+   "seconds_per_1000": 2236.661818,
+   "prompt_tokens_per_1000": 1692995.151515,
+   "output_tokens_per_1000": 1000.0,
+   "mean_letter_mass": 0.998048
+  }
+ },
+ "chosen_variant": "few_shot",
+ "same_sample": {
+  "majority": {
+   "macro_f1": {
+    "value": 0.015152,
+    "ci_low": 0.015152,
+    "ci_high": 0.015152,
+    "n": 3300
+   },
+   "accuracy": {
+    "value": 0.090909,
+    "ci_low": 0.090909,
+    "ci_high": 0.090909,
+    "n": 3300
+   },
+   "ece": 0.239605,
+   "auto_route": {
+    "coverage": {
+     "value": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.001163,
+     "n": 3300
+    },
+    "precision": {
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "n": 0
+    }
+   }
+  },
+  "words": {
+   "macro_f1": {
+    "value": 0.655547,
+    "ci_low": 0.639777,
+    "ci_high": 0.670727,
+    "n": 3300
+   },
+   "accuracy": {
+    "value": 0.669394,
+    "ci_low": 0.654242,
+    "ci_high": 0.683644,
+    "n": 3300
+   },
+   "ece": 0.063181,
+   "auto_route": {
+    "coverage": {
+     "value": 0.584545,
+     "ci_low": 0.567643,
+     "ci_high": 0.601251,
+     "n": 3300
+    },
+    "precision": {
+     "value": 0.825298,
+     "ci_low": 0.807711,
+     "ci_high": 0.841592,
+     "n": 1929
+    }
+   }
+  },
+  "embeddings": {
+   "macro_f1": {
+    "value": 0.628841,
+    "ci_low": 0.613934,
+    "ci_high": 0.643267,
+    "n": 3300
+   },
+   "accuracy": {
+    "value": 0.64697,
+    "ci_low": 0.632394,
+    "ci_high": 0.661212,
+    "n": 3300
+   },
+   "ece": 0.083893,
+   "auto_route": {
+    "coverage": {
+     "value": 0.508788,
+     "ci_low": 0.491731,
+     "ci_high": 0.525824,
+     "n": 3300
+    },
+    "precision": {
+     "value": 0.830256,
+     "ci_low": 0.81155,
+     "ci_high": 0.847454,
+     "n": 1679
+    }
+   }
+  }
+ },
+ "h1": {
+  "difference": {
+   "value": -0.038305,
+   "ci_low": -0.055659,
+   "ci_high": -0.021366,
+   "n": 3300
+  },
+  "verdict": "small_model_better",
+  "pass": false
+ }
+}
