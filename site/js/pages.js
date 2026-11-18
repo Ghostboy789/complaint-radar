@@ -152,6 +152,7 @@ const Pages = (() => {
       ${spec.title ? `<h3>${spec.title}</h3>` : ""}
       ${spec.intro ? `<p class="figure-intro">${spec.intro}</p>` : ""}
       <div class="chart" data-chart="${esc(spec.chart)}" ${spec.group ? `data-group="${esc(spec.group)}"` : ""} role="img" aria-label="${esc(spec.alt || spec.title || "chart")}"></div>
+      ${spec.key || ""}
       <p class="meaning"><strong>What this means.</strong> ${spec.meaning || ""}</p>
       <details class="exact"><summary>Exact numbers</summary>${rows.length ? table(headers, rows) : '<p class="muted">No exact numbers were published for this block.</p>'}</details>
     </section>`;
@@ -204,43 +205,144 @@ const Pages = (() => {
 
   // ---------------------------------------------------------------- overview
 
+  // Pass rules written in the analysis plan before any result existed. They are rules, not results.
+  const RULE = { precision: 0.95, coverage: 0.5 };
+
+  // Horizontal bar on a 0 to 100% scale with its 95% interval and an optional marked rule line.
+  function hbar(spec) {
+    const { label, num, mark, markLabel, tone } = spec;
+    if (!num || !ok(num.value)) {
+      return `<div class="hbar"><div class="hbar-head"><span class="hbar-label">${label}</span><span class="hbar-value mono">not reported</span></div></div>`;
+    }
+    const at = (x) => Math.max(0, Math.min(100, Number(x) * 100));
+    const lo = ok(num.ci_low) ? at(num.ci_low) : at(num.value);
+    const hi = ok(num.ci_high) ? at(num.ci_high) : at(num.value);
+    const markHtml = ok(mark)
+      ? `<span class="hbar-mark" style="left:${at(mark)}%"><i>${esc(markLabel || "")}</i></span>`
+      : "";
+    return `<div class="hbar"><div class="hbar-head"><span class="hbar-label">${label}</span><span class="hbar-value mono">${esc(pctFmt(num.value))}</span></div>
+      <div class="hbar-track" role="img" aria-label="${esc(`${label.replace(/<[^>]*>/g, "")}: ${pctFmt(num.value)}, 95% interval ${interval(num, pctFmt)}`)}"><span class="hbar-fill ${tone || ""}" style="width:${at(num.value)}%"></span><span class="hbar-ci" style="left:${lo}%;width:${Math.max(0, hi - lo)}%"></span>${markHtml}</div>
+      <p class="hbar-meta">${esc(numLine(num, pctFmt))}</p></div>`;
+  }
+
+  function eventName(event) {
+    return String(event.title || groupLabel(event.event_id));
+  }
+
+  // Short desk name from the product name: text before the first comma, "or other ..." dropped.
+  function deskName(product) {
+    return String(product).split(",")[0].replace(/\s+or other.*$/i, "");
+  }
+
+  function verdictBlock(spec) {
+    return `<article class="vblock reveal"><p class="eyebrow">${spec.eyebrow}</p><h2 class="vq">${spec.question}</h2>
+      <div class="vvisual">${spec.visual}</div>
+      <div class="vfoot">${spec.badge}<p class="vtext">${spec.text}</p><a class="vlink" href="${spec.href}">${spec.link} <span aria-hidden="true">→</span></a></div></article>`;
+  }
+
+  function h1Block(data) {
+    const evalData = data.llmEval;
+    if (!evalData || !evalData.h1) {
+      return verdictBlock({
+        eyebrow: "H1 · LANGUAGE MODEL",
+        question: "Does a large language model beat the small trained model?",
+        visual: '<p class="chart-empty">The long model run has not written its result file, so there is nothing to draw yet.</p>',
+        badge: '<span class="badge big idle">NOT RUN</span>',
+        text: "No result is shown until the file exists.",
+        href: "cost.html",
+        link: "See what is planned",
+      });
+    }
+    const h1 = evalData.h1;
+    const chosen = evalData.chosen_variant === "few_shot" ? "few-shot" : "zero-shot";
+    const variant = (evalData.variants || {})[evalData.chosen_variant] || {};
+    const llm = (variant.test || {}).macro_f1;
+    const words = ((evalData.same_sample || {}).words || {}).macro_f1;
+    const diff = h1.difference || {};
+    return verdictBlock({
+      eyebrow: "H1 · LANGUAGE MODEL",
+      question: "Does a large language model beat the small trained model?",
+      visual: `${hbar({ label: `Language model, ${chosen}`, num: llm, tone: "tone-grey" })}${hbar({ label: "Words model, same sample", num: words, tone: "tone-accent" })}
+        <p class="vdiff mono">Paired difference ${esc(fixed(diff.value, 3))}<span class="ci">${esc(numLine(diff, (v) => fixed(v, 3)))}</span></p>`,
+      badge: badge(h1.pass, "PASS", "FAIL").replace('class="badge', 'class="badge big'),
+      text: `${esc(verdictWords(h1.verdict))} Macro-F1 on an equal mix of products.`,
+      href: "cost.html",
+      link: "See the cost evidence",
+    });
+  }
+
+  function h2Block(router) {
+    const h2 = router.h2 || {};
+    return verdictBlock({
+      eyebrow: "H2 · AUTOMATIC ROUTING",
+      question: "Can half of all complaints go to a desk with no person, at least 95% right?",
+      visual: `${hbar({ label: "Right desk (precision)", num: h2.precision, mark: RULE.precision, markLabel: "95% needed", tone: "tone-accent" })}${hbar({ label: "Sent automatically (coverage)", num: h2.coverage, mark: RULE.coverage, markLabel: "50% needed", tone: "tone-accent" })}`,
+      badge: badge(h2.pass).replace('class="badge', 'class="badge big'),
+      text: "Both lines had to be crossed. The marked line on each bar is the rule.",
+      href: "router.html",
+      link: "See the router evidence",
+    });
+  }
+
+  function h3Block(radar) {
+    const events = radar.events || [];
+    const dots = events
+      .map(
+        (event) =>
+          `<li class="edot ${event.detected ? "hit" : "miss"}"><span class="edot-mark" aria-hidden="true"></span><span class="edot-name">${esc(eventName(event))}</span><span class="edot-state">${event.detected ? "detected" : "missed"}</span></li>`,
+      )
+      .join("");
+    const summary = radar.summary || {};
+    const rate = summary.unexplained_per_series_year;
+    return verdictBlock({
+      eyebrow: "H3 · THE RADAR",
+      question: "Would a simple alarm rule catch known events without crying wolf?",
+      visual: `<ul class="edots">${dots}</ul><p class="vdiff mono">${esc(integer(summary.detected))} of ${esc(integer(summary.events))} caught<span class="ci">${esc(fixed(rate && rate.value, 2))} unexplained alarms per series per year · ${esc(numLine(rate, (v) => fixed(v, 2)))}</span></p>`,
+      badge: badge((radar.h3 || {}).pass).replace('class="badge', 'class="badge big'),
+      text: "Filled dot: the rule raised an alarm in time. Hollow: it stayed silent.",
+      href: "radar.html",
+      link: "See the radar evidence",
+    });
+  }
+
   function renderIndex(data) {
     const router = data.router || {};
     const h2 = router.h2 || {};
     const coverage = h2.coverage;
     const precision = h2.precision;
+    const flags = [
+      (data.llmEval && data.llmEval.h1 ? data.llmEval.h1.pass : null),
+      h2.pass,
+      data.radar && data.radar.h3 ? data.radar.h3.pass : null,
+    ];
+    const known = flags.filter((flag) => ok(flag));
+    const passed = known.filter((flag) => flag === true).length;
+    const failed = known.length - passed;
+    const headline = `Three tests, set before the results. <em>${integer(passed)}</em> passed.`;
+    const look = known.length === 3
+      ? `${failed === 3 ? "All three failed." : `${integer(failed)} failed.`} A language model, an automatic router and an alarm rule were each held to a rule written down in advance. This is what each result looks like.`
+      : "Each test was held to a rule written down in advance. A test without a result file is shown as not run.";
+    const hero = `<header class="hero reveal"><p class="eyebrow">COMPLAINT RADAR · THE HONEST HOOK</p><h1>${headline}</h1><p class="look">${esc(look)}</p></header>
+      <section class="vblocks" aria-label="The three tests">${h1Block(data)}${h2Block(router)}${h3Block(data.radar || {})}</section>`;
+
     const every = 1000;
-    const routed = ok(coverage && coverage.value)
-      ? Math.round(Number(coverage.value) * every)
-      : null;
+    const routed = ok(coverage && coverage.value) ? Math.round(Number(coverage.value) * every) : null;
     const wrong = ok(routed) && ok(precision && precision.value)
       ? Math.round(routed * (1 - Number(precision.value)))
       : null;
     const sentence = ok(routed)
       ? `Of every ${integer(every)} complaints, <em>${integer(routed)}</em> can be sent to a desk without a person. <em>${integer(wrong)}</em> of those land on the wrong desk.`
       : "The routing result is not available, so this page cannot say how many complaints can be sent without a person.";
-    const look = "Watch the marks sort into desks, then read the three verdicts below.";
-    const meta = `<div class="hero-meta">
-      <div><p class="kpi-label">Automatic routing · ${term("coverage", "coverage")}</p><p class="mono">${esc(numLine(coverage, pctFmt))}</p></div>
-      <div><p class="kpi-label">Right desk · ${term("precision", "precision")}</p><p class="mono">${esc(numLine(precision, pctFmt))}</p></div>
-      <div><p class="kpi-label">H2 rule</p>${badge(h2.pass)}<p class="rule-words">Sent automatically for at least half of complaints, with at least ninety-five per cent on the right desk.</p></div>
-    </div>`;
-    const hero = `<section class="hero-grid">
-      ${opener("OVERVIEW · THE SORTING ROOM", sentence, look)}${meta}
+    const room = `<section class="room"><p class="eyebrow reveal">THE SORTING ROOM</p><h2 class="display reveal">${sentence}</h2>
+      <p class="look">Watch the marks settle into the eleven desks. Each mark is one of every thousand test complaints.</p>
       <div class="canvas-panel">
-        <div class="chart canvas-chart" data-chart="sorting-room" role="img" aria-label="One thousand marks sorting into eleven product desks"></div>
-        <p class="caption">One mark is one of every thousand test complaints. Accent: sent automatically. Signal: sent to the wrong desk. Grey: a person decides.</p>
-        <details class="exact"><summary>Exact numbers · by desk</summary>${deskTable(router)}</details>
+        <div class="chart canvas-chart" data-chart="sorting-room" role="img" aria-label="One thousand marks sorted into eleven product desks"></div>
+        <ul class="legend" aria-label="Key"><li><span class="swatch sw-auto"></span>Sent to the right desk automatically</li><li><span class="swatch sw-wrong"></span>Sent to the wrong desk</li><li><span class="swatch sw-person"></span>A person decides</li></ul>
       </div>
-    </section>`;
+      <div class="kpis">${kpi(`Sent automatically · ${term("coverage", "coverage")}`, coverage, pctFmt)}${kpi(`Right desk · ${term("precision", "precision")}`, precision, pctFmt)}
+        <div class="kpi"><p class="kpi-label">H2 rule</p>${badge(h2.pass)}<p class="rule-words">Sent automatically for at least half of complaints, with at least ninety-five per cent on the right desk.</p></div></div>
+      <details class="exact"><summary>Exact numbers · by desk</summary>${deskTable(router)}</details></section>`;
 
-    const verdicts = '<h2 class="section-head">The three questions</h2><div class="cards">';
-    const rCard = `<article class="card verdict"><p class="eyebrow">H2 · ROUTER</p><p class="verdict-number">${esc(pct(coverage && coverage.value))}</p><p class="mono small">${esc(numLine(coverage, pctFmt))}</p>${badge(h2.pass)}<p class="verdict-text">Can a complaint be sent to the right desk from its text alone?</p><a href="router.html">See the router evidence →</a></article>`;
-    const llmCard = renderLlmCard(data);
-    const h3 = data.radar && data.radar.h3 ? data.radar.h3.pass : null;
-    const summary = (data.radar || {}).summary || {};
-    const rate = summary.unexplained_per_series_year;
-    const radarCard = `<article class="card verdict"><p class="eyebrow">H3 · RADAR</p><p class="verdict-number">${esc(fixed(rate && rate.value, 2))}</p><p class="mono small">${esc(numLine(rate, (v) => fixed(v, 2)))}</p>${badge(h3)}<p class="verdict-text">Would a simple rule have flagged known events without crying wolf?</p><a href="radar.html">See the radar evidence →</a></article>`;
     const caveats = `<section class="prose reveal"><h2 class="section-head">What this is and is not</h2><ul class="caveats">
       <li>Complaints are not a random sample of problems, and narratives are the subset whose authors agreed to publish.</li>
       <li>Labels are chosen by the consumer. A "wrong" prediction is sometimes the better label.</li>
@@ -255,7 +357,7 @@ const Pages = (() => {
       ${exactCount("Companies", totals.companies)}
       <div class="kpi"><p class="kpi-label">Received</p><p class="fact-line">${esc(ok(totals.first_date) ? totals.first_date : "—")} to ${esc(ok(totals.last_date) ? totals.last_date : "—")}</p><p class="kpi-meta">exact count of days in the archive</p></div>
     </div><p class="prose-line">The archive holds ${integer(totals.complaints)} complaints; ${integer(totals.with_narrative)} carry a ${term("narrative")}. Of those that were responded to, ${pctFmt((totals.timely_rate || {}).value)} were timely and ${pctFmt((totals.monetary_relief_rate || {}).value)} ended in monetary relief.</p></section>`;
-    return `${hero}<section class="section">${verdicts}${rCard}${llmCard}${radarCard}</div></section>${caveats}${facts}${nextCard("index")}`;
+    return `${hero}${room}${caveats}${facts}${nextCard("index")}`;
   }
 
   function deskTable(router) {
@@ -264,22 +366,12 @@ const Pages = (() => {
     return table(
       ["Desk", "Complaints sent to desk", "Sent automatically", "Share right"],
       byProduct.map((row) => [
-        esc(groupLabel(row.product)),
+        esc(deskName(row.product)),
         esc(integer((row.coverage || {}).n)),
         esc(integer((row.precision || {}).n)),
         numCell(row.precision, pctFmt),
       ]),
     );
-  }
-
-  function renderLlmCard(data) {
-    const evalData = data.llmEval;
-    if (!evalData || !evalData.h1) {
-      return `<article class="card verdict"><p class="eyebrow">H1 · LANGUAGE MODEL</p><h3>Not run yet</h3><p class="mono small">The long model run has not written its result file.</p><span class="badge idle">NOT RUN</span><p class="verdict-text">Does a large language model beat the small trained model once confidence and cost are counted?</p><a href="cost.html">See what is planned →</a></article>`;
-    }
-    const h1 = evalData.h1;
-    const diff = h1.difference;
-    return `<article class="card verdict"><p class="eyebrow">H1 · LANGUAGE MODEL</p><p class="verdict-number">${esc(fixed(diff && diff.value, 3))}</p><p class="mono small">${esc(numLine(diff, (v) => fixed(v, 3)))}</p>${badge(h1.pass)}<p class="verdict-text">Paired difference in ${term("macro-F1")} on the same fixed sample.</p><a href="cost.html">See the cost evidence →</a></article>`;
   }
 
   // ---------------------------------------------------------------- volumes
@@ -557,6 +649,34 @@ const Pages = (() => {
     return "The result has not been published.";
   }
 
+  // A length of time in the unit a reader thinks in: seconds, minutes or hours.
+  function duration(value) {
+    const v = Number(value);
+    if (!ok(value) || !Number.isFinite(v)) return "—";
+    if (v < 100) return seconds(v);
+    if (v < 7200) return `${(v / 60).toFixed(v < 600 ? 1 : 0)} min`;
+    return `${(v / 3600).toFixed(1)} hours`;
+  }
+
+  function raceHtml(data) {
+    const rows = timeRows(data);
+    const words = rows.find((row) => row[0] === "Words");
+    const chosen = (data.llmEval || {}).chosen_variant === "few_shot" ? "Few-shot" : "Zero-shot";
+    const llm = rows.find((row) => row[0] === chosen);
+    if (!words || !llm) return "";
+    const ratio = Number(llm[1]) / Number(words[1]);
+    const slowest = Math.max(Number(words[1]), Number(llm[1]));
+    const lane = (name, secs, key) =>
+      `<div class="lane" data-lane="${key}" data-seconds="${esc(secs)}" data-share="${esc(Math.max(0.003, Number(secs) / slowest))}"><p class="lane-head"><span>${esc(name)}</span><span class="mono lane-time">${esc(duration(secs))}</span></p><div class="lane-track"><span class="lane-fill" style="transform:scaleX(${esc(Math.max(0.003, Number(secs) / slowest))})"></span></div><p class="mono lane-count"><span class="lane-n">${integer(1000)}</span> of ${integer(1000)} complaints scored</p></div>`;
+    return `<section class="race reveal" data-race data-ratio="${esc(ratio)}">
+      <p class="eyebrow">THE SAME 1,000 COMPLAINTS</p>
+      <p class="ratio"><span class="ratio-num">${esc(integer(Math.round(ratio)))}</span><span class="ratio-x" aria-hidden="true">×</span></p>
+      <p class="ratio-words">That is how many times longer the ${esc(llm[0].toLowerCase())} language model takes than the words model to score the same thousand complaints.</p>
+      ${lane("Words model", words[1], "fast")}${lane(`Language model, ${llm[0].toLowerCase()}`, llm[1], "slow")}
+      <p class="caption race-note">Bar length is time on one shared clock. The animation is scaled so the slower run takes about two and a half seconds on screen; the words model finishes before the first frame. Real times: ${esc(duration(words[1]))} and ${esc(duration(llm[1]))}.</p>
+    </section>`;
+  }
+
   function renderCost(data) {
     const evaluation = data.llmEval;
     if (!evaluation || !evaluation.h1) {
@@ -571,19 +691,27 @@ const Pages = (() => {
     const same = evaluation.same_sample || {};
     const llmMacro = (variant.test || {}).macro_f1;
     const wordsMacro = (same.words || {}).macro_f1;
-    const lead = ok(h1.difference && h1.difference.value)
-      ? `${h1.difference.value > 0 ? "above" : "below"} zero`
-      : "not available";
-    const sentence = `On the same fixed sample, the ${esc(chosen.toLowerCase())} language model scored ${esc(pct(llmMacro && llmMacro.value))} ${term("macro-F1")} against ${esc(pct(wordsMacro && wordsMacro.value))} for the words model: a paired difference of ${esc(fixed(h1.difference && h1.difference.value, 3))}, ${lead}. ${esc(verdictWords(h1.verdict))}`;
-    const figures = `<section class="figure-grid">
-      <article class="card figure-figure"><p class="eyebrow">${esc(chosen.toUpperCase())} · LANGUAGE MODEL</p><p class="big-figure">${esc(pct(llmMacro && llmMacro.value))}</p>${bar(llmMacro && llmMacro.value, llmMacro && llmMacro.ci_low, llmMacro && llmMacro.ci_high, pctFmt)}<p class="mono small">${esc(numLine(llmMacro, pctFmt))}</p></article>
-      <article class="card figure-figure"><p class="eyebrow">WORDS MODEL · SAME SAMPLE</p><p class="big-figure">${esc(pct(wordsMacro && wordsMacro.value))}</p>${bar(wordsMacro && wordsMacro.value, wordsMacro && wordsMacro.ci_low, wordsMacro && wordsMacro.ci_high, pctFmt)}<p class="mono small">${esc(numLine(wordsMacro, pctFmt))}</p></article>
-    </section>`;
-    const difference = `<section class="card verdict"><p class="eyebrow">PAIRED DIFFERENCE · H1</p><p class="big-figure">${esc(fixed(h1.difference && h1.difference.value, 3))}</p>${bar(h1.difference && h1.difference.value, h1.difference && h1.difference.ci_low, h1.difference && h1.difference.ci_high, (v) => fixed(v, 3))}<p class="mono small">${esc(numLine(h1.difference, (v) => fixed(v, 3)))}</p>${badge(h1.pass)}<p class="verdict-text">${esc(verdictWords(h1.verdict))}</p></section>`;
+    const rows = timeRows(data);
+    const wordsTime = rows.find((row) => row[0] === "Words");
+    const llmTime = rows.find((row) => row[0] === chosen);
+    const ratio = wordsTime && llmTime ? Math.round(Number(llmTime[1]) / Number(wordsTime[1])) : null;
+    const accuracy =
+      h1.verdict === "small_model_better"
+        ? "and less accurate"
+        : h1.verdict === "llm_better"
+          ? "but more accurate"
+          : "and no more accurate that the test can detect";
+    const sentence = ok(ratio)
+      ? `The language model is <em>${esc(integer(ratio))}×</em> slower ${accuracy}.`
+      : `On the same fixed sample, ${esc(verdictWords(h1.verdict).toLowerCase())}`;
+    const look = `On one fixed sample of ${integer((evaluation.sample || {}).test)} complaints, the ${chosen.toLowerCase()} language model scored ${pct(llmMacro && llmMacro.value)} macro-F1 against ${pct(wordsMacro && wordsMacro.value)} for the words model. Read the speed gap first, then the accuracy.`;
+    const accuracyCard = `<section class="card accuracy reveal"><p class="eyebrow">AND THE ACCURACY, ON THE SAME SAMPLE</p><h2 class="display">${esc(verdictWords(h1.verdict))}</h2>
+      ${hbar({ label: `Language model, ${esc(chosen.toLowerCase())} · ${term("macro-F1")}`, num: llmMacro, tone: "tone-grey" })}${hbar({ label: `Words model · ${term("macro-F1")}`, num: wordsMacro, tone: "tone-accent" })}
+      <div class="diffline"><p class="kpi-label">PAIRED DIFFERENCE · H1</p><p class="kpi-value">${esc(fixed(h1.difference && h1.difference.value, 3))}</p>${bar(h1.difference && h1.difference.value, h1.difference && h1.difference.ci_low, h1.difference && h1.difference.ci_high, (v) => fixed(v, 3))}<p class="kpi-meta">${esc(numLine(h1.difference, (v) => fixed(v, 3)))}</p>${badge(h1.pass)}</div></section>`;
     const comparison = `<section class="figure"><h3>Every model on the fixed sample</h3>${costTable(evaluation)}<p class="meaning"><strong>What this means.</strong> ${term("macro-F1")} here is on an equal mix of products, not the real mix. Calibration error and time are point estimates with n = ${esc(integer((evaluation.sample || {}).test))} complaints on this sample.</p></section>`;
     const timeFigure = figure({
       id: "cost-time",
-      title: "Time to score a thousand complaints",
+      title: "The same gap on a log scale",
       chart: "cost-time",
       alt: "Bars of seconds per thousand complaints, drawn to scale",
       meaning: timeMeaning(data),
@@ -596,8 +724,8 @@ const Pages = (() => {
       <label class="filter"><span>Your price per million tokens (no price is suggested here)</span><input id="price-input" type="number" min="0" step="any" inputmode="decimal" placeholder="Enter your own price"></label>
       <p id="cost-result" class="result-line" aria-live="polite">Enter a price to see what the measured tokens would cost.</p>
       <p class="caption">This applies your price to measured prompt and output tokens at the same rate. It is your assumption, not a measured cost.</p></section>`;
-    return `${opener("COST AGAINST ACCURACY · IS THE BIG MODEL WORTH IT?", sentence, "Compare the two large figures, the paired difference, then the time and token counts.")}
-      ${figures}${difference}${comparison}${timeFigure}${tokensBlock}
+    return `${opener("COST AGAINST ACCURACY · IS THE BIG MODEL WORTH IT?", sentence, look)}
+      ${raceHtml(data)}${accuracyCard}${timeFigure}${comparison}${tokensBlock}
       <section class="prose"><p>These results describe one fixed sample of complaints, with every product given equal weight. That is not the mix of complaints the desk actually sees.</p></section>
       ${nextCard("cost")}`;
   }
@@ -677,6 +805,37 @@ const Pages = (() => {
 
   // ------------------------------------------------------------------ radar
 
+  // The missed event whose two weeks from the event week came closest to the alarm line.
+  function nearMiss(data) {
+    const radar = data.radar || {};
+    const weekly = (data.weekly || {}).radar || {};
+    const limit = (radar.rule || {}).limit;
+    if (!ok(limit) || !weekly.weeks) return "";
+    let best = null;
+    (radar.events || []).forEach((event) => {
+      if (event.detected) return;
+      const z = ((weekly.series || {})[event.product_group] || {}).z;
+      const i = weekly.weeks.indexOf(event.week_start);
+      if (!z || i < 0 || !ok(z[i]) || !ok(z[i + 1])) return;
+      const closeness = Math.min(z[i], z[i + 1]);
+      if (!best || closeness > best.closeness) {
+        best = { event, closeness, week: [weekly.weeks[i], weekly.weeks[i + 1]], z: [z[i], z[i + 1]] };
+      }
+    });
+    if (!best || best.closeness <= 0) return "";
+    const need = (radar.rule || {}).consecutive;
+    const scale = Math.max(limit, ...best.z) * 1.15;
+    const row = (week, value, first) => {
+      const over = value > limit;
+      return `<div class="nm-row"><span class="mono nm-week">${esc(week)}</span><div class="nm-track"><span class="nm-fill ${over ? "over" : "under"}" style="width:${(Math.max(0, value) / scale) * 100}%"></span><span class="nm-limit" style="left:${(limit / scale) * 100}%">${first ? `<i>limit ${esc(fixed(limit, 0))}</i>` : ""}</span></div><span class="mono nm-z">z ${esc(fixed(value, 2))}</span></div>`;
+    };
+    const gap = limit - best.z[1];
+    return `<section class="near reveal"><p class="eyebrow">THE NEAR-MISS · ${esc(eventName(best.event).toUpperCase())}</p>
+      <h2 class="display">${esc(eventName(best.event))}: the first week rang the alarm. The second fell ${esc(fixed(gap, 2))} short.</h2>
+      ${row(best.week[0], best.z[0], true)}${row(best.week[1], best.z[1], false)}
+      <p class="meaning"><strong>What this means.</strong> The rule needs ${esc(integer(need))} weeks in a row above ${esc(fixed(limit, 0))}. The event week reached ${esc(fixed(best.z[0], 2))} but the next week fell back to ${esc(fixed(best.z[1], 2))}, so the rule stayed quiet and the event counts as missed.</p></section>`;
+  }
+
   function renderRadar(data, group) {
     const radar = data.radar || {};
     const summary = radar.summary || {};
@@ -697,9 +856,16 @@ const Pages = (() => {
       )
       .join("")}</div>`;
     return `${opener("RADAR · THE PULSE", sentence, "Choose a desk, watch the timeline draw, then check the dated events.")}
-      <section class="card verdict"><p class="eyebrow">H3 · ALARM RULE</p>${badge((radar.h3 || {}).pass)}<p class="rule-words">Pass needs at least four of the five events caught and no more than one unexplained alarm per series per year. The result is ${esc(detected)} of ${esc(events)} caught and ${esc(fixed(rate && rate.value, 2))} unexplained alarms per series per year.</p></section>
+      <section class="card verdict hook"><p class="eyebrow">H3 · ALARM RULE</p>${badge((radar.h3 || {}).pass).replace('class="badge', 'class="badge big')}<ul class="edots">${(radar.events || []).map((event) => `<li class="edot ${event.detected ? "hit" : "miss"}"><span class="edot-mark" aria-hidden="true"></span><span class="edot-name">${esc(eventName(event))}</span><span class="edot-state">${event.detected ? "detected" : "missed"}</span></li>`).join("")}</ul><p class="rule-words">Pass needs at least four of the five events caught and no more than one unexplained alarm per series per year. The result is ${esc(detected)} of ${esc(events)} caught and ${esc(fixed(rate && rate.value, 2))} unexplained alarms per series per year.</p></section>
+      ${nearMiss(data)}
       ${tabs}<div id="radar-dashboard">${radarDashboard(data, chosen)}</div>
       ${radarRule(rule)}${nextCard("radar")}`;
+  }
+
+  function eventKey(radar, group) {
+    const list = (radar.events || []).filter((event) => event.product_group === group);
+    if (!list.length) return "";
+    return `<ul class="flag-key">${list.map((event, i) => `<li class="${event.detected ? "hit" : "miss"}"><span class="flag-n" aria-hidden="true">${i + 1}</span>${esc(eventName(event))} · ${esc(event.event_date)} · <strong>${event.detected ? "detected" : "missed"}</strong></li>`).join("")}</ul>`;
   }
 
   function radarDashboard(data, group) {
@@ -721,6 +887,7 @@ const Pages = (() => {
       chart: "radar-weekly",
       group: group,
       alt: "Weekly complaint timeline with alarm weeks, episodes and event flags",
+      key: eventKey(radar, group),
       meaning: `This desk has ${integer(episodes.length)} episode${episodes.length === 1 ? "" : "s"}; ${episodes.filter((episode) => !episode.event_id).length} start outside the dated event windows.`,
       headers: ["Desk", "Start", "End", "Peak z", "Explained by"],
       rows: episodeRows,
@@ -871,20 +1038,21 @@ const Pages = (() => {
       "A debt collector calls me every day about a debt I already paid and threatens to sue me.",
       "The credit bureau shows an account that is not mine and will not remove it after I disputed it.",
     ];
+    const names = ["Mortgage fees", "Debt collector calls", "Wrong credit report"];
     const buttons = examples
       .map(
         (text, i) =>
-          `<button type="button" class="example" data-example="${i}">Made-up example ${i + 1}</button>`,
+          `<button type="button" class="example chip" data-example="${i}" title="${esc(text)}">${esc(names[i])}</button>`,
       )
       .join("");
-    return `${opener("TRY IT · THE SAME MODEL", `Type a complaint and watch the same words model tested here sort it into a desk, using only your browser.`, "The result shows the desk, the confidence against the threshold, and the terms that moved the decision.")}
-      <section class="try-grid"><div class="card">
+    return `${opener("TRY IT · THE SAME MODEL", `Type a complaint and watch the same words model tested here sort it into a desk, using only your browser.`, "The result shows the desk, the confidence against the routing threshold, and the terms that moved the decision.")}
+      <section class="try-stage">
         <label class="input-label" for="try-text">A made-up complaint, or write your own</label>
-        <textarea id="try-text" rows="7" placeholder="Describe the complaint in your own words…"></textarea>
-        <div class="examples" role="group" aria-label="Made-up examples">${buttons}</div>
-        <p class="caption">The three example buttons insert short made-up complaints written for this page.</p>
+        <textarea id="try-text" class="try-big" rows="6" placeholder="Describe the complaint in your own words…"></textarea>
+        <div class="examples" role="group" aria-label="Made-up examples"><span class="chip-label">Or start from a made-up example</span>${buttons}</div>
         <p id="try-status" class="status" aria-live="polite">The model has not been loaded yet. It loads when you first type or choose an example.</p>
-      </div><div class="card result" id="try-result" aria-live="polite"><p class="muted">Your result will appear here.</p></div></section>
+      </section>
+      <section class="desk-card" id="try-result" aria-live="polite"><p class="muted">Your result will appear here, as a card for the desk the complaint is sent to.</p></section>
       <section class="prose reveal"><h2 class="section-head">How this works</h2><p>This is the same model that was tested in the router section. It runs in your browser and nothing you type is sent anywhere. The confidence bar shows where the answer sits against the automatic-routing threshold from the model file.</p></section>
       ${nextCard("try")}`;
   }
@@ -919,6 +1087,9 @@ const Pages = (() => {
     routerDashboard,
     radarDashboard,
     costResult,
+    duration,
+    deskName,
+    nearMiss,
     timeRows,
     seconds,
   };

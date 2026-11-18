@@ -235,7 +235,7 @@
       const value = (peak / 3) * tick;
       const yy = y(value);
       body += `<line x1="${left}" x2="${width - right}" y1="${yy}" y2="${yy}" stroke="${grid}" stroke-width="1"/>`;
-      body += `<text x="${left - 6}" y="${yy + 3}" text-anchor="end" fill="${muted}" font-size="10">${value >= 10000 ? `${Math.round(value / 1000)}k` : Math.round(value)}</text>`;
+      body += `<text x="${left - 6}" y="${yy + 3}" text-anchor="end" fill="${muted}" font-size="11">${value >= 10000 ? `${Math.round(value / 1000)}k` : Math.round(value)}</text>`;
     }
     const labelSteps = [0, 0.25, 0.5, 0.75, 1];
     labelSteps.forEach((fraction) => {
@@ -451,7 +451,7 @@
     const height = 320;
     const left = 44;
     const right = 14;
-    const top = 66;
+    const top = 70;
     const bottom = 42;
     const values = series.complaints.map((value) => number(value));
     const peak = Math.max(...values, 1) * 1.1;
@@ -465,7 +465,7 @@
     let body = "";
     for (let tick = 0; tick <= 2; tick++) {
       const value = (peak / 2) * tick;
-      body += `<line x1="${left}" x2="${width - right}" y1="${y(value)}" y2="${y(value)}" stroke="${grid}"/><text x="${left - 6}" y="${y(value) + 3}" text-anchor="end" fill="${muted}" font-size="10">${value >= 10000 ? `${Math.round(value / 1000)}k` : Math.round(value)}</text>`;
+      body += `<line x1="${left}" x2="${width - right}" y1="${y(value)}" y2="${y(value)}" stroke="${grid}"/><text x="${left - 6}" y="${y(value) + 3}" text-anchor="end" fill="${muted}" font-size="11">${value >= 10000 ? `${Math.round(value / 1000)}k` : Math.round(value)}</text>`;
     }
     (desk.episodes || []).forEach((episode) => {
       const from = series.weeks.indexOf(episode.start);
@@ -485,20 +485,25 @@
       if (!flag) return;
       body += `<line x1="${x(i)}" x2="${x(i)}" y1="${height - bottom + 4}" y2="${height - bottom + 9}" stroke="${muted}" stroke-width="1.5"/>`;
     });
+    // numbered flags: filled disc = detected, hollow ring = missed; the key under the chart names them
     (radar.events || [])
       .filter((event) => event.product_group === group)
       .forEach((event, i) => {
         const index = series.weeks.indexOf(event.week_start);
         if (index < 0) return;
-        const xx = x(index);
-        const labelY = 14 + (i % 2) * 18;
-        body += `<line x1="${xx}" x2="${xx}" y1="${labelY + 10}" y2="${height - bottom}" stroke="${event.detected ? css("--pass") : signal}" stroke-width="1" stroke-dasharray="3 3"/>`;
-        body += `<text x="${Math.min(width - right, Math.max(left, xx))}" y="${labelY}" text-anchor="middle" fill="${event.detected ? css("--pass") : signal}" font-size="10"><title>${P.esc(event.title)}</title>${P.esc(short(event.title, 22))}</text>`;
+        const xx = Math.min(width - right - 10, Math.max(left + 10, x(index)));
+        const colour = event.detected ? css("--pass") : css("--fail");
+        const cy = 22 + (i % 2) * 24;
+        body += `<line x1="${x(index)}" x2="${x(index)}" y1="${cy + 10}" y2="${height - bottom}" stroke="${colour}" stroke-width="1.5" stroke-dasharray="3 3"/>`;
+        body += `<g><title>${P.esc(`${event.title}: ${event.detected ? "detected" : "missed"}`)}</title><circle cx="${xx}" cy="${cy}" r="10" fill="${event.detected ? colour : css("--surface")}" stroke="${colour}" stroke-width="2"/><text x="${xx}" y="${cy + 4}" text-anchor="middle" fill="${event.detected ? css("--surface") : colour}" font-size="12" font-weight="700">${i + 1}</text></g>`;
+        if (!event.detected && width > 520) {
+          body += `<text x="${xx + 15}" y="${cy + 4}" fill="${colour}" font-size="11" font-weight="700">MISSED</text>`;
+        }
       });
     body += `<line x1="${left}" x2="${width - right}" y1="${height - bottom}" y2="${height - bottom}" stroke="${grid}"/>`;
     const marks = [0, Math.floor(count / 2), count - 1];
     marks.forEach((index, i) => {
-      body += `<text x="${x(index)}" y="${height - 12}" text-anchor="${i === 0 ? "start" : i === 2 ? "end" : "middle"}" fill="${muted}" font-size="10">${P.esc(series.weeks[index])}</text>`;
+      body += `<text x="${x(index)}" y="${height - 12}" text-anchor="${i === 0 ? "start" : i === 2 ? "end" : "middle"}" fill="${muted}" font-size="11">${P.esc(series.weeks[index])}</text>`;
     });
     makeSvg(el, width, height, body, `Weekly complaints for ${group}`, "Bands are episodes, tall ticks are alarms, dashed flags are dated events.");
   }
@@ -539,30 +544,32 @@
     const canvas = document.createElement("canvas");
     const byProduct =
       ((((state.data.router || {}).models || {}).words || {}).auto_route || {}).by_product || [];
-    const panel = el.closest(".canvas-panel") || el;
-    const width = Math.max(280, panel.clientWidth || 700);
-    const pitch = width < 500 ? 4 : 6;
-    let height = width < 500 ? 340 : 430;
+    const width = Math.max(280, el.clientWidth || 700);
+    const rows = width < 640; // phones: one row per desk, label on the left
     const dpr = Math.min(3, window.devicePixelRatio || 1);
-    canvas.style.width = "100%";
-    canvas.style.height = `${height}px`;
-    canvas.style.display = "block";
-    canvas.width = Math.round(width * dpr);
-    canvas.height = Math.round(height * dpr);
     el.replaceChildren(canvas);
     const ctx = canvas.getContext("2d");
-    ctx.scale(dpr, dpr);
+    const setSize = (h) => {
+      canvas.style.width = "100%";
+      canvas.style.height = `${h}px`;
+      canvas.style.display = "block";
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
     if (!byProduct.length) {
+      setSize(60);
       ctx.fillStyle = css("--ink-2");
       ctx.font = "14px sans-serif";
       ctx.fillText("The routing result is not available.", 8, 24);
       return;
     }
+    // one mark per thousandth of the test complaints, shared out by largest remainder
     const totals = byProduct.map((row) => number((row.coverage || {}).n));
     const total = totals.reduce((sum, value) => sum + value, 0) || 1;
     const exact = totals.map((value) => (value / total) * 1000);
     const counts = exact.map(Math.floor);
-    let remainder = 1000 - counts.reduce((sum, value) => sum + value, 0);
+    const remainder = 1000 - counts.reduce((sum, value) => sum + value, 0);
     exact
       .map((value, i) => [value - Math.floor(value), i])
       .sort((a, b) => b[0] - a[0])
@@ -570,6 +577,73 @@
       .forEach((pair) => {
         counts[pair[1]] += 1;
       });
+    const names = byProduct.map((row) => P.deskName(row.product));
+    const labelFont = rows ? "11px 'JetBrains Mono', monospace" : "11.5px 'JetBrains Mono', monospace";
+    ctx.font = labelFont;
+    const wrap = (text, maxChars) => {
+      const out = [];
+      let line = "";
+      text.split(" ").forEach((word) => {
+        if ((line + " " + word).trim().length > maxChars && line) {
+          out.push(line);
+          line = word;
+        } else {
+          line = (line + " " + word).trim();
+        }
+      });
+      if (line) out.push(line);
+      return out;
+    };
+    // layout: a rectangle of marks per desk, and where its label goes
+    const layout = [];
+    let height;
+    let pitch;
+    if (!rows) {
+      pitch = width > 900 ? 8 : 6;
+      const gutter = 12;
+      const col = (width - 2 * gutter) / counts.length;
+      const perRow = Math.max(1, Math.floor((col - 8) / pitch));
+      const tallest = Math.max(...counts.map((c) => Math.ceil(c / perRow)));
+      const baseline = 14 + tallest * pitch + 6;
+      height = baseline + 62;
+      counts.forEach((count, desk) => {
+        layout.push({
+          x: gutter + desk * col + 4,
+          perRow,
+          place: (k) => [Math.floor(k % perRow) * pitch, baseline - (Math.floor(k / perRow) + 1) * pitch],
+          label: wrap(names[desk], Math.max(8, Math.floor((col - 6) / 6.6))),
+          labelX: gutter + desk * col + 4,
+          labelY: baseline + 18,
+          align: "left",
+          count,
+        });
+      });
+      layout.baseline = baseline;
+    } else {
+      pitch = 4;
+      const labelW = Math.min(122, Math.floor(width * 0.36));
+      const area = width - labelW - 12;
+      const perRow = Math.max(1, Math.floor(area / pitch));
+      let y = 8;
+      counts.forEach((count, desk) => {
+        const top = y;
+        const lines = wrap(names[desk], Math.floor((labelW - 4) / 6.6));
+        const h = Math.max(Math.ceil(count / perRow) * pitch, lines.length * 13) + 12;
+        layout.push({
+          x: labelW + 8,
+          perRow,
+          place: (k) => [(k % perRow) * pitch, top + 4 + Math.floor(k / perRow) * pitch],
+          label: lines,
+          labelX: 2,
+          labelY: top + 14,
+          align: "left",
+          count,
+        });
+        y += h;
+      });
+      height = y + 4;
+    }
+    setSize(height);
     const marks = [];
     counts.forEach((deskCount, desk) => {
       const row = byProduct[desk] || {};
@@ -583,40 +657,50 @@
         seed = (seed * 1103515245 + 12345) & 0x7fffffff;
         return seed / 0x7fffffff;
       };
-      const columnWidth = (width - 24) / counts.length;
+      const spot = layout[desk];
       for (let k = 0; k < deskCount; k++) {
         const kind = k < routedCount - wrongCount ? "auto" : k < routedCount ? "wrong" : "person";
-        const slot = k;
-        const subColumns = Math.max(1, Math.floor((columnWidth - 3) / pitch));
-        const finalX = 12 + desk * columnWidth + (slot % subColumns) * pitch + 1;
-        const finalY = 14 + Math.floor(slot / subColumns) * pitch;
-        const scatterX = 12 + random() * (width - 24);
-        const scatterY = 12 + random() * (height - 28);
-        marks.push({ desk, kind, finalX, finalY: Math.min(height - 10, finalY), scatterX, scatterY });
+        const [dx, finalY] = spot.place(k);
+        marks.push({
+          desk,
+          kind,
+          finalX: spot.x + dx,
+          finalY,
+          scatterX: 8 + random() * (width - 16),
+          scatterY: 8 + random() * (height - 40),
+        });
       }
     });
-    const fitted = Math.min(height, Math.ceil(Math.max(...marks.map((m) => m.finalY)) + pitch + 14));
-    if (fitted !== height) {
-      height = Math.max(fitted, 160);
-      canvas.style.height = `${height}px`;
-      canvas.height = Math.round(height * dpr);
-      ctx.scale(dpr, dpr);
-    }
-    const colors = {
-      auto: css("--accent"),
-      wrong: css("--signal"),
-      person: css("--ink-3"),
-    };
+    const colors = { auto: css("--accent"), wrong: css("--signal"), person: css("--ink-3") };
+    const ink = css("--ink-2");
+    const rule = css("--border");
+    const size = pitch - (pitch > 5 ? 2 : 1);
     const paint = (progress) => {
       ctx.clearRect(0, 0, width, height);
+      ctx.font = labelFont;
+      ctx.fillStyle = ink;
+      ctx.textBaseline = "alphabetic";
+      layout.forEach((spot, desk) => {
+        spot.label.forEach((line, i) => ctx.fillText(line, spot.labelX, spot.labelY + i * 13));
+        if (!rows) {
+          ctx.strokeStyle = rule;
+          ctx.beginPath();
+          ctx.moveTo(spot.x - 2, layout.baseline + 0.5);
+          ctx.lineTo(spot.x + spot.perRow * pitch, layout.baseline + 0.5);
+          ctx.stroke();
+        }
+      });
       marks.forEach((mark) => {
         const stagger = Math.min(0.42, (mark.desk / counts.length) * 0.42);
         const local = Math.max(0, Math.min(1, (progress - stagger) / (1 - stagger)));
         const eased = 1 - (1 - local) ** 3;
-        const x = mark.scatterX + (mark.finalX - mark.scatterX) * eased;
-        const y = Math.min(height - pitch, mark.scatterY) + (mark.finalY - Math.min(height - pitch, mark.scatterY)) * eased;
         ctx.fillStyle = colors[mark.kind];
-        ctx.fillRect(x, y, pitch - 1, pitch - 1);
+        ctx.fillRect(
+          mark.scatterX + (mark.finalX - mark.scatterX) * eased,
+          mark.scatterY + (mark.finalY - mark.scatterY) * eased,
+          size,
+          size,
+        );
       });
     };
     if (!animate || reduced) {
@@ -625,8 +709,7 @@
     }
     const start = performance.now();
     const frame = (now) => {
-      const elapsed = now - start;
-      const progress = Math.min(1, elapsed / 2400);
+      const progress = Math.min(1, (now - start) / 2400);
       paint(1 - (1 - progress) ** 3);
       if (progress < 1) requestAnimationFrame(frame);
     };
@@ -774,7 +857,44 @@
     });
   }
 
+  // The speed gap: both lanes run on one clock scaled from the measured seconds; once, then static.
+  function initRace() {
+    const root = select(app, "[data-race]");
+    if (!root || reduced || !("IntersectionObserver" in window)) return;
+    const lanes = selectAll(root, ".lane").map((lane) => ({
+      secs: Number(lane.dataset.seconds),
+      share: Number(lane.dataset.share),
+      fill: select(lane, ".lane-fill"),
+      count: select(lane, ".lane-n"),
+      time: select(lane, ".lane-time"),
+      final: select(lane, ".lane-time").textContent,
+    }));
+    const slowest = Math.max(...lanes.map((lane) => lane.secs));
+    const show = 2500; // ms on screen for the slowest run
+    const set = (progressOf) =>
+      lanes.forEach((lane) => {
+        const p = progressOf(lane);
+        lane.fill.style.transform = `scaleX(${p * lane.share})`;
+        lane.count.textContent = P.integer(Math.floor(p * 1000));
+        lane.time.textContent = p >= 1 ? lane.final : P.duration(p * lane.secs);
+      });
+    set(() => 0);
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      const start = performance.now();
+      const frame = (now) => {
+        const real = ((now - start) / show) * slowest;
+        set((lane) => Math.min(1, real / lane.secs));
+        if (real < slowest) requestAnimationFrame(frame);
+      };
+      requestAnimationFrame(frame);
+    }, { threshold: 0.5 });
+    observer.observe(root);
+  }
+
   function initCost() {
+    initRace();
     const input = select(app, "#price-input");
     if (!input) return;
     input.addEventListener("input", () => {
@@ -794,14 +914,17 @@
     const terms = result.terms.length
       ? result.terms.map((item) => `<li>${P.esc(item.term)} <span class="mono">+${item.weight.toFixed(3)}</span></li>`).join("")
       : '<li>No vocabulary terms from this text moved the decision.</li>';
-    const confidence = result.routed
-      ? '<span class="badge pass">Sent automatically</span>'
-      : '<span class="badge idle">A person decides</span>';
-    return `<p class="eyebrow">THE DESK</p><h2>${P.esc(result.product)}</h2>${confidence}
-      <p class="confidence-label">Confidence ${(result.confidence * 100).toFixed(1)}% against a threshold of ${threshold == null ? "not published" : `${(threshold * 100).toFixed(1)}%`}</p>
-      <div class="track"><span class="track-range" style="left:0%;width:${threshold == null ? 0 : threshold * 100}%"></span><span class="track-dot" style="left:${result.confidence * 100}%"></span></div>
-      <h3>All eleven desks</h3><div class="probabilities">${lines}</div>
-      <h3>Terms that pushed the decision</h3><ul class="terms">${terms}</ul>`;
+    const badge = result.routed
+      ? '<span class="badge big pass">Sent automatically</span>'
+      : '<span class="badge big idle">A person decides</span>';
+    const at = (v) => Math.max(0, Math.min(100, v * 100));
+    const mark = threshold == null ? "" : `<span class="hbar-mark" style="left:${at(threshold)}%"><i>routing threshold ${(threshold * 100).toFixed(1)}%</i></span>`;
+    return `<p class="eyebrow">THE DESK</p><h2 class="desk-name">${P.esc(P.deskName(result.product))}</h2>${badge}
+      <div class="hbar"><div class="hbar-head"><span class="hbar-label">Confidence</span><span class="hbar-value mono">${(result.confidence * 100).toFixed(1)}%</span></div>
+      <div class="hbar-track"><span class="hbar-fill ${result.routed ? "tone-accent" : "tone-grey"}" style="width:${at(result.confidence)}%"></span>${mark}</div>
+      <p class="hbar-meta">${threshold == null ? "Threshold not published." : `Above the threshold the complaint is sent on automatically; below it, a person decides.`}</p></div>
+      <div class="desk-cols"><div><h3>All eleven desks</h3><div class="probabilities">${lines}</div></div>
+      <div><h3>Terms that pushed the decision</h3><ul class="terms">${terms}</ul></div></div>`;
   }
 
   function loadModel() {
@@ -835,7 +958,7 @@
       if (!model) return;
       const text = field.value.trim();
       if (!text) {
-        resultBox.innerHTML = '<p class="muted">Your result will appear here.</p>';
+        resultBox.innerHTML = '<p class="muted">Your result will appear here, as a card for the desk the complaint is sent to.</p>';
         return;
       }
       resultBox.innerHTML = resultHtml(window.classify(text, model));
@@ -938,5 +1061,12 @@
     });
   });
 
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => {
+      drawCharts();
+      const room = select(app, '.chart[data-chart="sorting-room"]');
+      if (room && state.sortedDrawn) drawSorting(room, false);
+    });
+  }
   boot();
 })();
