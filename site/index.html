@@ -3,50 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
 <title>Overview · Complaint Radar</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/site.css">
+<script>
+(function () {
+  document.documentElement.classList.add("js");
+  try {
+    var t = localStorage.getItem("complaint-radar-theme");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
 <script src="js/pages.js" defer></script>
-<script src="js/classify.js" defer></script>
+<script src="js/charts.js" defer></script>
+<script src="js/scope.js" defer></script>
 <script src="js/site.js" defer></script>
 </head>
 <body data-page="index">
-<a class="skip-link" href="#app">Skip to content</a>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="wordmark" href="index.html">Complaint Radar<span class="author">Medhansh Shekhawat</span></a>
-    <nav class="site-nav" aria-label="Pages">
-      <a href="index.html" aria-current="page">Overview</a>
-      <a href="volumes.html">Volumes</a>
-      <a href="router.html">Router</a>
-      <a href="cost.html">Cost against accuracy</a>
-      <a href="radar.html">Radar</a>
-      <a href="quality.html">Data quality</a>
-      <a href="try.html">Try it</a>
-    </nav>
-    <div class="header-tools">
-      <a href="https://github.com/Ghostboy789/complaint-radar">GitHub</a>
-      <a href="https://www.linkedin.com/in/medhansh-shekhawat/">LinkedIn</a>
-      <button type="button" id="theme-toggle" aria-label="Colour theme: system. Click to change.">System</button>
-    </div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="brand" href="index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/><circle cx="16" cy="16" r="7" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/><path d="M16 16 L26 8" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/><circle cx="22" cy="19" r="2.6" fill="var(--accent)"/></svg><span class="brand-text"><b>Complaint Radar</b><small>Medhansh Shekhawat</small></span></a>
+  <nav class="pill" aria-label="Pages"><a href="index.html" aria-current="page">Overview</a><a href="volumes.html">Volumes</a><a href="router.html">Router</a><a href="cost.html">Cost</a><a href="radar.html">Radar</a><a href="quality.html">Data quality</a><a href="try.html">Try it</a></nav>
+  <div class="tools">
+    <a class="tool-link" href="https://github.com/Ghostboy789/complaint-radar">GitHub</a>
+    <a class="tool-link" href="https://www.linkedin.com/in/medhansh-shekhawat/">LinkedIn</a>
+    <button type="button" id="theme-toggle" class="tool-btn" aria-label="Colour theme: system. Click to change.">System</button>
+    <button type="button" class="tool-btn menu-btn" id="menu-btn" aria-expanded="false" aria-controls="sheet">Menu</button>
   </div>
 </header>
-<main id="main"><div id="app"></div></main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
+<div class="sheet" id="sheet" hidden>
+  <nav aria-label="All pages"><a href="index.html" aria-current="page"><span>01</span>Overview</a><a href="volumes.html"><span>02</span>Volumes</a><a href="router.html"><span>03</span>Router</a><a href="cost.html"><span>04</span>Cost against accuracy</a><a href="radar.html"><span>05</span>Radar</a><a href="quality.html"><span>06</span>Data quality</a><a href="try.html"><span>07</span>Try it</a></nav>
+  <p class="sheet-links"><a href="https://github.com/Ghostboy789/complaint-radar">GitHub</a><a href="https://www.linkedin.com/in/medhansh-shekhawat/">LinkedIn</a></p>
+</div>
+<main id="main"><div id="app"></div><noscript><p class="noscript">This site draws every figure from its data files with JavaScript, so it needs JavaScript turned on.</p></noscript></main>
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer-name"><b>Complaint Radar</b> by Medhansh Shekhawat</p>
+    <div class="footer-cols">
       <p>Source: CFPB Consumer Complaint Database Narratives Archive. Data received <span id="footer-range">from the archive</span>.</p>
       <p>Complaints are not incidents; nothing here measures any company's conduct.</p>
-    </div>
-    <div>
-      <p>Every figure on this site is read from the committed result files in the repository.</p>
-      <p><a href="https://github.com/Ghostboy789/complaint-radar">View the repository</a></p>
-    </div>
-    <div>
-      <p class="mono">Complaint Radar · Overview</p>
-      <span id="gloss-def" class="gloss-def" role="tooltip" hidden></span>
+      <p>Every figure on this site is read from the committed result files. <a href="https://github.com/Ghostboy789/complaint-radar">View the repository</a></p>
     </div>
   </div>
 </footer>
+<div id="gloss" class="gloss" role="dialog" aria-label="Definition" hidden></div>
 </body>
 </html>
