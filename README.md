@@ -1,5 +1,7 @@
 # Complaint Radar
 
+**Live site:** https://complaint-radar-seven.vercel.app
+
 A bank's complaints team has two jobs: send each complaint to the right desk, and notice a new
 problem before it becomes a flood. This project tests both on 17.5 million real complaints from the
 US Consumer Financial Protection Bureau, and asks whether a large language model is worth its cost
