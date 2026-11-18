@@ -25,7 +25,7 @@ const Pages = (() => {
     coverage:
       "The share of complaints confident enough to be sent to a desk automatically.",
     "95% interval":
-      "A range of values from resampling the complaints; the estimate is expected to fall inside it in ninety-five of a hundred repeated samples.",
+      "A range of values from resampling the complaints, built so that ninety-five of a hundred such ranges would contain the true value.",
     calibration:
       "Whether the stated confidence matches how often the prediction is actually right.",
     "zero-shot": "A language model given only the list of desks and the complaint.",
