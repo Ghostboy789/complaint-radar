@@ -831,7 +831,7 @@ const Pages = (() => {
     };
     const gap = limit - best.z[1];
     return `<section class="near reveal"><p class="eyebrow">THE NEAR-MISS · ${esc(eventName(best.event).toUpperCase())}</p>
-      <h2 class="display">${esc(eventName(best.event))}: the first week rang the alarm. The second fell ${esc(fixed(gap, 2))} short.</h2>
+      <h2 class="display">${esc(eventName(best.event))}: the first week crossed the limit. The second fell ${esc(fixed(gap, 2))} short.</h2>
       ${row(best.week[0], best.z[0], true)}${row(best.week[1], best.z[1], false)}
       <p class="meaning"><strong>What this means.</strong> The rule needs ${esc(integer(need))} weeks in a row above ${esc(fixed(limit, 0))}. The event week reached ${esc(fixed(best.z[0], 2))} but the next week fell back to ${esc(fixed(best.z[1], 2))}, so the rule stayed quiet and the event counts as missed.</p></section>`;
   }
